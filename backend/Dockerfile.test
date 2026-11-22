@@ -1,0 +1,9 @@
+FROM python:3.12-slim-bookworm
+WORKDIR /app
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTEST_ADDOPTS="-o cache_dir=/tmp/pytest-cache"
+COPY backend/requirements.txt backend/requirements-dev.txt backend/requirements.lock ./
+RUN python -m pip install --no-cache-dir -r requirements-dev.txt
+COPY backend/ ./
+COPY contracts/ /contracts/
+USER 10001:10001
+CMD ["python", "-m", "scripts.run_integration"]

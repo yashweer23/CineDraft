@@ -1,0 +1,12 @@
+# Direct runtime dependencies; transitive versions constrained by requirements.lock.
+-c requirements.lock
+fastapi==0.155.0
+pydantic==2.14.1
+pydantic-settings==2.16.1
+sqlalchemy==2.1.5
+psycopg[binary]==3.3.6
+uvicorn==0.54.0
+alembic==1.20.0
+httpx2==2.15.1
+tzdata==2025.2
+websockets==17.3
