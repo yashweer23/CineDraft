@@ -1,0 +1,27 @@
+{
+  "name": "cinedraft-local-prototype",
+  "version": "0.15.0",
+  "private": true,
+  "description": "CineDraft Phase 15: cooperative live draft rooms",
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "dev": "node scripts/serve.cjs",
+    "test": "node --test tests/engine.test.cjs tests/server.test.cjs",
+    "setup": "node scripts/setup-env.cjs",
+    "test:legacy": "node --test tests/engine.test.cjs tests/server.test.cjs",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "test:frontend": "npm --prefix frontend test",
+    "build:frontend": "npm --prefix frontend run build",
+    "check:stack": "node scripts/check-stack.cjs",
+    "test:browser": "node frontend/e2e/journey.mjs",
+    "test:browser:phase10": "node frontend/e2e/phase10.mjs",
+    "test:browser:phase11": "node frontend/e2e/phase11.mjs",
+    "test:browser:phase12": "node frontend/e2e/phase12.mjs",
+    "test:browser:all": "node frontend/e2e/all.mjs",
+    "test:ops": "node --test tests/backup.test.cjs",
+    "test:browser:phase15": "node frontend/e2e/phase15.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

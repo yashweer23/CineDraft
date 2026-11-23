@@ -1,0 +1,87 @@
+name: cinedraft
+services:
+  db:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Run node scripts/setup-env.cjs first}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run node scripts/setup-env.cjs first}
+      POSTGRES_DB: ${POSTGRES_DB:?Run node scripts/setup-env.cjs first}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - ./backend/.env
+    environment: &api_environment
+      ENVIRONMENT: development
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_NAME: ${POSTGRES_DB:?Run node scripts/setup-env.cjs first}
+      DB_USER: ${POSTGRES_USER:?Run node scripts/setup-env.cjs first}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:?Run node scripts/setup-env.cjs first}
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend/app:/app/app:ro
+    command: ["python", "-m", "uvicorn", "app.main:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health/ready', timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    environment:
+      API_PROXY_TARGET: http://api:8000
+    ports:
+      - "127.0.0.1:${WEB_PORT:-5173}:5173"
+    depends_on:
+      - api
+    volumes:
+      - ./frontend/src:/app/frontend/src:ro
+      - ./config:/app/config:ro
+
+  api-tests:
+    profiles: ["verification"]
+    build:
+      context: .
+      dockerfile: backend/Dockerfile.test
+    environment: *api_environment
+    depends_on:
+      db:
+        condition: service_healthy
+
+  prototype:
+    image: node:24-bookworm-slim
+    working_dir: /app
+    command: ["node", "scripts/serve.cjs"]
+    environment:
+      CINEDRAFT_HOST: 0.0.0.0
+    ports:
+      - "127.0.0.1:5500:5500"
+    volumes:
+      - ./index.html:/app/index.html:ro
+      - ./app.js:/app/app.js:ro
+      - ./engine.js:/app/engine.js:ro
+      - ./styles.css:/app/styles.css:ro
+      - ./scripts/serve.cjs:/app/scripts/serve.cjs:ro
+
+volumes:
+  postgres_data:

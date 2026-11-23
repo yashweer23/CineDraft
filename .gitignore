@@ -1,0 +1,39 @@
+node_modules/
+.env
+.env.*
+!.env.example
+__pycache__/
+.venv/
+coverage/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+Thumbs.db
+dist/
+.pytest_cache/
+*.pyc
+*.tsbuildinfo
+MANIFEST.sha256
+
+# Private import review notes
+data/*.local.json
+
+# Optional local browser-check tooling
+.browser-tools/
+*.local.json
+
+# Private owner exports and local analytical databases
+analytics-output/
+gameplay-????????????.json
+*.sqlite
+*.sqlite-*
+
+# Locally measured reports and human playtest notes
+validation-output/
+
+# Private database copies and local release output
+backups/
+*.dump
+*.backup
+release-output/
