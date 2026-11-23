@@ -1,0 +1,638 @@
+{
+  "$defs": {
+    "Budget": {
+      "additionalProperties": false,
+      "properties": {
+        "tier": {
+          "enum": [
+            "indie",
+            "studio",
+            "blockbuster"
+          ],
+          "title": "Tier",
+          "type": "string"
+        },
+        "currency": {
+          "const": "USD",
+          "default": "USD",
+          "title": "Currency",
+          "type": "string"
+        },
+        "total_budget_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Total Budget Usd",
+          "type": "integer"
+        },
+        "reserve_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Reserve Usd",
+          "type": "integer"
+        },
+        "talent_budget_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Talent Budget Usd",
+          "type": "integer"
+        },
+        "talent_spend_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Talent Spend Usd",
+          "type": "integer"
+        },
+        "talent_remaining_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Talent Remaining Usd",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tier",
+        "total_budget_usd",
+        "reserve_usd",
+        "talent_budget_usd",
+        "talent_spend_usd",
+        "talent_remaining_usd"
+      ],
+      "title": "Budget",
+      "type": "object"
+    },
+    "DraftVersions": {
+      "additionalProperties": false,
+      "properties": {
+        "dataset_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "feature_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Feature Id",
+          "type": "string"
+        },
+        "pricing_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Pricing Id",
+          "type": "string"
+        },
+        "rules_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Rules Id",
+          "type": "string"
+        },
+        "scoring_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Scoring Id",
+          "type": "string"
+        },
+        "ranking_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Ranking Version",
+          "type": "string"
+        },
+        "role_mapping_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Role Mapping Version",
+          "type": "string"
+        },
+        "prng_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Prng Version",
+          "type": "string"
+        },
+        "simulation_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Simulation Version",
+          "type": "string"
+        },
+        "catalog_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Catalog Id",
+          "type": "string"
+        },
+        "catalog_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Catalog Hash",
+          "type": "string"
+        },
+        "graph_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Graph Id",
+          "type": "string"
+        },
+        "graph_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Graph Hash",
+          "type": "string"
+        },
+        "feature_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Feature Hash",
+          "type": "string"
+        },
+        "pricing_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Pricing Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dataset_id",
+        "feature_id",
+        "pricing_id",
+        "rules_id",
+        "scoring_id",
+        "ranking_version",
+        "role_mapping_version",
+        "prng_version",
+        "simulation_version",
+        "catalog_id",
+        "catalog_hash",
+        "graph_id",
+        "graph_hash",
+        "feature_hash",
+        "pricing_hash"
+      ],
+      "title": "DraftVersions",
+      "type": "object"
+    },
+    "FrozenRoleProfile": {
+      "additionalProperties": false,
+      "properties": {
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/Role"
+        },
+        "attributes": {
+          "additionalProperties": true,
+          "title": "Attributes",
+          "type": "object"
+        },
+        "evidence": {
+          "additionalProperties": true,
+          "title": "Evidence",
+          "type": "object"
+        }
+      },
+      "required": [
+        "person_id",
+        "role",
+        "attributes",
+        "evidence"
+      ],
+      "title": "FrozenRoleProfile",
+      "type": "object"
+    },
+    "LiveCard": {
+      "additionalProperties": false,
+      "properties": {
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/Role"
+        },
+        "hiring_fee_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Hiring Fee Usd",
+          "type": "integer"
+        },
+        "fee_is_fictional": {
+          "const": true,
+          "default": true,
+          "title": "Fee Is Fictional",
+          "type": "boolean"
+        },
+        "source": {
+          "enum": [
+            "tmdb",
+            "fixture"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "talent_strength": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Talent Strength"
+        },
+        "genre_fit": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Genre Fit"
+        },
+        "specialties": {
+          "items": {
+            "enum": [
+              "action",
+              "adventure",
+              "comedy",
+              "crime",
+              "drama",
+              "horror",
+              "mystery",
+              "romance",
+              "science_fiction",
+              "thriller"
+            ],
+            "type": "string"
+          },
+          "title": "Specialties",
+          "type": "array"
+        },
+        "coverage": {
+          "title": "Coverage",
+          "type": "string"
+        },
+        "notable_works": {
+          "items": {
+            "$ref": "#/$defs/LiveWork"
+          },
+          "maxItems": 5,
+          "title": "Notable Works",
+          "type": "array"
+        },
+        "versions": {
+          "$ref": "#/$defs/DraftVersions"
+        }
+      },
+      "required": [
+        "person_id",
+        "name",
+        "role",
+        "hiring_fee_usd",
+        "source",
+        "talent_strength",
+        "genre_fit",
+        "specialties",
+        "coverage",
+        "notable_works",
+        "versions"
+      ],
+      "title": "LiveCard",
+      "type": "object"
+    },
+    "LiveWork": {
+      "additionalProperties": false,
+      "properties": {
+        "movie_id": {
+          "format": "uuid",
+          "title": "Movie Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "maximum": 9999,
+              "minimum": 1800,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Year"
+        },
+        "credited_jobs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Credited Jobs",
+          "type": "array"
+        },
+        "poster_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Poster Path"
+        },
+        "audience_rating": {
+          "anyOf": [
+            {
+              "maximum": 10,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Audience Rating"
+        },
+        "vote_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Vote Count"
+        },
+        "source": {
+          "enum": [
+            "tmdb",
+            "fixture"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "poster_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Poster Url"
+        }
+      },
+      "required": [
+        "movie_id",
+        "title",
+        "year",
+        "credited_jobs",
+        "poster_path",
+        "audience_rating",
+        "vote_count",
+        "source",
+        "poster_url"
+      ],
+      "title": "LiveWork",
+      "type": "object"
+    },
+    "Role": {
+      "enum": [
+        "director",
+        "actor",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "Selection": {
+      "additionalProperties": false,
+      "properties": {
+        "slot": {
+          "$ref": "#/$defs/Slot"
+        },
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        },
+        "locked_fee_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Locked Fee Usd",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "slot",
+        "person_id",
+        "locked_fee_usd"
+      ],
+      "title": "Selection",
+      "type": "object"
+    },
+    "Slot": {
+      "enum": [
+        "director",
+        "lead",
+        "co_lead",
+        "supporting_1",
+        "supporting_2",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Slot",
+      "type": "string"
+    },
+    "Team": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "phase11-team-v1",
+          "default": "phase11-team-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "draft": {
+          "$ref": "#/$defs/TeamDraft"
+        },
+        "cards": {
+          "items": {
+            "$ref": "#/$defs/LiveCard"
+          },
+          "maxItems": 8,
+          "minItems": 8,
+          "title": "Cards",
+          "type": "array"
+        },
+        "role_features": {
+          "items": {
+            "$ref": "#/$defs/FrozenRoleProfile"
+          },
+          "maxItems": 8,
+          "minItems": 8,
+          "title": "Role Features",
+          "type": "array"
+        },
+        "graph_configuration": {
+          "additionalProperties": true,
+          "title": "Graph Configuration",
+          "type": "object"
+        },
+        "collaborations": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "maxItems": 12,
+          "minItems": 12,
+          "title": "Collaborations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "synthetic",
+        "draft",
+        "cards",
+        "role_features",
+        "graph_configuration",
+        "collaborations"
+      ],
+      "title": "Team",
+      "type": "object"
+    },
+    "TeamDraft": {
+      "additionalProperties": false,
+      "properties": {
+        "genre_id": {
+          "enum": [
+            "action",
+            "adventure",
+            "comedy",
+            "crime",
+            "drama",
+            "horror",
+            "mystery",
+            "romance",
+            "science_fiction",
+            "thriller"
+          ],
+          "title": "Genre Id",
+          "type": "string"
+        },
+        "versions": {
+          "$ref": "#/$defs/DraftVersions"
+        },
+        "budget": {
+          "$ref": "#/$defs/Budget"
+        },
+        "picks": {
+          "items": {
+            "$ref": "#/$defs/Selection"
+          },
+          "maxItems": 8,
+          "minItems": 8,
+          "title": "Picks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "genre_id",
+        "versions",
+        "budget",
+        "picks"
+      ],
+      "title": "TeamDraft",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "phase11-inputs-v1",
+      "default": "phase11-inputs-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "draft_id": {
+      "format": "uuid",
+      "title": "Draft Id",
+      "type": "string"
+    },
+    "source_input_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Input Hash",
+      "type": "string"
+    },
+    "source_output_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Output Hash",
+      "type": "string"
+    },
+    "slot": {
+      "$ref": "#/$defs/Slot"
+    },
+    "person_id": {
+      "format": "uuid",
+      "title": "Person Id",
+      "type": "string"
+    },
+    "manifest": {
+      "additionalProperties": true,
+      "title": "Manifest",
+      "type": "object"
+    },
+    "baseline": {
+      "$ref": "#/$defs/Team"
+    },
+    "alternative": {
+      "$ref": "#/$defs/Team"
+    },
+    "evidence_movies": {
+      "additionalProperties": true,
+      "title": "Evidence Movies",
+      "type": "object"
+    }
+  },
+  "required": [
+    "draft_id",
+    "source_input_hash",
+    "source_output_hash",
+    "slot",
+    "person_id",
+    "manifest",
+    "baseline",
+    "alternative",
+    "evidence_movies"
+  ],
+  "title": "Inputs",
+  "type": "object"
+}

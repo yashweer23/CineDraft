@@ -1,0 +1,21 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "username": {
+      "title": "Username",
+      "type": "string"
+    },
+    "password": {
+      "format": "password",
+      "title": "Password",
+      "type": "string",
+      "writeOnly": true
+    }
+  },
+  "required": [
+    "username",
+    "password"
+  ],
+  "title": "Registration",
+  "type": "object"
+}

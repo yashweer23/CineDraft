@@ -1,0 +1,574 @@
+{
+  "$defs": {
+    "Comparison": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "phase11-result-v1",
+          "default": "phase11-result-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "hypothetical": {
+          "const": true,
+          "default": true,
+          "title": "Hypothetical",
+          "type": "boolean"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "draft_id": {
+          "format": "uuid",
+          "title": "Draft Id",
+          "type": "string"
+        },
+        "source_input_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Input Hash",
+          "type": "string"
+        },
+        "source_output_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Output Hash",
+          "type": "string"
+        },
+        "sample_count": {
+          "title": "Sample Count",
+          "type": "integer"
+        },
+        "sample_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sample Hash",
+          "type": "string"
+        },
+        "unchanged": {
+          "title": "Unchanged",
+          "type": "boolean"
+        },
+        "synthetic": {
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "slot": {
+          "$ref": "#/$defs/Slot"
+        },
+        "baseline_card": {
+          "$ref": "#/$defs/LiveCard"
+        },
+        "alternative_card": {
+          "$ref": "#/$defs/LiveCard"
+        },
+        "budget": {
+          "additionalProperties": true,
+          "title": "Budget",
+          "type": "object"
+        },
+        "metrics": {
+          "items": {
+            "$ref": "#/$defs/Metric"
+          },
+          "title": "Metrics",
+          "type": "array"
+        },
+        "score": {
+          "additionalProperties": true,
+          "title": "Score",
+          "type": "object"
+        },
+        "explanation": {
+          "additionalProperties": true,
+          "title": "Explanation",
+          "type": "object"
+        },
+        "reproducibility": {
+          "additionalProperties": true,
+          "title": "Reproducibility",
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "draft_id",
+        "source_input_hash",
+        "source_output_hash",
+        "sample_count",
+        "sample_hash",
+        "unchanged",
+        "synthetic",
+        "slot",
+        "baseline_card",
+        "alternative_card",
+        "budget",
+        "metrics",
+        "score",
+        "explanation",
+        "reproducibility"
+      ],
+      "title": "Comparison",
+      "type": "object"
+    },
+    "Distribution": {
+      "additionalProperties": false,
+      "properties": {
+        "p10": {
+          "title": "P10",
+          "type": "string"
+        },
+        "median": {
+          "title": "Median",
+          "type": "string"
+        },
+        "p90": {
+          "title": "P90",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p10",
+        "median",
+        "p90"
+      ],
+      "title": "Distribution",
+      "type": "object"
+    },
+    "DraftVersions": {
+      "additionalProperties": false,
+      "properties": {
+        "dataset_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "feature_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Feature Id",
+          "type": "string"
+        },
+        "pricing_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Pricing Id",
+          "type": "string"
+        },
+        "rules_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Rules Id",
+          "type": "string"
+        },
+        "scoring_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Scoring Id",
+          "type": "string"
+        },
+        "ranking_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Ranking Version",
+          "type": "string"
+        },
+        "role_mapping_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Role Mapping Version",
+          "type": "string"
+        },
+        "prng_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Prng Version",
+          "type": "string"
+        },
+        "simulation_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Simulation Version",
+          "type": "string"
+        },
+        "catalog_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Catalog Id",
+          "type": "string"
+        },
+        "catalog_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Catalog Hash",
+          "type": "string"
+        },
+        "graph_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Graph Id",
+          "type": "string"
+        },
+        "graph_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Graph Hash",
+          "type": "string"
+        },
+        "feature_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Feature Hash",
+          "type": "string"
+        },
+        "pricing_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Pricing Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dataset_id",
+        "feature_id",
+        "pricing_id",
+        "rules_id",
+        "scoring_id",
+        "ranking_version",
+        "role_mapping_version",
+        "prng_version",
+        "simulation_version",
+        "catalog_id",
+        "catalog_hash",
+        "graph_id",
+        "graph_hash",
+        "feature_hash",
+        "pricing_hash"
+      ],
+      "title": "DraftVersions",
+      "type": "object"
+    },
+    "LiveCard": {
+      "additionalProperties": false,
+      "properties": {
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/Role"
+        },
+        "hiring_fee_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Hiring Fee Usd",
+          "type": "integer"
+        },
+        "fee_is_fictional": {
+          "const": true,
+          "default": true,
+          "title": "Fee Is Fictional",
+          "type": "boolean"
+        },
+        "source": {
+          "enum": [
+            "tmdb",
+            "fixture"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "talent_strength": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Talent Strength"
+        },
+        "genre_fit": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Genre Fit"
+        },
+        "specialties": {
+          "items": {
+            "enum": [
+              "action",
+              "adventure",
+              "comedy",
+              "crime",
+              "drama",
+              "horror",
+              "mystery",
+              "romance",
+              "science_fiction",
+              "thriller"
+            ],
+            "type": "string"
+          },
+          "title": "Specialties",
+          "type": "array"
+        },
+        "coverage": {
+          "title": "Coverage",
+          "type": "string"
+        },
+        "notable_works": {
+          "items": {
+            "$ref": "#/$defs/LiveWork"
+          },
+          "maxItems": 5,
+          "title": "Notable Works",
+          "type": "array"
+        },
+        "versions": {
+          "$ref": "#/$defs/DraftVersions"
+        }
+      },
+      "required": [
+        "person_id",
+        "name",
+        "role",
+        "hiring_fee_usd",
+        "source",
+        "talent_strength",
+        "genre_fit",
+        "specialties",
+        "coverage",
+        "notable_works",
+        "versions"
+      ],
+      "title": "LiveCard",
+      "type": "object"
+    },
+    "LiveWork": {
+      "additionalProperties": false,
+      "properties": {
+        "movie_id": {
+          "format": "uuid",
+          "title": "Movie Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "maximum": 9999,
+              "minimum": 1800,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Year"
+        },
+        "credited_jobs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Credited Jobs",
+          "type": "array"
+        },
+        "poster_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Poster Path"
+        },
+        "audience_rating": {
+          "anyOf": [
+            {
+              "maximum": 10,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Audience Rating"
+        },
+        "vote_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Vote Count"
+        },
+        "source": {
+          "enum": [
+            "tmdb",
+            "fixture"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "poster_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Poster Url"
+        }
+      },
+      "required": [
+        "movie_id",
+        "title",
+        "year",
+        "credited_jobs",
+        "poster_path",
+        "audience_rating",
+        "vote_count",
+        "source",
+        "poster_url"
+      ],
+      "title": "LiveWork",
+      "type": "object"
+    },
+    "Metric": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "baseline": {
+          "$ref": "#/$defs/Distribution"
+        },
+        "alternative": {
+          "$ref": "#/$defs/Distribution"
+        },
+        "paired_delta": {
+          "$ref": "#/$defs/Distribution"
+        },
+        "positive_samples": {
+          "title": "Positive Samples",
+          "type": "integer"
+        },
+        "equal_samples": {
+          "title": "Equal Samples",
+          "type": "integer"
+        },
+        "negative_samples": {
+          "title": "Negative Samples",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "unit",
+        "baseline",
+        "alternative",
+        "paired_delta",
+        "positive_samples",
+        "equal_samples",
+        "negative_samples"
+      ],
+      "title": "Metric",
+      "type": "object"
+    },
+    "Role": {
+      "enum": [
+        "director",
+        "actor",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "Slot": {
+      "enum": [
+        "director",
+        "lead",
+        "co_lead",
+        "supporting_1",
+        "supporting_2",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Slot",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "analysis_id": {
+      "format": "uuid",
+      "title": "Analysis Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "input_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Input Hash",
+      "type": "string"
+    },
+    "output_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Output Hash",
+      "type": "string"
+    },
+    "comparison": {
+      "$ref": "#/$defs/Comparison"
+    }
+  },
+  "required": [
+    "analysis_id",
+    "created_at",
+    "input_hash",
+    "output_hash",
+    "comparison"
+  ],
+  "title": "Saved",
+  "type": "object"
+}

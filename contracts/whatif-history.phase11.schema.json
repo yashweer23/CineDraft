@@ -1,0 +1,86 @@
+{
+  "$defs": {
+    "HistoryItem": {
+      "additionalProperties": false,
+      "properties": {
+        "analysis_id": {
+          "format": "uuid",
+          "title": "Analysis Id",
+          "type": "string"
+        },
+        "slot": {
+          "$ref": "#/$defs/Slot"
+        },
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "unchanged": {
+          "title": "Unchanged",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "analysis_id",
+        "slot",
+        "person_id",
+        "name",
+        "created_at",
+        "unchanged"
+      ],
+      "title": "HistoryItem",
+      "type": "object"
+    },
+    "Slot": {
+      "enum": [
+        "director",
+        "lead",
+        "co_lead",
+        "supporting_1",
+        "supporting_2",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Slot",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "items": {
+        "$ref": "#/$defs/HistoryItem"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "next_offset": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Next Offset"
+    }
+  },
+  "required": [
+    "items",
+    "next_offset"
+  ],
+  "title": "History",
+  "type": "object"
+}

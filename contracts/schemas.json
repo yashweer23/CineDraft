@@ -1,0 +1,1084 @@
+{
+  "$defs": {
+    "Budget": {
+      "additionalProperties": false,
+      "properties": {
+        "tier": {
+          "enum": [
+            "indie",
+            "studio",
+            "blockbuster"
+          ],
+          "title": "Tier",
+          "type": "string"
+        },
+        "currency": {
+          "const": "USD",
+          "default": "USD",
+          "title": "Currency",
+          "type": "string"
+        },
+        "total_budget_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Total Budget Usd",
+          "type": "integer"
+        },
+        "reserve_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Reserve Usd",
+          "type": "integer"
+        },
+        "talent_budget_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Talent Budget Usd",
+          "type": "integer"
+        },
+        "talent_spend_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Talent Spend Usd",
+          "type": "integer"
+        },
+        "talent_remaining_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Talent Remaining Usd",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tier",
+        "total_budget_usd",
+        "reserve_usd",
+        "talent_budget_usd",
+        "talent_spend_usd",
+        "talent_remaining_usd"
+      ],
+      "title": "Budget",
+      "type": "object"
+    },
+    "CandidateCard": {
+      "additionalProperties": false,
+      "properties": {
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/Role"
+        },
+        "hiring_fee_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Hiring Fee Usd",
+          "type": "integer"
+        },
+        "fee_is_fictional": {
+          "const": true,
+          "default": true,
+          "title": "Fee Is Fictional",
+          "type": "boolean"
+        },
+        "source": {
+          "enum": [
+            "tmdb",
+            "fixture"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "talent_strength": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Talent Strength"
+        },
+        "genre_fit": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Genre Fit"
+        },
+        "specialties": {
+          "items": {
+            "enum": [
+              "action",
+              "adventure",
+              "comedy",
+              "crime",
+              "drama",
+              "horror",
+              "mystery",
+              "romance",
+              "science_fiction",
+              "thriller"
+            ],
+            "type": "string"
+          },
+          "title": "Specialties",
+          "type": "array"
+        },
+        "coverage": {
+          "title": "Coverage",
+          "type": "string"
+        },
+        "notable_works": {
+          "items": {
+            "$ref": "#/$defs/NotableWork"
+          },
+          "maxItems": 5,
+          "title": "Notable Works",
+          "type": "array"
+        },
+        "versions": {
+          "$ref": "#/$defs/VersionBundle"
+        }
+      },
+      "required": [
+        "person_id",
+        "name",
+        "role",
+        "hiring_fee_usd",
+        "source",
+        "talent_strength",
+        "genre_fit",
+        "specialties",
+        "coverage",
+        "notable_works",
+        "versions"
+      ],
+      "title": "CandidateCard",
+      "type": "object"
+    },
+    "CatalogPage": {
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/$defs/CandidateCard"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "next_cursor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Next Cursor"
+        },
+        "dataset_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Dataset Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "items",
+        "next_cursor",
+        "dataset_id"
+      ],
+      "title": "CatalogPage",
+      "type": "object"
+    },
+    "ContractError": {
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "$ref": "#/$defs/ContractErrorDetail"
+        },
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "error",
+        "request_id"
+      ],
+      "title": "ContractError",
+      "type": "object"
+    },
+    "ContractErrorDetail": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "current_revision": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Current Revision"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "ContractErrorDetail",
+      "type": "object"
+    },
+    "CreateDraftRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "genre_id": {
+          "enum": [
+            "action",
+            "adventure",
+            "comedy",
+            "crime",
+            "drama",
+            "horror",
+            "mystery",
+            "romance",
+            "science_fiction",
+            "thriller"
+          ],
+          "title": "Genre Id",
+          "type": "string"
+        },
+        "tier": {
+          "enum": [
+            "indie",
+            "studio",
+            "blockbuster"
+          ],
+          "title": "Tier",
+          "type": "string"
+        },
+        "mode": {
+          "const": "classic",
+          "default": "classic",
+          "title": "Mode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "genre_id",
+        "tier"
+      ],
+      "title": "CreateDraftRequest",
+      "type": "object"
+    },
+    "DraftStatus": {
+      "enum": [
+        "awaiting_pick",
+        "recast_available",
+        "recast_preview",
+        "review_locked",
+        "production_finalized",
+        "simulation_running",
+        "simulation_failed",
+        "results_available",
+        "abandoned"
+      ],
+      "title": "DraftStatus",
+      "type": "string"
+    },
+    "DraftView": {
+      "additionalProperties": false,
+      "properties": {
+        "draft_id": {
+          "format": "uuid",
+          "title": "Draft Id",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/DraftStatus"
+        },
+        "genre_id": {
+          "enum": [
+            "action",
+            "adventure",
+            "comedy",
+            "crime",
+            "drama",
+            "horror",
+            "mystery",
+            "romance",
+            "science_fiction",
+            "thriller"
+          ],
+          "title": "Genre Id",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 0,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "budget": {
+          "$ref": "#/$defs/Budget"
+        },
+        "picks": {
+          "items": {
+            "$ref": "#/$defs/PickView"
+          },
+          "maxItems": 8,
+          "title": "Picks",
+          "type": "array"
+        },
+        "current_offer": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/OfferView"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rerolls_used": {
+          "maximum": 2,
+          "minimum": 0,
+          "title": "Rerolls Used",
+          "type": "integer"
+        },
+        "recasts_used": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Recasts Used",
+          "type": "integer"
+        },
+        "versions": {
+          "$ref": "#/$defs/VersionBundle"
+        }
+      },
+      "required": [
+        "draft_id",
+        "status",
+        "genre_id",
+        "revision",
+        "budget",
+        "picks",
+        "current_offer",
+        "rerolls_used",
+        "recasts_used",
+        "versions"
+      ],
+      "title": "DraftView",
+      "type": "object"
+    },
+    "FrozenInputs": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "phase3-v1",
+          "default": "phase3-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "draft": {
+          "$ref": "#/$defs/DraftView"
+        },
+        "seed": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Seed",
+          "type": "string"
+        },
+        "cards": {
+          "items": {
+            "$ref": "#/$defs/CandidateCard"
+          },
+          "maxItems": 8,
+          "minItems": 8,
+          "title": "Cards",
+          "type": "array"
+        },
+        "rules_configuration": {
+          "additionalProperties": true,
+          "title": "Rules Configuration",
+          "type": "object"
+        },
+        "scoring_configuration": {
+          "additionalProperties": true,
+          "title": "Scoring Configuration",
+          "type": "object"
+        },
+        "rounding": {
+          "const": "integer-usd-half-up",
+          "default": "integer-usd-half-up",
+          "title": "Rounding",
+          "type": "string"
+        }
+      },
+      "required": [
+        "synthetic",
+        "draft",
+        "seed",
+        "cards",
+        "rules_configuration",
+        "scoring_configuration"
+      ],
+      "title": "FrozenInputs",
+      "type": "object"
+    },
+    "GenreView": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "action",
+            "adventure",
+            "comedy",
+            "crime",
+            "drama",
+            "horror",
+            "mystery",
+            "romance",
+            "science_fiction",
+            "thriller"
+          ],
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "GenreView",
+      "type": "object"
+    },
+    "MutationRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "expected_revision": {
+          "minimum": 0,
+          "title": "Expected Revision",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "request_id",
+        "expected_revision"
+      ],
+      "title": "MutationRequest",
+      "type": "object"
+    },
+    "NotableWork": {
+      "additionalProperties": false,
+      "properties": {
+        "movie_id": {
+          "format": "uuid",
+          "title": "Movie Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "maximum": 9999,
+              "minimum": 1800,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Year"
+        },
+        "credited_jobs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Credited Jobs",
+          "type": "array"
+        },
+        "poster_path": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Poster Path"
+        },
+        "audience_rating": {
+          "anyOf": [
+            {
+              "maximum": 10,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Audience Rating"
+        },
+        "vote_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Vote Count"
+        },
+        "source": {
+          "enum": [
+            "tmdb",
+            "fixture"
+          ],
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "movie_id",
+        "title",
+        "year",
+        "credited_jobs",
+        "poster_path",
+        "audience_rating",
+        "vote_count",
+        "source"
+      ],
+      "title": "NotableWork",
+      "type": "object"
+    },
+    "OfferView": {
+      "additionalProperties": false,
+      "properties": {
+        "offer_id": {
+          "format": "uuid",
+          "title": "Offer Id",
+          "type": "string"
+        },
+        "slot": {
+          "$ref": "#/$defs/Slot"
+        },
+        "kind": {
+          "enum": [
+            "pick",
+            "recast"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 0,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/OfferedCandidate"
+          },
+          "maxItems": 3,
+          "title": "Candidates",
+          "type": "array"
+        },
+        "shortage_message": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Shortage Message"
+        }
+      },
+      "required": [
+        "offer_id",
+        "slot",
+        "kind",
+        "revision",
+        "candidates",
+        "shortage_message"
+      ],
+      "title": "OfferView",
+      "type": "object"
+    },
+    "OfferedCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "card": {
+          "$ref": "#/$defs/CandidateCard"
+        },
+        "selectable": {
+          "title": "Selectable",
+          "type": "boolean"
+        },
+        "blocked_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Blocked Reason"
+        }
+      },
+      "required": [
+        "card",
+        "selectable",
+        "blocked_reason"
+      ],
+      "title": "OfferedCandidate",
+      "type": "object"
+    },
+    "PickRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "expected_revision": {
+          "minimum": 0,
+          "title": "Expected Revision",
+          "type": "integer"
+        },
+        "offer_id": {
+          "format": "uuid",
+          "title": "Offer Id",
+          "type": "string"
+        },
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "expected_revision",
+        "offer_id",
+        "person_id"
+      ],
+      "title": "PickRequest",
+      "type": "object"
+    },
+    "PickView": {
+      "additionalProperties": false,
+      "properties": {
+        "slot": {
+          "$ref": "#/$defs/Slot"
+        },
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        },
+        "locked_fee_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Locked Fee Usd",
+          "type": "integer"
+        },
+        "offer_id": {
+          "format": "uuid",
+          "title": "Offer Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "slot",
+        "person_id",
+        "locked_fee_usd",
+        "offer_id"
+      ],
+      "title": "PickView",
+      "type": "object"
+    },
+    "RecastCancelRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "expected_revision": {
+          "minimum": 0,
+          "title": "Expected Revision",
+          "type": "integer"
+        },
+        "offer_id": {
+          "format": "uuid",
+          "title": "Offer Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "expected_revision",
+        "offer_id"
+      ],
+      "title": "RecastCancelRequest",
+      "type": "object"
+    },
+    "RecastConfirmRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "expected_revision": {
+          "minimum": 0,
+          "title": "Expected Revision",
+          "type": "integer"
+        },
+        "offer_id": {
+          "format": "uuid",
+          "title": "Offer Id",
+          "type": "string"
+        },
+        "person_id": {
+          "format": "uuid",
+          "title": "Person Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "expected_revision",
+        "offer_id",
+        "person_id"
+      ],
+      "title": "RecastConfirmRequest",
+      "type": "object"
+    },
+    "RecastPreviewRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "expected_revision": {
+          "minimum": 0,
+          "title": "Expected Revision",
+          "type": "integer"
+        },
+        "slot": {
+          "$ref": "#/$defs/Slot"
+        }
+      },
+      "required": [
+        "request_id",
+        "expected_revision",
+        "slot"
+      ],
+      "title": "RecastPreviewRequest",
+      "type": "object"
+    },
+    "RerollRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "expected_revision": {
+          "minimum": 0,
+          "title": "Expected Revision",
+          "type": "integer"
+        },
+        "offer_id": {
+          "format": "uuid",
+          "title": "Offer Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request_id",
+        "expected_revision",
+        "offer_id"
+      ],
+      "title": "RerollRequest",
+      "type": "object"
+    },
+    "ResultView": {
+      "additionalProperties": false,
+      "properties": {
+        "draft_id": {
+          "format": "uuid",
+          "title": "Draft Id",
+          "type": "string"
+        },
+        "input_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Input Hash",
+          "type": "string"
+        },
+        "simulation_id": {
+          "format": "uuid",
+          "title": "Simulation Id",
+          "type": "string"
+        },
+        "simulation_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Simulation Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "critics": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Critics",
+          "type": "number"
+        },
+        "audience": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Audience",
+          "type": "number"
+        },
+        "studio_score": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Studio Score",
+          "type": "integer"
+        },
+        "production_cost_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Production Cost Usd",
+          "type": "integer"
+        },
+        "marketing_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Marketing Usd",
+          "type": "integer"
+        },
+        "worldwide_gross_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Worldwide Gross Usd",
+          "type": "integer"
+        },
+        "studio_receipts_usd": {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "title": "Studio Receipts Usd",
+          "type": "integer"
+        },
+        "profit_usd": {
+          "title": "Profit Usd",
+          "type": "integer"
+        },
+        "weekly_gross_usd": {
+          "items": {
+            "maximum": 9007199254740991,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "title": "Weekly Gross Usd",
+          "type": "array"
+        },
+        "explanation": {
+          "additionalProperties": true,
+          "title": "Explanation",
+          "type": "object"
+        }
+      },
+      "required": [
+        "draft_id",
+        "input_hash",
+        "simulation_id",
+        "simulation_version",
+        "synthetic",
+        "critics",
+        "audience",
+        "studio_score",
+        "production_cost_usd",
+        "marketing_usd",
+        "worldwide_gross_usd",
+        "studio_receipts_usd",
+        "profit_usd",
+        "weekly_gross_usd",
+        "explanation"
+      ],
+      "title": "ResultView",
+      "type": "object"
+    },
+    "Role": {
+      "enum": [
+        "director",
+        "actor",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "Slot": {
+      "enum": [
+        "director",
+        "lead",
+        "co_lead",
+        "supporting_1",
+        "supporting_2",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Slot",
+      "type": "string"
+    },
+    "VersionBundle": {
+      "additionalProperties": false,
+      "properties": {
+        "dataset_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "feature_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Feature Id",
+          "type": "string"
+        },
+        "pricing_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Pricing Id",
+          "type": "string"
+        },
+        "rules_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Rules Id",
+          "type": "string"
+        },
+        "scoring_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Scoring Id",
+          "type": "string"
+        },
+        "ranking_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Ranking Version",
+          "type": "string"
+        },
+        "role_mapping_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Role Mapping Version",
+          "type": "string"
+        },
+        "prng_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Prng Version",
+          "type": "string"
+        },
+        "simulation_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Simulation Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dataset_id",
+        "feature_id",
+        "pricing_id",
+        "rules_id",
+        "scoring_id",
+        "ranking_version",
+        "role_mapping_version",
+        "prng_version",
+        "simulation_version"
+      ],
+      "title": "VersionBundle",
+      "type": "object"
+    }
+  },
+  "title": "CineDraft Phase 3 wire schemas"
+}

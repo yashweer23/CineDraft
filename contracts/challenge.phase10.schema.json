@@ -1,0 +1,96 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "challenge_id": {
+      "title": "Challenge Id",
+      "type": "string"
+    },
+    "opens_at": {
+      "format": "date-time",
+      "title": "Opens At",
+      "type": "string"
+    },
+    "closes_at": {
+      "format": "date-time",
+      "title": "Closes At",
+      "type": "string"
+    },
+    "timezone": {
+      "title": "Timezone",
+      "type": "string"
+    },
+    "status": {
+      "title": "Status",
+      "type": "string"
+    },
+    "genre_id": {
+      "enum": [
+        "action",
+        "adventure",
+        "comedy",
+        "crime",
+        "drama",
+        "horror",
+        "mystery",
+        "romance",
+        "science_fiction",
+        "thriller"
+      ],
+      "title": "Genre Id",
+      "type": "string"
+    },
+    "tier": {
+      "enum": [
+        "indie",
+        "studio",
+        "blockbuster"
+      ],
+      "title": "Tier",
+      "type": "string"
+    },
+    "catalog_id": {
+      "title": "Catalog Id",
+      "type": "string"
+    },
+    "config_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Config Hash",
+      "type": "string"
+    },
+    "seed_commitment": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Seed Commitment",
+      "type": "string"
+    },
+    "configuration": {
+      "additionalProperties": true,
+      "title": "Configuration",
+      "type": "object"
+    },
+    "results_hidden": {
+      "title": "Results Hidden",
+      "type": "boolean"
+    },
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "challenge_id",
+    "opens_at",
+    "closes_at",
+    "timezone",
+    "status",
+    "genre_id",
+    "tier",
+    "catalog_id",
+    "config_hash",
+    "seed_commitment",
+    "configuration",
+    "results_hidden",
+    "synthetic"
+  ],
+  "title": "ChallengeView",
+  "type": "object"
+}

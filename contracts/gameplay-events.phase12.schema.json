@@ -1,0 +1,306 @@
+{
+  "$defs": {
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "event_key": {
+          "title": "Event Key",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "start",
+            "replay_start",
+            "pick",
+            "reroll",
+            "preview_recast",
+            "cancel_recast",
+            "confirm_recast",
+            "finalize",
+            "abandon",
+            "release",
+            "release_failed",
+            "whatif"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "at": {
+          "format": "date-time",
+          "title": "At",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 0,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "slot": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Slot"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "person": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Person"
+        },
+        "offer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Offer"
+        },
+        "fee": {
+          "anyOf": [
+            {
+              "maximum": 9007199254740991,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fee"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Score"
+        },
+        "profit": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Profit"
+        }
+      },
+      "required": [
+        "event_key",
+        "kind",
+        "at",
+        "revision"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "Opportunity": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "pick",
+            "recast"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "offer": {
+          "title": "Offer",
+          "type": "string"
+        },
+        "person": {
+          "title": "Person",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "slot": {
+          "$ref": "#/$defs/Slot"
+        },
+        "at": {
+          "format": "date-time",
+          "title": "At",
+          "type": "string"
+        },
+        "event_key": {
+          "title": "Event Key",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "offer",
+        "person",
+        "name",
+        "slot",
+        "at",
+        "event_key"
+      ],
+      "title": "Opportunity",
+      "type": "object"
+    },
+    "Slot": {
+      "enum": [
+        "director",
+        "lead",
+        "co_lead",
+        "supporting_1",
+        "supporting_2",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Slot",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "gameplay-events-1.0",
+      "default": "gameplay-events-1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "origin": {
+      "default": "owner_export",
+      "enum": [
+        "owner_export",
+        "generated_demo"
+      ],
+      "title": "Origin",
+      "type": "string"
+    },
+    "session_key": {
+      "title": "Session Key",
+      "type": "string"
+    },
+    "started": {
+      "format": "date-time",
+      "title": "Started",
+      "type": "string"
+    },
+    "captured": {
+      "format": "date-time",
+      "title": "Captured",
+      "type": "string"
+    },
+    "genre": {
+      "title": "Genre",
+      "type": "string"
+    },
+    "tier": {
+      "title": "Tier",
+      "type": "string"
+    },
+    "catalog": {
+      "title": "Catalog",
+      "type": "string"
+    },
+    "rules": {
+      "title": "Rules",
+      "type": "string"
+    },
+    "scoring": {
+      "title": "Scoring",
+      "type": "string"
+    },
+    "simulation": {
+      "title": "Simulation",
+      "type": "string"
+    },
+    "fixture": {
+      "title": "Fixture",
+      "type": "boolean"
+    },
+    "mode": {
+      "enum": [
+        "practice",
+        "closed_challenge"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "total": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Total",
+      "type": "integer"
+    },
+    "allowance": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Allowance",
+      "type": "integer"
+    },
+    "reserve": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Reserve",
+      "type": "integer"
+    },
+    "events": {
+      "items": {
+        "$ref": "#/$defs/Event"
+      },
+      "title": "Events",
+      "type": "array"
+    },
+    "opportunities": {
+      "items": {
+        "$ref": "#/$defs/Opportunity"
+      },
+      "title": "Opportunities",
+      "type": "array"
+    }
+  },
+  "required": [
+    "session_key",
+    "started",
+    "captured",
+    "genre",
+    "tier",
+    "catalog",
+    "rules",
+    "scoring",
+    "simulation",
+    "fixture",
+    "mode",
+    "total",
+    "allowance",
+    "reserve",
+    "events",
+    "opportunities"
+  ],
+  "title": "Stream",
+  "type": "object"
+}

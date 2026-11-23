@@ -1,0 +1,41 @@
+{
+  "$defs": {
+    "Slot": {
+      "enum": [
+        "director",
+        "lead",
+        "co_lead",
+        "supporting_1",
+        "supporting_2",
+        "writer",
+        "cinematographer",
+        "composer"
+      ],
+      "title": "Slot",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "format": "uuid",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "slot": {
+      "$ref": "#/$defs/Slot"
+    },
+    "person_id": {
+      "format": "uuid",
+      "title": "Person Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "slot",
+    "person_id"
+  ],
+  "title": "CompareRequest",
+  "type": "object"
+}

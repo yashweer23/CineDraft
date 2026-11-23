@@ -1,0 +1,353 @@
+{
+  "$defs": {
+    "DraftVersions": {
+      "additionalProperties": false,
+      "properties": {
+        "dataset_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "feature_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Feature Id",
+          "type": "string"
+        },
+        "pricing_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Pricing Id",
+          "type": "string"
+        },
+        "rules_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Rules Id",
+          "type": "string"
+        },
+        "scoring_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Scoring Id",
+          "type": "string"
+        },
+        "ranking_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Ranking Version",
+          "type": "string"
+        },
+        "role_mapping_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Role Mapping Version",
+          "type": "string"
+        },
+        "prng_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Prng Version",
+          "type": "string"
+        },
+        "simulation_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Simulation Version",
+          "type": "string"
+        },
+        "catalog_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Catalog Id",
+          "type": "string"
+        },
+        "catalog_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Catalog Hash",
+          "type": "string"
+        },
+        "graph_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Graph Id",
+          "type": "string"
+        },
+        "graph_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Graph Hash",
+          "type": "string"
+        },
+        "feature_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Feature Hash",
+          "type": "string"
+        },
+        "pricing_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Pricing Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dataset_id",
+        "feature_id",
+        "pricing_id",
+        "rules_id",
+        "scoring_id",
+        "ranking_version",
+        "role_mapping_version",
+        "prng_version",
+        "simulation_version",
+        "catalog_id",
+        "catalog_hash",
+        "graph_id",
+        "graph_hash",
+        "feature_hash",
+        "pricing_hash"
+      ],
+      "title": "DraftVersions",
+      "type": "object"
+    },
+    "ScoreComponent": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "enum": [
+            "genre",
+            "talent",
+            "chemistry",
+            "efficiency"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 300,
+          "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+          "title": "Value",
+          "type": "string"
+        },
+        "weight": {
+          "maxLength": 300,
+          "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+          "title": "Weight",
+          "type": "string"
+        },
+        "contribution": {
+          "maxLength": 300,
+          "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+          "title": "Contribution",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "weight",
+        "contribution"
+      ],
+      "title": "ScoreComponent",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "draft_id": {
+      "format": "uuid",
+      "title": "Draft Id",
+      "type": "string"
+    },
+    "input_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Input Hash",
+      "type": "string"
+    },
+    "simulation_id": {
+      "format": "uuid",
+      "title": "Simulation Id",
+      "type": "string"
+    },
+    "simulation_version": {
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Simulation Version",
+      "type": "string"
+    },
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "critics": {
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Critics",
+      "type": "number"
+    },
+    "audience": {
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Audience",
+      "type": "number"
+    },
+    "studio_score": {
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Studio Score",
+      "type": "integer"
+    },
+    "production_cost_usd": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Production Cost Usd",
+      "type": "integer"
+    },
+    "marketing_usd": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Marketing Usd",
+      "type": "integer"
+    },
+    "worldwide_gross_usd": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Worldwide Gross Usd",
+      "type": "integer"
+    },
+    "studio_receipts_usd": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Studio Receipts Usd",
+      "type": "integer"
+    },
+    "profit_usd": {
+      "title": "Profit Usd",
+      "type": "integer"
+    },
+    "weekly_gross_usd": {
+      "items": {
+        "maximum": 9007199254740991,
+        "minimum": 0,
+        "type": "integer"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "Weekly Gross Usd",
+      "type": "array"
+    },
+    "explanation": {
+      "additionalProperties": true,
+      "title": "Explanation",
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "phase8-v1",
+      "default": "phase8-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "versions": {
+      "$ref": "#/$defs/DraftVersions"
+    },
+    "studio_score_unrounded": {
+      "maxLength": 300,
+      "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+      "title": "Studio Score Unrounded",
+      "type": "string"
+    },
+    "score_components": {
+      "items": {
+        "$ref": "#/$defs/ScoreComponent"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "Score Components",
+      "type": "array"
+    },
+    "cast_appeal": {
+      "maxLength": 300,
+      "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+      "title": "Cast Appeal",
+      "type": "string"
+    },
+    "critics_unrounded": {
+      "maxLength": 300,
+      "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+      "title": "Critics Unrounded",
+      "type": "string"
+    },
+    "audience_unrounded": {
+      "maxLength": 300,
+      "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+      "title": "Audience Unrounded",
+      "type": "string"
+    },
+    "gross_multiplier": {
+      "maxLength": 300,
+      "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+      "title": "Gross Multiplier",
+      "type": "string"
+    },
+    "total_cost_usd": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Total Cost Usd",
+      "type": "integer"
+    },
+    "unused_talent_budget_usd": {
+      "maximum": 9007199254740991,
+      "minimum": 0,
+      "title": "Unused Talent Budget Usd",
+      "type": "integer"
+    },
+    "return_on_total_cost_percent": {
+      "maxLength": 300,
+      "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+      "title": "Return On Total Cost Percent",
+      "type": "string"
+    },
+    "weekly_retention": {
+      "maxLength": 300,
+      "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+      "title": "Weekly Retention",
+      "type": "string"
+    },
+    "reproducibility": {
+      "additionalProperties": true,
+      "title": "Reproducibility",
+      "type": "object"
+    }
+  },
+  "required": [
+    "draft_id",
+    "input_hash",
+    "simulation_id",
+    "simulation_version",
+    "synthetic",
+    "critics",
+    "audience",
+    "studio_score",
+    "production_cost_usd",
+    "marketing_usd",
+    "worldwide_gross_usd",
+    "studio_receipts_usd",
+    "profit_usd",
+    "weekly_gross_usd",
+    "explanation",
+    "versions",
+    "studio_score_unrounded",
+    "score_components",
+    "cast_appeal",
+    "critics_unrounded",
+    "audience_unrounded",
+    "gross_multiplier",
+    "total_cost_usd",
+    "unused_talent_budget_usd",
+    "return_on_total_cost_percent",
+    "weekly_retention",
+    "reproducibility"
+  ],
+  "title": "SimulationResult",
+  "type": "object"
+}
