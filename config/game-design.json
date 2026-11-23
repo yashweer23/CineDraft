@@ -1,0 +1,17 @@
+{
+  "rulesVersion": "design-1.0",
+  "implementationStatus": "planned",
+  "currency": "USD",
+  "reservePercent": 35,
+  "offerSize": 3,
+  "offerRerolls": 2,
+  "finalRecasts": 1,
+  "notableWorksPerCard": 5,
+  "uniquePeopleRequired": 8,
+  "slotOrder": ["director", "lead", "co_lead", "supporting_1", "supporting_2", "writer", "cinematographer", "composer"],
+  "tiers": [
+    { "id": "indie", "name": "Indie Production", "totalBudgetUsd": 10000000, "description": "A focused vision. Every choice matters." },
+    { "id": "studio", "name": "Studio Picture", "totalBudgetUsd": 50000000, "description": "A bigger canvas for your creative team." },
+    { "id": "blockbuster", "name": "Big-Budget Blockbuster", "totalBudgetUsd": 200000000, "description": "Ambition on a grand scale." }
+  ]
+}
