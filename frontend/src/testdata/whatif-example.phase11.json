@@ -1,0 +1,3024 @@
+{
+  "synthetic": true,
+  "inputs": {
+    "schema_version": "phase11-inputs-v1",
+    "draft_id": "6d298876-377c-53a7-af2a-4da89c26691b",
+    "source_input_hash": "db64a0c4d6eafcc8654738a69c474d08bab16645514c62fea09f27e395a6ed0f",
+    "source_output_hash": "14016b0d022bb223f41896463322e62da8585b188f24e87b299c65412f1a2ce4",
+    "slot": "director",
+    "person_id": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+    "manifest": {
+      "version": "whatif-1.0",
+      "engine_manifest_hash": "5a01b76138244bc22684a48efc1acf140c9bf88ce967c87feca12f0d29afc8a3",
+      "samples": 64,
+      "sample_seed": "SHA256 canonical JSON [whatif-1.0, source_input_hash, sample_index]; indices 0..63",
+      "pairing": "same three named Phase 8 noise draws for both teams in each scenario",
+      "quantiles": "linear interpolation at (n-1)*p; p=0.1,0.5,0.9",
+      "deltas": "alternative minus baseline within each scenario, then summarize",
+      "reviews": "unrounded Decimal values; financial dollar rounding inherited from simulation-1.0",
+      "arithmetic": "Decimal precision 64; ROUND_HALF_UP",
+      "official_results_unchanged": true
+    },
+    "baseline": {
+      "schema_version": "phase11-team-v1",
+      "synthetic": true,
+      "draft": {
+        "genre_id": "drama",
+        "versions": {
+          "dataset_id": "fixture:phase8-example",
+          "feature_id": "features:phase8-example",
+          "pricing_id": "pricing:phase8-example",
+          "rules_id": "rules:classic-1.0",
+          "scoring_id": "scoring:baseline-1.0",
+          "ranking_version": "notability-1.0",
+          "role_mapping_version": "fixture:roles",
+          "prng_version": "sha256-order-1.0",
+          "simulation_version": "simulation-1.0",
+          "catalog_id": "draft-catalog:phase8-example",
+          "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "graph_id": "graph:phase8-example",
+          "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+          "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        "budget": {
+          "tier": "indie",
+          "currency": "USD",
+          "total_budget_usd": 10000000,
+          "reserve_usd": 3500000,
+          "talent_budget_usd": 6500000,
+          "talent_spend_usd": 3250000,
+          "talent_remaining_usd": 3250000
+        },
+        "picks": [
+          {
+            "slot": "director",
+            "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "lead",
+            "person_id": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "co_lead",
+            "person_id": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "supporting_1",
+            "person_id": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "supporting_2",
+            "person_id": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "writer",
+            "person_id": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "cinematographer",
+            "person_id": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "composer",
+            "person_id": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+            "locked_fee_usd": 406250
+          }
+        ]
+      },
+      "cards": [
+        {
+          "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "name": "Synthetic Director",
+          "role": "director",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "name": "Synthetic Lead",
+          "role": "actor",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "name": "Synthetic Co Lead",
+          "role": "actor",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+          "name": "Synthetic Supporting 1",
+          "role": "actor",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+          "name": "Synthetic Supporting 2",
+          "role": "actor",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+          "name": "Synthetic Writer",
+          "role": "writer",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+          "name": "Synthetic Cinematographer",
+          "role": "cinematographer",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+          "name": "Synthetic Composer",
+          "role": "composer",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        }
+      ],
+      "role_features": [
+        {
+          "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "role": "director",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "role": "actor",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "role": "actor",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+          "role": "actor",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+          "role": "actor",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+          "role": "writer",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+          "role": "cinematographer",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+          "role": "composer",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        }
+      ],
+      "graph_configuration": {
+        "synthetic": true,
+        "purpose": "Phase 8 database-free arithmetic example"
+      },
+      "collaborations": [
+        {
+          "slot_a": "director",
+          "slot_b": "lead",
+          "canonical_a": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "co_lead",
+          "canonical_a": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "supporting_1",
+          "canonical_a": [
+            "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+            "actor"
+          ],
+          "canonical_b": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "supporting_2",
+          "canonical_a": [
+            "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+            "actor"
+          ],
+          "canonical_b": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "writer",
+          "canonical_a": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "canonical_b": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "cinematographer",
+          "canonical_a": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "canonical_b": [
+            "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+            "cinematographer"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "composer",
+          "canonical_a": [
+            "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+            "composer"
+          ],
+          "canonical_b": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "writer",
+          "slot_b": "lead",
+          "canonical_a": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "writer",
+          "slot_b": "co_lead",
+          "canonical_a": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "lead",
+          "slot_b": "co_lead",
+          "canonical_a": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "lead",
+          "slot_b": "supporting_1",
+          "canonical_a": [
+            "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+            "actor"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "co_lead",
+          "slot_b": "supporting_2",
+          "canonical_a": [
+            "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+            "actor"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        }
+      ]
+    },
+    "alternative": {
+      "schema_version": "phase11-team-v1",
+      "synthetic": true,
+      "draft": {
+        "genre_id": "drama",
+        "versions": {
+          "dataset_id": "fixture:phase8-example",
+          "feature_id": "features:phase8-example",
+          "pricing_id": "pricing:phase8-example",
+          "rules_id": "rules:classic-1.0",
+          "scoring_id": "scoring:baseline-1.0",
+          "ranking_version": "notability-1.0",
+          "role_mapping_version": "fixture:roles",
+          "prng_version": "sha256-order-1.0",
+          "simulation_version": "simulation-1.0",
+          "catalog_id": "draft-catalog:phase8-example",
+          "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "graph_id": "graph:phase8-example",
+          "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+          "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        "budget": {
+          "tier": "indie",
+          "currency": "USD",
+          "total_budget_usd": 10000000,
+          "reserve_usd": 3500000,
+          "talent_budget_usd": 6500000,
+          "talent_spend_usd": 3293750,
+          "talent_remaining_usd": 3206250
+        },
+        "picks": [
+          {
+            "slot": "director",
+            "person_id": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+            "locked_fee_usd": 450000
+          },
+          {
+            "slot": "lead",
+            "person_id": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "co_lead",
+            "person_id": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "supporting_1",
+            "person_id": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "supporting_2",
+            "person_id": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "writer",
+            "person_id": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "cinematographer",
+            "person_id": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+            "locked_fee_usd": 406250
+          },
+          {
+            "slot": "composer",
+            "person_id": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+            "locked_fee_usd": 406250
+          }
+        ]
+      },
+      "cards": [
+        {
+          "person_id": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+          "name": "Synthetic Alternative Director",
+          "role": "director",
+          "hiring_fee_usd": 450000,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 90.0,
+          "genre_fit": 85.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "name": "Synthetic Lead",
+          "role": "actor",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "name": "Synthetic Co Lead",
+          "role": "actor",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+          "name": "Synthetic Supporting 1",
+          "role": "actor",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+          "name": "Synthetic Supporting 2",
+          "role": "actor",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+          "name": "Synthetic Writer",
+          "role": "writer",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+          "name": "Synthetic Cinematographer",
+          "role": "cinematographer",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        },
+        {
+          "person_id": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+          "name": "Synthetic Composer",
+          "role": "composer",
+          "hiring_fee_usd": 406250,
+          "fee_is_fictional": true,
+          "source": "fixture",
+          "talent_strength": 80.0,
+          "genre_fit": 60.0,
+          "specialties": [],
+          "coverage": "Synthetic arithmetic only",
+          "notable_works": [],
+          "versions": {
+            "dataset_id": "fixture:phase8-example",
+            "feature_id": "features:phase8-example",
+            "pricing_id": "pricing:phase8-example",
+            "rules_id": "rules:classic-1.0",
+            "scoring_id": "scoring:baseline-1.0",
+            "ranking_version": "notability-1.0",
+            "role_mapping_version": "fixture:roles",
+            "prng_version": "sha256-order-1.0",
+            "simulation_version": "simulation-1.0",
+            "catalog_id": "draft-catalog:phase8-example",
+            "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "graph_id": "graph:phase8-example",
+            "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+            "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        }
+      ],
+      "role_features": [
+        {
+          "person_id": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+          "role": "director",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 90,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 85,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "role": "actor",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "role": "actor",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+          "role": "actor",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+          "role": "actor",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+          "role": "writer",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+          "role": "cinematographer",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        },
+        {
+          "person_id": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+          "role": "composer",
+          "attributes": {
+            "schema_version": "talent-1.0",
+            "talent_strength": 80,
+            "genre_fit": {
+              "action": 60,
+              "adventure": 60,
+              "comedy": 60,
+              "crime": 60,
+              "drama": 60,
+              "horror": 60,
+              "mystery": 60,
+              "romance": 60,
+              "science_fiction": 60,
+              "thriller": 60
+            },
+            "popularity_percentile": 50,
+            "coverage": {
+              "level": "broader",
+              "eligible_movies": 10,
+              "synthetic": true
+            }
+          },
+          "evidence": {
+            "synthetic": true,
+            "genre_catalog_gaps": []
+          }
+        }
+      ],
+      "graph_configuration": {
+        "synthetic": true,
+        "purpose": "Phase 8 database-free arithmetic example"
+      },
+      "collaborations": [
+        {
+          "slot_a": "director",
+          "slot_b": "lead",
+          "canonical_a": [
+            "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+            "director"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "co_lead",
+          "canonical_a": [
+            "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+            "director"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "supporting_1",
+          "canonical_a": [
+            "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+            "director"
+          ],
+          "canonical_b": [
+            "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "supporting_2",
+          "canonical_a": [
+            "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+            "actor"
+          ],
+          "canonical_b": [
+            "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+            "director"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "writer",
+          "canonical_a": [
+            "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+            "director"
+          ],
+          "canonical_b": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "cinematographer",
+          "canonical_a": [
+            "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+            "director"
+          ],
+          "canonical_b": [
+            "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+            "cinematographer"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "composer",
+          "canonical_a": [
+            "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+            "director"
+          ],
+          "canonical_b": [
+            "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+            "composer"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "writer",
+          "slot_b": "lead",
+          "canonical_a": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "writer",
+          "slot_b": "co_lead",
+          "canonical_a": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "lead",
+          "slot_b": "co_lead",
+          "canonical_a": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "lead",
+          "slot_b": "supporting_1",
+          "canonical_a": [
+            "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+            "actor"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        },
+        {
+          "slot_a": "co_lead",
+          "slot_b": "supporting_2",
+          "canonical_a": [
+            "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+            "actor"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ],
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": []
+        }
+      ]
+    },
+    "evidence_movies": {}
+  },
+  "saved": {
+    "analysis_id": "11111111-1111-4111-8111-111111111111",
+    "created_at": "2026-11-01T12:00:00Z",
+    "input_hash": "a0e4c15e495d0a9f8065d0be2dde40e1cdb7c88bbb63802effbe524e1f17d7a5",
+    "output_hash": "54b20ed8634c2b6c73b04d83727c597d2db7802fde35604b55530155c929139e",
+    "comparison": {
+      "schema_version": "phase11-result-v1",
+      "hypothetical": true,
+      "version": "whatif-1.0",
+      "draft_id": "6d298876-377c-53a7-af2a-4da89c26691b",
+      "source_input_hash": "db64a0c4d6eafcc8654738a69c474d08bab16645514c62fea09f27e395a6ed0f",
+      "source_output_hash": "14016b0d022bb223f41896463322e62da8585b188f24e87b299c65412f1a2ce4",
+      "sample_count": 64,
+      "sample_hash": "4777e4514414a0094b9ab69a5be918394becee01ec20067773935ccb373db5c1",
+      "unchanged": false,
+      "synthetic": true,
+      "slot": "director",
+      "baseline_card": {
+        "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+        "name": "Synthetic Director",
+        "role": "director",
+        "hiring_fee_usd": 406250,
+        "fee_is_fictional": true,
+        "source": "fixture",
+        "talent_strength": 80.0,
+        "genre_fit": 60.0,
+        "specialties": [],
+        "coverage": "Synthetic arithmetic only",
+        "notable_works": [],
+        "versions": {
+          "dataset_id": "fixture:phase8-example",
+          "feature_id": "features:phase8-example",
+          "pricing_id": "pricing:phase8-example",
+          "rules_id": "rules:classic-1.0",
+          "scoring_id": "scoring:baseline-1.0",
+          "ranking_version": "notability-1.0",
+          "role_mapping_version": "fixture:roles",
+          "prng_version": "sha256-order-1.0",
+          "simulation_version": "simulation-1.0",
+          "catalog_id": "draft-catalog:phase8-example",
+          "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "graph_id": "graph:phase8-example",
+          "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+          "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      },
+      "alternative_card": {
+        "person_id": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+        "name": "Synthetic Alternative Director",
+        "role": "director",
+        "hiring_fee_usd": 450000,
+        "fee_is_fictional": true,
+        "source": "fixture",
+        "talent_strength": 90.0,
+        "genre_fit": 85.0,
+        "specialties": [],
+        "coverage": "Synthetic arithmetic only",
+        "notable_works": [],
+        "versions": {
+          "dataset_id": "fixture:phase8-example",
+          "feature_id": "features:phase8-example",
+          "pricing_id": "pricing:phase8-example",
+          "rules_id": "rules:classic-1.0",
+          "scoring_id": "scoring:baseline-1.0",
+          "ranking_version": "notability-1.0",
+          "role_mapping_version": "fixture:roles",
+          "prng_version": "sha256-order-1.0",
+          "simulation_version": "simulation-1.0",
+          "catalog_id": "draft-catalog:phase8-example",
+          "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "graph_id": "graph:phase8-example",
+          "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+          "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      },
+      "budget": {
+        "refund_usd": 406250,
+        "replacement_fee_usd": 450000,
+        "net_fee_change_usd": 43750,
+        "baseline_spend_usd": 3250000,
+        "alternative_spend_usd": 3293750,
+        "alternative_remaining_usd": 3206250,
+        "reserve_usd": 3500000,
+        "baseline_production_usd": 6750000,
+        "alternative_production_usd": 6793750,
+        "baseline_marketing_usd": 1350000,
+        "alternative_marketing_usd": 1358750
+      },
+      "metrics": [
+        {
+          "key": "critics_unrounded",
+          "label": "Critics",
+          "unit": "points",
+          "baseline": {
+            "p10": "65.8453123830652358172699223359813913702964782714843750",
+            "median": "70.884722316646655015937028565531363710761070251464843750",
+            "p90": "73.6300842435980729128175426012603566050529479980468750"
+          },
+          "alternative": {
+            "p10": "68.21600203823764961037337061184346033581371965079471982758620690",
+            "median": "73.25541197181906880904047684139343267627831163077518857758620690",
+            "p90": "76.00077389877048670592099087712242557057018937735721982758620690"
+          },
+          "paired_delta": {
+            "p10": "2.370689655172413793103448275862068965517241379310344827586206900",
+            "median": "2.370689655172413793103448275862068965517241379310344827586206900",
+            "p90": "2.370689655172413793103448275862068965517241379310344827586206900"
+          },
+          "positive_samples": 64,
+          "equal_samples": 0,
+          "negative_samples": 0
+        },
+        {
+          "key": "audience_unrounded",
+          "label": "Audience",
+          "unit": "points",
+          "baseline": {
+            "p10": "59.777183415974040392448785041779046878218650817871093750",
+            "median": "63.674459193089251507480241798475617542862892150878906250",
+            "p90": "67.525567765107205375763044230552623048424720764160156250"
+          },
+          "alternative": {
+            "p10": "61.58752824356024728900050917971008136097727150752626616379310345",
+            "median": "65.48480402067545840403196593640665202562151284053407866379310345",
+            "p90": "69.33591259269341227231476836848365753118334145381532866379310345"
+          },
+          "paired_delta": {
+            "p10": "1.810344827586206896551724137931034482758620689655172413793103450",
+            "median": "1.810344827586206896551724137931034482758620689655172413793103450",
+            "p90": "1.810344827586206896551724137931034482758620689655172413793103450"
+          },
+          "positive_samples": 64,
+          "equal_samples": 0,
+          "negative_samples": 0
+        },
+        {
+          "key": "worldwide_gross_usd",
+          "label": "Worldwide gross",
+          "unit": "USD",
+          "baseline": {
+            "p10": "15559266.7",
+            "median": "18426076.0",
+            "p90": "21432741.8"
+          },
+          "alternative": {
+            "p10": "16042554.8",
+            "median": "18927945.5",
+            "p90": "21954099.6"
+          },
+          "paired_delta": {
+            "p10": "483288.1",
+            "median": "501869.5",
+            "p90": "521357.8"
+          },
+          "positive_samples": 64,
+          "equal_samples": 0,
+          "negative_samples": 0
+        },
+        {
+          "key": "profit_usd",
+          "label": "Profit",
+          "unit": "USD",
+          "baseline": {
+            "p10": "-320366.5",
+            "median": "1113038.0",
+            "p90": "2616370.9"
+          },
+          "alternative": {
+            "p10": "-131222.6",
+            "median": "1311473.0",
+            "p90": "2824550.3"
+          },
+          "paired_delta": {
+            "p10": "189143.9",
+            "median": "198435.0",
+            "p90": "208179.4"
+          },
+          "positive_samples": 64,
+          "equal_samples": 0,
+          "negative_samples": 0
+        },
+        {
+          "key": "return_on_total_cost_percent",
+          "label": "Return on total cost",
+          "unit": "percent",
+          "baseline": {
+            "p10": "-3.955141975308641975308641975308641975308641975308641975308641976",
+            "median": "13.74120987654320987654320987654320987654320987654320987654320988",
+            "p90": "32.30087530864197530864197530864197530864197530864197530864197531"
+          },
+          "alternative": {
+            "p10": "-1.609599509352959214964734743943575590309720944495553511192885618",
+            "median": "16.08675866298681386077890217724624348359398957375038331800061331",
+            "p90": "34.64643115608708984973934375958295001533272002453235203925176326"
+          },
+          "paired_delta": {
+            "p10": "2.345540338682748986336842822583392960577873181369041534634910904",
+            "median": "2.345546015196429179869842243347303144911240587413540495417220350",
+            "p90": "2.345552425409156473247242949788181312253682692198484900110168432"
+          },
+          "positive_samples": 64,
+          "equal_samples": 0,
+          "negative_samples": 0
+        }
+      ],
+      "score": {
+        "baseline": 66,
+        "alternative": 68,
+        "delta": 2,
+        "unrounded_delta": "2.17292730437665782493368700265251989389920424403183023872679045",
+        "components": [
+          {
+            "name": "genre",
+            "baseline": "18.00",
+            "alternative": "19.29310344827586206896551724137931034482758620689655172413793104",
+            "delta": "1.29310344827586206896551724137931034482758620689655172413793104"
+          },
+          {
+            "name": "talent",
+            "baseline": "24.00",
+            "alternative": "24.51724137931034482758620689655172413793103448275862068965517241",
+            "delta": "0.51724137931034482758620689655172413793103448275862068965517241"
+          },
+          {
+            "name": "chemistry",
+            "baseline": "15.00",
+            "alternative": "15.00",
+            "delta": "0.00"
+          },
+          {
+            "name": "efficiency",
+            "baseline": "8.9250",
+            "alternative": "9.287582476790450928381962864721485411140583554376657824933687001",
+            "delta": "0.362582476790450928381962864721485411140583554376657824933687001"
+          }
+        ]
+      },
+      "explanation": {
+        "baseline_row": {
+          "slot": "director",
+          "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "name": "Synthetic Director",
+          "role": "director",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "1.5",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": null,
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "10.34482758620689655172413793103448275862068965517241379310344828",
+          "talent_contribution": "13.79310344827586206896551724137931034482758620689655172413793103"
+        },
+        "alternative_row": {
+          "slot": "director",
+          "person_id": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+          "name": "Synthetic Alternative Director",
+          "role": "director",
+          "source": "fixture",
+          "hiring_fee_usd": 450000,
+          "weight": "1.5",
+          "talent": "90",
+          "genre_fit": "85",
+          "cast_appeal": null,
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "14.65517241379310344827586206896551724137931034482758620689655172",
+          "talent_contribution": "15.51724137931034482758620689655172413793103448275862068965517241"
+        },
+        "chemistry_before": "60",
+        "chemistry_after": "60",
+        "chemistry_delta": "0",
+        "relationships": [
+          {
+            "slot_a": "director",
+            "slot_b": "lead",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "lead",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Lead",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+                "actor"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "lead",
+              "person_id_a": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+              "person_id_b": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+              "name_a": "Synthetic Alternative Director",
+              "name_b": "Synthetic Lead",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+                "director"
+              ],
+              "canonical_b": [
+                "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+                "actor"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "co_lead",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "co_lead",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Co Lead",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+                "actor"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "co_lead",
+              "person_id_a": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+              "person_id_b": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+              "name_a": "Synthetic Alternative Director",
+              "name_b": "Synthetic Co Lead",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+                "director"
+              ],
+              "canonical_b": [
+                "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+                "actor"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "supporting_1",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "supporting_1",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Supporting 1",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+                "actor"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "supporting_1",
+              "person_id_a": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+              "person_id_b": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+              "name_a": "Synthetic Alternative Director",
+              "name_b": "Synthetic Supporting 1",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+                "director"
+              ],
+              "canonical_b": [
+                "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+                "actor"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "supporting_2",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "supporting_2",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Supporting 2",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+                "actor"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "supporting_2",
+              "person_id_a": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+              "person_id_b": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+              "name_a": "Synthetic Alternative Director",
+              "name_b": "Synthetic Supporting 2",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+                "actor"
+              ],
+              "canonical_b": [
+                "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+                "director"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "writer",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "writer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Writer",
+              "role_a": "director",
+              "role_b": "writer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+                "writer"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "writer",
+              "person_id_a": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+              "person_id_b": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+              "name_a": "Synthetic Alternative Director",
+              "name_b": "Synthetic Writer",
+              "role_a": "director",
+              "role_b": "writer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+                "director"
+              ],
+              "canonical_b": [
+                "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+                "writer"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "cinematographer",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "cinematographer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Cinematographer",
+              "role_a": "director",
+              "role_b": "cinematographer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+                "cinematographer"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "cinematographer",
+              "person_id_a": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+              "person_id_b": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+              "name_a": "Synthetic Alternative Director",
+              "name_b": "Synthetic Cinematographer",
+              "role_a": "director",
+              "role_b": "cinematographer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+                "director"
+              ],
+              "canonical_b": [
+                "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+                "cinematographer"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "composer",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "composer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Composer",
+              "role_a": "director",
+              "role_b": "composer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+                "composer"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "composer",
+              "person_id_a": "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+              "person_id_b": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+              "name_a": "Synthetic Alternative Director",
+              "name_b": "Synthetic Composer",
+              "role_a": "director",
+              "role_b": "composer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "5b7b1935-fc19-5bc4-8a1e-01a4b763772c",
+                "director"
+              ],
+              "canonical_b": [
+                "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+                "composer"
+              ]
+            },
+            "bonus_delta": 0
+          }
+        ],
+        "baseline_warnings": [],
+        "alternative_warnings": [],
+        "note": "Hypothetical game scenarios, not real-world predictions. P10\u2013P90 describes simulated outcomes, not a confidence interval. Paired median differences need not equal the difference of two medians."
+      },
+      "reproducibility": {
+        "manifest": {
+          "version": "whatif-1.0",
+          "engine_manifest_hash": "5a01b76138244bc22684a48efc1acf140c9bf88ce967c87feca12f0d29afc8a3",
+          "samples": 64,
+          "sample_seed": "SHA256 canonical JSON [whatif-1.0, source_input_hash, sample_index]; indices 0..63",
+          "pairing": "same three named Phase 8 noise draws for both teams in each scenario",
+          "quantiles": "linear interpolation at (n-1)*p; p=0.1,0.5,0.9",
+          "deltas": "alternative minus baseline within each scenario, then summarize",
+          "reviews": "unrounded Decimal values; financial dollar rounding inherited from simulation-1.0",
+          "arithmetic": "Decimal precision 64; ROUND_HALF_UP",
+          "official_results_unchanged": true
+        },
+        "manifest_hash": "6d90507f591364e28c63be217422587edfaedaa9157cc193ec60f1d0ba71e3b1",
+        "sample_seeds": [
+          "c071264e19d89b5027bfea4d735565b4de9c59988d4cb8d86a447089b20f018f",
+          "25d9f1e3e636ff1591af04a5dacd0668494b8cbeaa06bff2a018309e5d1fbb0b",
+          "71e6c91023d4e55ddb3a733eafc640a70869a1d2c9f20ae255c668c4198cc2c9",
+          "21b65e0bd0c9a3bc036921c273895d74357a468c31f3ec138ebfb108695cbe2f",
+          "2deebbfc5218ced0f03de6c8491b383d0feac4cdc3caadc14bd1c9c515d2c717",
+          "a489591bf7d2fd3563fe6d44621207d75f931cfc7edfff78723d37cd432ca65c",
+          "441c792b7d89f3d902a86257dc67dbca7872d12fc5f5d14a84c4bbd6cf385852",
+          "4928df2bdc7b339fe3712d3d661fdf927d66cd533fd77755cf48692f96a0770e",
+          "d9ea42dc1dca52cfc4425c0517a5e38f81d855f1c6b939c76371260370db8279",
+          "9b5abbe25e17daaec234e6eac5f49697a2d86cdf94659a6b1ead5cb3bfcd47d2",
+          "a505e813c35a58d4cf3a48be3cbb006e934ebb279c7ba34462f3f23a7808322b",
+          "076777b064ae5980f638da6ad5d2df230fadbcc1b9cf5ac00fb00fcd2658c9a9",
+          "67a81c7a5cd83de9ea57d6cc1e6a4c13eba45d9ba79cd7aaa5ebbb4ef2540410",
+          "affd52a5d0c152fcac18dc95ff90e3e28418551ffbbcb0efb76cd9008773a91c",
+          "91b9d24b58a2b78607eb9853436baee41cfc5d979751ccf759fdc45cb9f213cf",
+          "7ed60cec1c7d2d9a8891a70b2c131d6093e7fd99dc921654b93570651849087b",
+          "4ec71c2f73fece906bf279eb43f40805af0a981eda2d5f8c6211a1d59c026188",
+          "f05961549c16209ca017e0ef18de1b65ee5e0c6f441394243b208e70cb0bb4e4",
+          "b1b4a7785f93d55ce59140f584b4b401b54c97edaddc63e761145b00e4a52730",
+          "c1b8d451657c1a21dbe0316e33ee6edc856c02d42c47ce303bd1d96907c197e4",
+          "e7f79fa1f0eda150f608fc50bb9fa45c2e4983b9f92dd41ec6ca48ea98658245",
+          "019dc35a10bae5ed52d38fe075851c3a3c7e2800fd1bfa752284e22cf2bb0282",
+          "1d63725fccd33272c4d920288326b9e30d05305b523d5e5e5b74501baadbc315",
+          "256ad174b78111e237635029f3243f8fc588c7da14b9d15506d1e9fecccf449e",
+          "e22da3438aabc39c205e735587d6a07f8b58719424acd303b41f4716822c3adb",
+          "cbea4cda713bf5ad0c92532e508c1f8f1b76af1190697c4cd6e8e0816e23b418",
+          "be9086c6bc7986f3ea7010876bf2c53bc529cfd940b567503f3816580ab2e35e",
+          "da77498f0defe81b1010825b7d7e37eb34f58f20f9098fb13753fd1981ec63df",
+          "9cc9982d1740d4e72e0578b06a4b5c924e0636811fbca8207acafa6a9bd367bd",
+          "273da24f7987a459b94c1e1bbc7768c652d6579596767cf9031ddeb90026a383",
+          "6c9980d248e000b8be836113c005e932933492f444269835007cff11ce2a351e",
+          "c5c7400e0b30d5ae865818d88de13deef4d6095530a91764d629569bf21cb29d",
+          "df57c8a27e29a0d908d99d939c9f7b42a2f0fc8e083420404241cbd219235f8f",
+          "73e0f4408601d3299c89ab58b884f178f9c639fe4fddce5908192d3d119210e1",
+          "e35d44e4a2e1cf8857623a24281fadf875a77f8f68a49f00e80cbdb75e1633de",
+          "7de8a8100f57b597493f250e65551487cdcbedf8f4486d2935e2e9e3224e7cdf",
+          "0e55e4676760cb11f1992c59b4902f58bdbec651ebfe85fb5ad5fcdc5dbe4c6c",
+          "7e0b2fd11fc08e0ae58cd79827b5df67c8b51f6184bfc9aa60b3e0646eaec047",
+          "3565b3c02357eda0a7d95c9579b1a95c47829ce7c16fe0176ded0e38bd4d7c31",
+          "d339281849e404c373933b7303a7731b3cf9a38c968d93a107d885f5fbbc0e67",
+          "1e4419aa3b4f178756d14bf8937065637cb46d1b99845713f39360316e8d4490",
+          "2a6076caed6c2f42bc8ab7e4955b78815c7b36821607b2df349b6657bc33ab9f",
+          "bf42bd83294c0e6251231d6586df8830957938f49d43cf1ca3aa4086bc1c61cf",
+          "0bdd00d0f909d202d1a48215446efff86a0da729ccc7e2b23e4b760c35f70db2",
+          "7edfc46fda1fd0cd7a3ae9236a914625be270dcb3392044b27d190381046201f",
+          "ae63e1eeed8a070ed82338dd096375fe697bd0a8d4d3c1575d9a3e87cbd28860",
+          "81149afeea71076af28d7e3fa76dd09a2e23bcca1692a69825d6694713c9a388",
+          "63b2e55423c936572a1208b86e7fda37206424b069058440d9b0c50f2321d4f8",
+          "83d784f0d6e3446c0f9dfcd348a896a515f9f5a5e4f4f0dddb676cd07e66fe69",
+          "4445313d7568751acc74d4f5fcd4ad6c61054313e4851b8e7c386b0bbed73aa0",
+          "be044e3f33db21bb9ed1aca721ea931a45e137e76e0663ab4e36b0d439e2208b",
+          "a432731e51b3aa297237a14fbea1eb02325330f235b3ead38b3b36363945eb86",
+          "174a4e07e8c9f2eb680d605f8bc327e3ad22ac86ccc2490afdb176d676337b3a",
+          "49f4c518563ce4a303ac4aa4a8b7db165ac21bcc6764a94b44b5c211d2761b21",
+          "91ec9362827e1027dd7acef71cf2c0ebc81ee9247c4118f665c16700aba21c74",
+          "ae810d8c537627fb2fe7755a6c7faf93dc7cbba58e90758e4688c8879a0e09c2",
+          "14585c7d42ad538631147bf3a66d8c1cc4b9a26898b834101e72a939826d0433",
+          "f946b372627c1e6f7dacfe7133958d76fe8956cafc325a080b29bb160664124d",
+          "7952271b3e67f676a5837690527b4b6e9aa0924c7e904701727dcce10c286e82",
+          "3d38ea2a0918a533a27ad46f97a2efe4cf6863e04d596818bd0ef4356388e4c6",
+          "8c0e8abc57fee0b9f8ea8bae7caf46e3d853d1654d0947c4f9387857ecc450d7",
+          "7e02fea8d4bdbc3ba74e3bddb36e013a84b716e8a61995b327660581e402ab60",
+          "9f407042309b077505712638c868849f9c1b09eae82d6236c56f37725447ec91",
+          "1b2148f2000184963cb39e11f7156ba6e6d43a47383aa5849b7d7d7fa37830f3"
+        ],
+        "baseline_team_hash": "db18e248f14d16e1827b304631744121e342dfe52f9b30befe96883d45685c81",
+        "alternative_team_hash": "ce4a40d26d3a38dfb9065877a3d8084850cedfd1e45680b73f21fa7f63848f2a"
+      }
+    }
+  },
+  "control_saved": {
+    "analysis_id": "22222222-2222-4222-8222-222222222222",
+    "created_at": "2026-11-01T12:00:00Z",
+    "input_hash": "db2542c107858b7b2be4532449f44479af878ac26c9a12fa3661d2c3201637c0",
+    "output_hash": "3f5913cc5d84d2f1c5ba8ebd8fdf0583ce55b69ce28512d61dc4233070760a98",
+    "comparison": {
+      "schema_version": "phase11-result-v1",
+      "hypothetical": true,
+      "version": "whatif-1.0",
+      "draft_id": "6d298876-377c-53a7-af2a-4da89c26691b",
+      "source_input_hash": "db64a0c4d6eafcc8654738a69c474d08bab16645514c62fea09f27e395a6ed0f",
+      "source_output_hash": "14016b0d022bb223f41896463322e62da8585b188f24e87b299c65412f1a2ce4",
+      "sample_count": 64,
+      "sample_hash": "4777e4514414a0094b9ab69a5be918394becee01ec20067773935ccb373db5c1",
+      "unchanged": true,
+      "synthetic": true,
+      "slot": "director",
+      "baseline_card": {
+        "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+        "name": "Synthetic Director",
+        "role": "director",
+        "hiring_fee_usd": 406250,
+        "fee_is_fictional": true,
+        "source": "fixture",
+        "talent_strength": 80.0,
+        "genre_fit": 60.0,
+        "specialties": [],
+        "coverage": "Synthetic arithmetic only",
+        "notable_works": [],
+        "versions": {
+          "dataset_id": "fixture:phase8-example",
+          "feature_id": "features:phase8-example",
+          "pricing_id": "pricing:phase8-example",
+          "rules_id": "rules:classic-1.0",
+          "scoring_id": "scoring:baseline-1.0",
+          "ranking_version": "notability-1.0",
+          "role_mapping_version": "fixture:roles",
+          "prng_version": "sha256-order-1.0",
+          "simulation_version": "simulation-1.0",
+          "catalog_id": "draft-catalog:phase8-example",
+          "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "graph_id": "graph:phase8-example",
+          "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+          "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      },
+      "alternative_card": {
+        "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+        "name": "Synthetic Director",
+        "role": "director",
+        "hiring_fee_usd": 406250,
+        "fee_is_fictional": true,
+        "source": "fixture",
+        "talent_strength": 80.0,
+        "genre_fit": 60.0,
+        "specialties": [],
+        "coverage": "Synthetic arithmetic only",
+        "notable_works": [],
+        "versions": {
+          "dataset_id": "fixture:phase8-example",
+          "feature_id": "features:phase8-example",
+          "pricing_id": "pricing:phase8-example",
+          "rules_id": "rules:classic-1.0",
+          "scoring_id": "scoring:baseline-1.0",
+          "ranking_version": "notability-1.0",
+          "role_mapping_version": "fixture:roles",
+          "prng_version": "sha256-order-1.0",
+          "simulation_version": "simulation-1.0",
+          "catalog_id": "draft-catalog:phase8-example",
+          "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "graph_id": "graph:phase8-example",
+          "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+          "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      },
+      "budget": {
+        "refund_usd": 406250,
+        "replacement_fee_usd": 406250,
+        "net_fee_change_usd": 0,
+        "baseline_spend_usd": 3250000,
+        "alternative_spend_usd": 3250000,
+        "alternative_remaining_usd": 3250000,
+        "reserve_usd": 3500000,
+        "baseline_production_usd": 6750000,
+        "alternative_production_usd": 6750000,
+        "baseline_marketing_usd": 1350000,
+        "alternative_marketing_usd": 1350000
+      },
+      "metrics": [
+        {
+          "key": "critics_unrounded",
+          "label": "Critics",
+          "unit": "points",
+          "baseline": {
+            "p10": "65.8453123830652358172699223359813913702964782714843750",
+            "median": "70.884722316646655015937028565531363710761070251464843750",
+            "p90": "73.6300842435980729128175426012603566050529479980468750"
+          },
+          "alternative": {
+            "p10": "65.8453123830652358172699223359813913702964782714843750",
+            "median": "70.884722316646655015937028565531363710761070251464843750",
+            "p90": "73.6300842435980729128175426012603566050529479980468750"
+          },
+          "paired_delta": {
+            "p10": "0.000000000000000000000000000000000000000000000000000000",
+            "median": "0.000000000000000000000000000000000000000000000000000000",
+            "p90": "0.000000000000000000000000000000000000000000000000000000"
+          },
+          "positive_samples": 0,
+          "equal_samples": 64,
+          "negative_samples": 0
+        },
+        {
+          "key": "audience_unrounded",
+          "label": "Audience",
+          "unit": "points",
+          "baseline": {
+            "p10": "59.777183415974040392448785041779046878218650817871093750",
+            "median": "63.674459193089251507480241798475617542862892150878906250",
+            "p90": "67.525567765107205375763044230552623048424720764160156250"
+          },
+          "alternative": {
+            "p10": "59.777183415974040392448785041779046878218650817871093750",
+            "median": "63.674459193089251507480241798475617542862892150878906250",
+            "p90": "67.525567765107205375763044230552623048424720764160156250"
+          },
+          "paired_delta": {
+            "p10": "0.00000000000000000000000000000000000000000000000000000",
+            "median": "0.000000000000000000000000000000000000000000000000000",
+            "p90": "0.000000000000000000000000000000000000000000000000000000"
+          },
+          "positive_samples": 0,
+          "equal_samples": 64,
+          "negative_samples": 0
+        },
+        {
+          "key": "worldwide_gross_usd",
+          "label": "Worldwide gross",
+          "unit": "USD",
+          "baseline": {
+            "p10": "15559266.7",
+            "median": "18426076.0",
+            "p90": "21432741.8"
+          },
+          "alternative": {
+            "p10": "15559266.7",
+            "median": "18426076.0",
+            "p90": "21432741.8"
+          },
+          "paired_delta": {
+            "p10": "0.0",
+            "median": "0.0",
+            "p90": "0.0"
+          },
+          "positive_samples": 0,
+          "equal_samples": 64,
+          "negative_samples": 0
+        },
+        {
+          "key": "profit_usd",
+          "label": "Profit",
+          "unit": "USD",
+          "baseline": {
+            "p10": "-320366.5",
+            "median": "1113038.0",
+            "p90": "2616370.9"
+          },
+          "alternative": {
+            "p10": "-320366.5",
+            "median": "1113038.0",
+            "p90": "2616370.9"
+          },
+          "paired_delta": {
+            "p10": "0.0",
+            "median": "0.0",
+            "p90": "0.0"
+          },
+          "positive_samples": 0,
+          "equal_samples": 64,
+          "negative_samples": 0
+        },
+        {
+          "key": "return_on_total_cost_percent",
+          "label": "Return on total cost",
+          "unit": "percent",
+          "baseline": {
+            "p10": "-3.955141975308641975308641975308641975308641975308641975308641976",
+            "median": "13.74120987654320987654320987654320987654320987654320987654320988",
+            "p90": "32.30087530864197530864197530864197530864197530864197530864197531"
+          },
+          "alternative": {
+            "p10": "-3.955141975308641975308641975308641975308641975308641975308641976",
+            "median": "13.74120987654320987654320987654320987654320987654320987654320988",
+            "p90": "32.30087530864197530864197530864197530864197530864197530864197531"
+          },
+          "paired_delta": {
+            "p10": "0.0000000000000000000000000000000000000000000000000000000000000000",
+            "median": "0.0000000000000000000000000000000000000000000000000000000000000000",
+            "p90": "0.000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "positive_samples": 0,
+          "equal_samples": 64,
+          "negative_samples": 0
+        }
+      ],
+      "score": {
+        "baseline": 66,
+        "alternative": 66,
+        "delta": 0,
+        "unrounded_delta": "0.0000",
+        "components": [
+          {
+            "name": "genre",
+            "baseline": "18.00",
+            "alternative": "18.00",
+            "delta": "0.00"
+          },
+          {
+            "name": "talent",
+            "baseline": "24.00",
+            "alternative": "24.00",
+            "delta": "0.00"
+          },
+          {
+            "name": "chemistry",
+            "baseline": "15.00",
+            "alternative": "15.00",
+            "delta": "0.00"
+          },
+          {
+            "name": "efficiency",
+            "baseline": "8.9250",
+            "alternative": "8.9250",
+            "delta": "0.0000"
+          }
+        ]
+      },
+      "explanation": {
+        "baseline_row": {
+          "slot": "director",
+          "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "name": "Synthetic Director",
+          "role": "director",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "1.5",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": null,
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "10.34482758620689655172413793103448275862068965517241379310344828",
+          "talent_contribution": "13.79310344827586206896551724137931034482758620689655172413793103"
+        },
+        "alternative_row": {
+          "slot": "director",
+          "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "name": "Synthetic Director",
+          "role": "director",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "1.5",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": null,
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "10.34482758620689655172413793103448275862068965517241379310344828",
+          "talent_contribution": "13.79310344827586206896551724137931034482758620689655172413793103"
+        },
+        "chemistry_before": "60",
+        "chemistry_after": "60",
+        "chemistry_delta": "0",
+        "relationships": [
+          {
+            "slot_a": "director",
+            "slot_b": "lead",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "lead",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Lead",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+                "actor"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "lead",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Lead",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+                "actor"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "co_lead",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "co_lead",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Co Lead",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+                "actor"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "co_lead",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Co Lead",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+                "actor"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "supporting_1",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "supporting_1",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Supporting 1",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+                "actor"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "supporting_1",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Supporting 1",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+                "actor"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "supporting_2",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "supporting_2",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Supporting 2",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+                "actor"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "supporting_2",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Supporting 2",
+              "role_a": "director",
+              "role_b": "actor",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+                "actor"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "writer",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "writer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Writer",
+              "role_a": "director",
+              "role_b": "writer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+                "writer"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "writer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Writer",
+              "role_a": "director",
+              "role_b": "writer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+                "writer"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "cinematographer",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "cinematographer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Cinematographer",
+              "role_a": "director",
+              "role_b": "cinematographer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+                "cinematographer"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "cinematographer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Cinematographer",
+              "role_a": "director",
+              "role_b": "cinematographer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ],
+              "canonical_b": [
+                "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+                "cinematographer"
+              ]
+            },
+            "bonus_delta": 0
+          },
+          {
+            "slot_a": "director",
+            "slot_b": "composer",
+            "before": {
+              "slot_a": "director",
+              "slot_b": "composer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Composer",
+              "role_a": "director",
+              "role_b": "composer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+                "composer"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "after": {
+              "slot_a": "director",
+              "slot_b": "composer",
+              "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+              "person_id_b": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+              "name_a": "Synthetic Director",
+              "name_b": "Synthetic Composer",
+              "role_a": "director",
+              "role_b": "composer",
+              "edge_id": null,
+              "shared_movie_count": 0,
+              "bonus": 0,
+              "message": "No shared credits found in this dataset.",
+              "evidence": [],
+              "canonical_a": [
+                "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+                "composer"
+              ],
+              "canonical_b": [
+                "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+                "director"
+              ]
+            },
+            "bonus_delta": 0
+          }
+        ],
+        "baseline_warnings": [],
+        "alternative_warnings": [],
+        "note": "Hypothetical game scenarios, not real-world predictions. P10\u2013P90 describes simulated outcomes, not a confidence interval. Paired median differences need not equal the difference of two medians."
+      },
+      "reproducibility": {
+        "manifest": {
+          "version": "whatif-1.0",
+          "engine_manifest_hash": "5a01b76138244bc22684a48efc1acf140c9bf88ce967c87feca12f0d29afc8a3",
+          "samples": 64,
+          "sample_seed": "SHA256 canonical JSON [whatif-1.0, source_input_hash, sample_index]; indices 0..63",
+          "pairing": "same three named Phase 8 noise draws for both teams in each scenario",
+          "quantiles": "linear interpolation at (n-1)*p; p=0.1,0.5,0.9",
+          "deltas": "alternative minus baseline within each scenario, then summarize",
+          "reviews": "unrounded Decimal values; financial dollar rounding inherited from simulation-1.0",
+          "arithmetic": "Decimal precision 64; ROUND_HALF_UP",
+          "official_results_unchanged": true
+        },
+        "manifest_hash": "6d90507f591364e28c63be217422587edfaedaa9157cc193ec60f1d0ba71e3b1",
+        "sample_seeds": [
+          "c071264e19d89b5027bfea4d735565b4de9c59988d4cb8d86a447089b20f018f",
+          "25d9f1e3e636ff1591af04a5dacd0668494b8cbeaa06bff2a018309e5d1fbb0b",
+          "71e6c91023d4e55ddb3a733eafc640a70869a1d2c9f20ae255c668c4198cc2c9",
+          "21b65e0bd0c9a3bc036921c273895d74357a468c31f3ec138ebfb108695cbe2f",
+          "2deebbfc5218ced0f03de6c8491b383d0feac4cdc3caadc14bd1c9c515d2c717",
+          "a489591bf7d2fd3563fe6d44621207d75f931cfc7edfff78723d37cd432ca65c",
+          "441c792b7d89f3d902a86257dc67dbca7872d12fc5f5d14a84c4bbd6cf385852",
+          "4928df2bdc7b339fe3712d3d661fdf927d66cd533fd77755cf48692f96a0770e",
+          "d9ea42dc1dca52cfc4425c0517a5e38f81d855f1c6b939c76371260370db8279",
+          "9b5abbe25e17daaec234e6eac5f49697a2d86cdf94659a6b1ead5cb3bfcd47d2",
+          "a505e813c35a58d4cf3a48be3cbb006e934ebb279c7ba34462f3f23a7808322b",
+          "076777b064ae5980f638da6ad5d2df230fadbcc1b9cf5ac00fb00fcd2658c9a9",
+          "67a81c7a5cd83de9ea57d6cc1e6a4c13eba45d9ba79cd7aaa5ebbb4ef2540410",
+          "affd52a5d0c152fcac18dc95ff90e3e28418551ffbbcb0efb76cd9008773a91c",
+          "91b9d24b58a2b78607eb9853436baee41cfc5d979751ccf759fdc45cb9f213cf",
+          "7ed60cec1c7d2d9a8891a70b2c131d6093e7fd99dc921654b93570651849087b",
+          "4ec71c2f73fece906bf279eb43f40805af0a981eda2d5f8c6211a1d59c026188",
+          "f05961549c16209ca017e0ef18de1b65ee5e0c6f441394243b208e70cb0bb4e4",
+          "b1b4a7785f93d55ce59140f584b4b401b54c97edaddc63e761145b00e4a52730",
+          "c1b8d451657c1a21dbe0316e33ee6edc856c02d42c47ce303bd1d96907c197e4",
+          "e7f79fa1f0eda150f608fc50bb9fa45c2e4983b9f92dd41ec6ca48ea98658245",
+          "019dc35a10bae5ed52d38fe075851c3a3c7e2800fd1bfa752284e22cf2bb0282",
+          "1d63725fccd33272c4d920288326b9e30d05305b523d5e5e5b74501baadbc315",
+          "256ad174b78111e237635029f3243f8fc588c7da14b9d15506d1e9fecccf449e",
+          "e22da3438aabc39c205e735587d6a07f8b58719424acd303b41f4716822c3adb",
+          "cbea4cda713bf5ad0c92532e508c1f8f1b76af1190697c4cd6e8e0816e23b418",
+          "be9086c6bc7986f3ea7010876bf2c53bc529cfd940b567503f3816580ab2e35e",
+          "da77498f0defe81b1010825b7d7e37eb34f58f20f9098fb13753fd1981ec63df",
+          "9cc9982d1740d4e72e0578b06a4b5c924e0636811fbca8207acafa6a9bd367bd",
+          "273da24f7987a459b94c1e1bbc7768c652d6579596767cf9031ddeb90026a383",
+          "6c9980d248e000b8be836113c005e932933492f444269835007cff11ce2a351e",
+          "c5c7400e0b30d5ae865818d88de13deef4d6095530a91764d629569bf21cb29d",
+          "df57c8a27e29a0d908d99d939c9f7b42a2f0fc8e083420404241cbd219235f8f",
+          "73e0f4408601d3299c89ab58b884f178f9c639fe4fddce5908192d3d119210e1",
+          "e35d44e4a2e1cf8857623a24281fadf875a77f8f68a49f00e80cbdb75e1633de",
+          "7de8a8100f57b597493f250e65551487cdcbedf8f4486d2935e2e9e3224e7cdf",
+          "0e55e4676760cb11f1992c59b4902f58bdbec651ebfe85fb5ad5fcdc5dbe4c6c",
+          "7e0b2fd11fc08e0ae58cd79827b5df67c8b51f6184bfc9aa60b3e0646eaec047",
+          "3565b3c02357eda0a7d95c9579b1a95c47829ce7c16fe0176ded0e38bd4d7c31",
+          "d339281849e404c373933b7303a7731b3cf9a38c968d93a107d885f5fbbc0e67",
+          "1e4419aa3b4f178756d14bf8937065637cb46d1b99845713f39360316e8d4490",
+          "2a6076caed6c2f42bc8ab7e4955b78815c7b36821607b2df349b6657bc33ab9f",
+          "bf42bd83294c0e6251231d6586df8830957938f49d43cf1ca3aa4086bc1c61cf",
+          "0bdd00d0f909d202d1a48215446efff86a0da729ccc7e2b23e4b760c35f70db2",
+          "7edfc46fda1fd0cd7a3ae9236a914625be270dcb3392044b27d190381046201f",
+          "ae63e1eeed8a070ed82338dd096375fe697bd0a8d4d3c1575d9a3e87cbd28860",
+          "81149afeea71076af28d7e3fa76dd09a2e23bcca1692a69825d6694713c9a388",
+          "63b2e55423c936572a1208b86e7fda37206424b069058440d9b0c50f2321d4f8",
+          "83d784f0d6e3446c0f9dfcd348a896a515f9f5a5e4f4f0dddb676cd07e66fe69",
+          "4445313d7568751acc74d4f5fcd4ad6c61054313e4851b8e7c386b0bbed73aa0",
+          "be044e3f33db21bb9ed1aca721ea931a45e137e76e0663ab4e36b0d439e2208b",
+          "a432731e51b3aa297237a14fbea1eb02325330f235b3ead38b3b36363945eb86",
+          "174a4e07e8c9f2eb680d605f8bc327e3ad22ac86ccc2490afdb176d676337b3a",
+          "49f4c518563ce4a303ac4aa4a8b7db165ac21bcc6764a94b44b5c211d2761b21",
+          "91ec9362827e1027dd7acef71cf2c0ebc81ee9247c4118f665c16700aba21c74",
+          "ae810d8c537627fb2fe7755a6c7faf93dc7cbba58e90758e4688c8879a0e09c2",
+          "14585c7d42ad538631147bf3a66d8c1cc4b9a26898b834101e72a939826d0433",
+          "f946b372627c1e6f7dacfe7133958d76fe8956cafc325a080b29bb160664124d",
+          "7952271b3e67f676a5837690527b4b6e9aa0924c7e904701727dcce10c286e82",
+          "3d38ea2a0918a533a27ad46f97a2efe4cf6863e04d596818bd0ef4356388e4c6",
+          "8c0e8abc57fee0b9f8ea8bae7caf46e3d853d1654d0947c4f9387857ecc450d7",
+          "7e02fea8d4bdbc3ba74e3bddb36e013a84b716e8a61995b327660581e402ab60",
+          "9f407042309b077505712638c868849f9c1b09eae82d6236c56f37725447ec91",
+          "1b2148f2000184963cb39e11f7156ba6e6d43a47383aa5849b7d7d7fa37830f3"
+        ],
+        "baseline_team_hash": "db18e248f14d16e1827b304631744121e342dfe52f9b30befe96883d45685c81",
+        "alternative_team_hash": "db18e248f14d16e1827b304631744121e342dfe52f9b30befe96883d45685c81"
+      }
+    }
+  }
+}
