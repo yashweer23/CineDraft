@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CineDraft: Original prototype (start server first)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:5500",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "CineDraft: React frontend (start services first)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:5174",
+      "webRoot": "${workspaceFolder}/frontend"
+    }
+  ]
+}

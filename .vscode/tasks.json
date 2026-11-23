@@ -1,0 +1,392 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CineDraft: Start original prototype",
+      "type": "process",
+      "command": "node",
+      "args": [
+        "scripts/serve.cjs"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "CineDraft: Run legacy checks",
+      "type": "process",
+      "command": "node",
+      "args": [
+        "--test",
+        "tests/engine.test.cjs",
+        "tests/server.test.cjs"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Start React frontend",
+      "type": "shell",
+      "command": "npm --prefix frontend run dev -- --port 5174",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Check full-stack connection",
+      "type": "process",
+      "command": "node",
+      "args": [
+        "scripts/check-stack.cjs"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Apply database migrations",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "exec",
+        "api",
+        "python",
+        "-m",
+        "alembic",
+        "upgrade",
+        "head"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Load synthetic fixture",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "exec",
+        "api",
+        "python",
+        "-m",
+        "scripts.seed_demo"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Inspect frozen fixture",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "exec",
+        "api",
+        "python",
+        "-m",
+        "scripts.inspect_demo"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: TMDB smoke check",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--rm",
+        "api",
+        "python",
+        "-m",
+        "scripts.import_tmdb",
+        "smoke"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Run PostgreSQL checks",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "--profile",
+        "verification",
+        "run",
+        "--rm",
+        "--build",
+        "api-tests"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Preview talent build",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--rm",
+        "api",
+        "python",
+        "-m",
+        "scripts.build_talent",
+        "--dataset",
+        "${input:talentDataset}",
+        "--version",
+        "${input:talentVersion}",
+        "--dry-run"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Publish talent build",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--rm",
+        "api",
+        "python",
+        "-m",
+        "scripts.build_talent",
+        "--dataset",
+        "${input:talentDataset}",
+        "--version",
+        "${input:talentVersion}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Preview draft catalog",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--rm",
+        "api",
+        "python",
+        "-m",
+        "scripts.prepare_drafting",
+        "--pricing",
+        "${input:draftPricing}",
+        "--graph",
+        "${input:draftGraph}",
+        "--version",
+        "${input:draftVersion}",
+        "--dry-run"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Activate draft catalog",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--rm",
+        "api",
+        "python",
+        "-m",
+        "scripts.prepare_drafting",
+        "--pricing",
+        "${input:draftPricing}",
+        "--graph",
+        "${input:draftGraph}",
+        "--version",
+        "${input:draftVersion}",
+        "--activate"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Verify saved release",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--rm",
+        "api",
+        "python",
+        "-m",
+        "scripts.verify_release",
+        "--draft",
+        "${input:releasedDraftId}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Build Phase 12 synthetic BI dashboard",
+      "type": "process",
+      "command": "${workspaceFolder}/backend/.venv/bin/python",
+      "windows": {
+        "command": "${workspaceFolder}/backend/.venv/Scripts/python.exe"
+      },
+      "args": [
+        "-m",
+        "scripts.gameplay_analytics",
+        "demo",
+        "--out",
+        "${workspaceFolder}/analytics-output/demo"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Run Phase 13 balance experiment",
+      "type": "process",
+      "command": "${workspaceFolder}/backend/.venv/bin/python",
+      "windows": {
+        "command": "${workspaceFolder}/backend/.venv/Scripts/python.exe"
+      },
+      "args": [
+        "-m",
+        "scripts.validate_balance",
+        "--out",
+        "${workspaceFolder}/validation-output/balance"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Benchmark exact roster solver",
+      "type": "process",
+      "command": "${workspaceFolder}/backend/.venv/bin/python",
+      "windows": {
+        "command": "${workspaceFolder}/backend/.venv/Scripts/python.exe"
+      },
+      "args": [
+        "-m",
+        "scripts.benchmark_assignment",
+        "--out",
+        "${workspaceFolder}/validation-output/assignment.json"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Preview the portfolio catalog",
+      "type": "process",
+      "command": "${workspaceFolder}/backend/.venv/bin/python",
+      "windows": {
+        "command": "${workspaceFolder}/backend/.venv/Scripts/python.exe"
+      },
+      "args": [
+        "-m",
+        "scripts.prepare_demo",
+        "--preview"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CineDraft: Run the worked film",
+      "type": "process",
+      "command": "${workspaceFolder}/backend/.venv/bin/python",
+      "windows": {
+        "command": "${workspaceFolder}/backend/.venv/Scripts/python.exe"
+      },
+      "args": [
+        "-m",
+        "scripts.portfolio_tour"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "talentDataset",
+      "type": "promptString",
+      "description": "Exact sealed dataset ID",
+      "default": "tmdb:first-import-v1"
+    },
+    {
+      "id": "talentVersion",
+      "type": "promptString",
+      "description": "New talent build version label",
+      "default": "first-ratings-v1"
+    },
+    {
+      "id": "draftPricing",
+      "type": "promptString",
+      "description": "Compatible published pricing ID",
+      "default": "pricing:first-ratings-v1"
+    },
+    {
+      "id": "draftGraph",
+      "type": "promptString",
+      "description": "Compatible graph ID from the same dataset",
+      "default": "graph:first-graph-v1"
+    },
+    {
+      "id": "draftVersion",
+      "type": "promptString",
+      "description": "Draft catalog version label",
+      "default": "first-draft-v1"
+    },
+    {
+      "id": "releasedDraftId",
+      "type": "promptString",
+      "description": "Exact UUID of a released Phase 7 draft"
+    }
+  ]
+}
