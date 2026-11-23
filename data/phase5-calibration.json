@@ -1,0 +1,1098 @@
+{
+  "synthetic": true,
+  "tmdb_requests": 0,
+  "note": "Invented demonstration records. These are not real films, people, fees or source ratings.",
+  "people": {
+    "02e72d17-a4c1-55e2-8f45-7f3412969a04": "Synthetic Visible Actor",
+    "9b34350f-0424-5f49-9d7e-86c1c54312a0": "Synthetic Less-Visible Actor",
+    "1fbd6ca0-42cf-5405-9efc-33c5d171f5a2": "Synthetic Director-Writer"
+  },
+  "movies": {
+    "4d9a0e98-846e-5b5f-ba34-bab261e95972": "Synthetic Supported Drama",
+    "1df12d36-858c-5d0c-b9af-0037c73996c8": "Synthetic Two-Vote Outlier",
+    "8d7bff8a-2ed0-5fc1-bffa-0ded1d0619ae": "Synthetic Unrated Story",
+    "7d9bb533-bcf1-529e-90b5-c742f77e516c": "Synthetic Older Comedy",
+    "6530aa6e-b644-5f50-a57d-79baf5cfbe5e": "Synthetic Adventure Film",
+    "617642f9-d86f-575b-a2cc-8b77e03cd7b6": "Synthetic Crime Film",
+    "13bc0e46-ebec-5329-af7c-91199187cd5d": "Synthetic Romance Film"
+  },
+  "features": {
+    "parameters": {
+      "schema_version": "talent-1.0",
+      "ranking_version": "notability-1.0",
+      "film_prior_weight": 500,
+      "person_prior_films": 3,
+      "fallback_catalog_rating": "6.0",
+      "experience_cap_films": 30,
+      "versatility_cap_genres": 6,
+      "genre_prior_films": 5,
+      "missing_genre_prior": "0.5",
+      "strength_weights": [
+        "0.8",
+        "0.2"
+      ],
+      "notability_weights": [
+        "0.75",
+        "0.15",
+        "0.08",
+        "0.02"
+      ],
+      "vote_signal_cap": 100000,
+      "missing_person_popularity_appeal": 50,
+      "missing_person_popularity_price": 0,
+      "percentiles": "average zero-based rank / (observed count - 1); singleton 0.5",
+      "genre_prior_denominator": "distinct person/movie pairs per role",
+      "notability_ties": "unrounded score desc, effective votes desc, source asc, numeric TMDB ID asc or fixture key asc, UUID asc",
+      "arithmetic_precision": 50,
+      "stored_decimal_places": 6,
+      "rounding": "ROUND_HALF_UP"
+    },
+    "input_hash": "1ee187d335d5af3a0515d5ccd5474f7ae356bd969601cbd285ca41fb57c1ccc2",
+    "profiles": [
+      {
+        "person_id": "02e72d17-a4c1-55e2-8f45-7f3412969a04",
+        "role": "actor",
+        "attributes": {
+          "schema_version": "talent-1.0",
+          "talent_strength": 70.731227,
+          "reception": 73.275352,
+          "experience": 60.554726,
+          "versatility": 100.0,
+          "popularity_percentile": 100.0,
+          "appeal_popularity": 100.0,
+          "pricing_popularity": 100.0,
+          "genre_fit": {
+            "action": 20.833333,
+            "adventure": 14.285714,
+            "comedy": 14.285714,
+            "crime": 14.285714,
+            "drama": 42.857143,
+            "horror": 20.833333,
+            "mystery": 14.285714,
+            "romance": 14.285714,
+            "science_fiction": 20.833333,
+            "thriller": 20.833333
+          },
+          "specialties": [
+            "drama",
+            "adventure",
+            "comedy"
+          ],
+          "career_span_years": 7,
+          "coverage": {
+            "scope": "eligible imported catalog only",
+            "eligible_movies": 7,
+            "rated_movies": 6,
+            "level": "moderate",
+            "missing_person_popularity": false,
+            "reception_prior_only": false
+          }
+        },
+        "evidence": {
+          "movie_ids": [
+            "13bc0e46-ebec-5329-af7c-91199187cd5d",
+            "1df12d36-858c-5d0c-b9af-0037c73996c8",
+            "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+            "617642f9-d86f-575b-a2cc-8b77e03cd7b6",
+            "6530aa6e-b644-5f50-a57d-79baf5cfbe5e",
+            "7d9bb533-bcf1-529e-90b5-c742f77e516c",
+            "8d7bff8a-2ed0-5fc1-bffa-0ded1d0619ae"
+          ],
+          "rated_movie_ids": [
+            "13bc0e46-ebec-5329-af7c-91199187cd5d",
+            "1df12d36-858c-5d0c-b9af-0037c73996c8",
+            "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+            "617642f9-d86f-575b-a2cc-8b77e03cd7b6",
+            "6530aa6e-b644-5f50-a57d-79baf5cfbe5e",
+            "7d9bb533-bcf1-529e-90b5-c742f77e516c"
+          ],
+          "catalog_rating_prior": "7.4833333333333333333333333333333333333333333333333",
+          "catalog_rating_prior_is_fallback": false,
+          "genre_counts": {
+            "action": 0,
+            "adventure": 1,
+            "comedy": 1,
+            "crime": 1,
+            "drama": 3,
+            "horror": 0,
+            "mystery": 1,
+            "romance": 1,
+            "science_fiction": 0,
+            "thriller": 0
+          },
+          "genre_priors": {
+            "action": "0.5",
+            "adventure": "0.14285714285714285714285714285714285714285714285714",
+            "comedy": "0.14285714285714285714285714285714285714285714285714",
+            "crime": "0.14285714285714285714285714285714285714285714285714",
+            "drama": "0.42857142857142857142857142857142857142857142857143",
+            "horror": "0.5",
+            "mystery": "0.14285714285714285714285714285714285714285714285714",
+            "romance": "0.14285714285714285714285714285714285714285714285714",
+            "science_fiction": "0.5",
+            "thriller": "0.5"
+          },
+          "genre_catalog_gaps": [
+            "action",
+            "horror",
+            "science_fiction",
+            "thriller"
+          ],
+          "reception_contributions": [
+            {
+              "movie_id": "13bc0e46-ebec-5329-af7c-91199187cd5d",
+              "adjusted_reception": 6.991667
+            },
+            {
+              "movie_id": "1df12d36-858c-5d0c-b9af-0037c73996c8",
+              "adjusted_reception": 7.492961
+            },
+            {
+              "movie_id": "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+              "adjusted_reception": 7.95303
+            },
+            {
+              "movie_id": "617642f9-d86f-575b-a2cc-8b77e03cd7b6",
+              "adjusted_reception": 7.496667
+            },
+            {
+              "movie_id": "6530aa6e-b644-5f50-a57d-79baf5cfbe5e",
+              "adjusted_reception": 7.069048
+            },
+            {
+              "movie_id": "7d9bb533-bcf1-529e-90b5-c742f77e516c",
+              "adjusted_reception": 6.494444
+            }
+          ],
+          "notable_works": [
+            {
+              "movie_id": "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+              "rank": 1,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.754449,
+              "adjusted_reception": 7.95303,
+              "reception_available": true,
+              "effective_votes": 5000,
+              "components": {
+                "reception": 0.596477,
+                "vote_support": 0.110972,
+                "visibility": 0.032,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "617642f9-d86f-575b-a2cc-8b77e03cd7b6",
+              "rank": 2,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.724287,
+              "adjusted_reception": 7.496667,
+              "reception_available": true,
+              "effective_votes": 2000,
+              "components": {
+                "reception": 0.56225,
+                "vote_support": 0.099037,
+                "visibility": 0.048,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "6530aa6e-b644-5f50-a57d-79baf5cfbe5e",
+              "rank": 3,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.713496,
+              "adjusted_reception": 7.069048,
+              "reception_available": true,
+              "effective_votes": 3000,
+              "components": {
+                "reception": 0.530179,
+                "vote_support": 0.104318,
+                "visibility": 0.064,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "7d9bb533-bcf1-529e-90b5-c742f77e516c",
+              "rank": 4,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.672096,
+              "adjusted_reception": 6.494444,
+              "reception_available": true,
+              "effective_votes": 1000,
+              "components": {
+                "reception": 0.487083,
+                "vote_support": 0.090013,
+                "visibility": 0.08,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "13bc0e46-ebec-5329-af7c-91199187cd5d",
+              "rank": 5,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.63637,
+              "adjusted_reception": 6.991667,
+              "reception_available": true,
+              "effective_votes": 500,
+              "components": {
+                "reception": 0.524375,
+                "vote_support": 0.080995,
+                "visibility": 0.016,
+                "completeness": 0.015
+              }
+            }
+          ],
+          "ranking_version": "notability-1.0",
+          "strength_contributions": {
+            "reception": 58.620282,
+            "experience": 12.110945
+          }
+        }
+      },
+      {
+        "person_id": "1fbd6ca0-42cf-5405-9efc-33c5d171f5a2",
+        "role": "director",
+        "attributes": {
+          "schema_version": "talent-1.0",
+          "talent_strength": 68.70755,
+          "reception": 75.791984,
+          "experience": 40.369817,
+          "versatility": 33.333333,
+          "popularity_percentile": null,
+          "appeal_popularity": 50.0,
+          "pricing_popularity": 0.0,
+          "genre_fit": {
+            "action": 31.25,
+            "adventure": 31.25,
+            "comedy": 31.25,
+            "crime": 31.25,
+            "drama": 100.0,
+            "horror": 31.25,
+            "mystery": 33.333333,
+            "romance": 31.25,
+            "science_fiction": 31.25,
+            "thriller": 31.25
+          },
+          "specialties": [
+            "drama",
+            "mystery"
+          ],
+          "career_span_years": 3,
+          "coverage": {
+            "scope": "eligible imported catalog only",
+            "eligible_movies": 3,
+            "rated_movies": 2,
+            "level": "moderate",
+            "missing_person_popularity": true,
+            "reception_prior_only": false
+          }
+        },
+        "evidence": {
+          "movie_ids": [
+            "1df12d36-858c-5d0c-b9af-0037c73996c8",
+            "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+            "8d7bff8a-2ed0-5fc1-bffa-0ded1d0619ae"
+          ],
+          "rated_movie_ids": [
+            "1df12d36-858c-5d0c-b9af-0037c73996c8",
+            "4d9a0e98-846e-5b5f-ba34-bab261e95972"
+          ],
+          "catalog_rating_prior": "7.4833333333333333333333333333333333333333333333333",
+          "catalog_rating_prior_is_fallback": false,
+          "genre_counts": {
+            "action": 0,
+            "adventure": 0,
+            "comedy": 0,
+            "crime": 0,
+            "drama": 3,
+            "horror": 0,
+            "mystery": 1,
+            "romance": 0,
+            "science_fiction": 0,
+            "thriller": 0
+          },
+          "genre_priors": {
+            "action": "0.5",
+            "adventure": "0.5",
+            "comedy": "0.5",
+            "crime": "0.5",
+            "drama": "1",
+            "horror": "0.5",
+            "mystery": "0.33333333333333333333333333333333333333333333333333",
+            "romance": "0.5",
+            "science_fiction": "0.5",
+            "thriller": "0.5"
+          },
+          "genre_catalog_gaps": [
+            "action",
+            "adventure",
+            "comedy",
+            "crime",
+            "horror",
+            "romance",
+            "science_fiction",
+            "thriller"
+          ],
+          "reception_contributions": [
+            {
+              "movie_id": "1df12d36-858c-5d0c-b9af-0037c73996c8",
+              "adjusted_reception": 7.492961
+            },
+            {
+              "movie_id": "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+              "adjusted_reception": 7.95303
+            }
+          ],
+          "notable_works": [
+            {
+              "movie_id": "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+              "rank": 1,
+              "credited_jobs": [
+                "Director"
+              ],
+              "notability": 0.754449,
+              "adjusted_reception": 7.95303,
+              "reception_available": true,
+              "effective_votes": 5000,
+              "components": {
+                "reception": 0.596477,
+                "vote_support": 0.110972,
+                "visibility": 0.032,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "1df12d36-858c-5d0c-b9af-0037c73996c8",
+              "rank": 2,
+              "credited_jobs": [
+                "Director"
+              ],
+              "notability": 0.591286,
+              "adjusted_reception": 7.492961,
+              "reception_available": true,
+              "effective_votes": 2,
+              "components": {
+                "reception": 0.561972,
+                "vote_support": 0.014314,
+                "visibility": 0.0,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "8d7bff8a-2ed0-5fc1-bffa-0ded1d0619ae",
+              "rank": 3,
+              "credited_jobs": [
+                "Director"
+              ],
+              "notability": 0.57125,
+              "adjusted_reception": 7.483333,
+              "reception_available": false,
+              "effective_votes": 0,
+              "components": {
+                "reception": 0.56125,
+                "vote_support": 0.0,
+                "visibility": 0.0,
+                "completeness": 0.01
+              }
+            }
+          ],
+          "ranking_version": "notability-1.0",
+          "strength_contributions": {
+            "reception": 60.633587,
+            "experience": 8.073963
+          }
+        }
+      },
+      {
+        "person_id": "1fbd6ca0-42cf-5405-9efc-33c5d171f5a2",
+        "role": "writer",
+        "attributes": {
+          "schema_version": "talent-1.0",
+          "talent_strength": 64.843042,
+          "reception": 76.007576,
+          "experience": 20.184909,
+          "versatility": 16.666667,
+          "popularity_percentile": null,
+          "appeal_popularity": 50.0,
+          "pricing_popularity": 0.0,
+          "genre_fit": {
+            "action": 41.666667,
+            "adventure": 41.666667,
+            "comedy": 41.666667,
+            "crime": 41.666667,
+            "drama": 100.0,
+            "horror": 41.666667,
+            "mystery": 41.666667,
+            "romance": 41.666667,
+            "science_fiction": 41.666667,
+            "thriller": 41.666667
+          },
+          "specialties": [
+            "drama"
+          ],
+          "career_span_years": 1,
+          "coverage": {
+            "scope": "eligible imported catalog only",
+            "eligible_movies": 1,
+            "rated_movies": 1,
+            "level": "low",
+            "missing_person_popularity": true,
+            "reception_prior_only": false
+          }
+        },
+        "evidence": {
+          "movie_ids": [
+            "4d9a0e98-846e-5b5f-ba34-bab261e95972"
+          ],
+          "rated_movie_ids": [
+            "4d9a0e98-846e-5b5f-ba34-bab261e95972"
+          ],
+          "catalog_rating_prior": "7.4833333333333333333333333333333333333333333333333",
+          "catalog_rating_prior_is_fallback": false,
+          "genre_counts": {
+            "action": 0,
+            "adventure": 0,
+            "comedy": 0,
+            "crime": 0,
+            "drama": 1,
+            "horror": 0,
+            "mystery": 0,
+            "romance": 0,
+            "science_fiction": 0,
+            "thriller": 0
+          },
+          "genre_priors": {
+            "action": "0.5",
+            "adventure": "0.5",
+            "comedy": "0.5",
+            "crime": "0.5",
+            "drama": "1",
+            "horror": "0.5",
+            "mystery": "0.5",
+            "romance": "0.5",
+            "science_fiction": "0.5",
+            "thriller": "0.5"
+          },
+          "genre_catalog_gaps": [
+            "action",
+            "adventure",
+            "comedy",
+            "crime",
+            "horror",
+            "mystery",
+            "romance",
+            "science_fiction",
+            "thriller"
+          ],
+          "reception_contributions": [
+            {
+              "movie_id": "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+              "adjusted_reception": 7.95303
+            }
+          ],
+          "notable_works": [
+            {
+              "movie_id": "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+              "rank": 1,
+              "credited_jobs": [
+                "Screenplay",
+                "Writer"
+              ],
+              "notability": 0.754449,
+              "adjusted_reception": 7.95303,
+              "reception_available": true,
+              "effective_votes": 5000,
+              "components": {
+                "reception": 0.596477,
+                "vote_support": 0.110972,
+                "visibility": 0.032,
+                "completeness": 0.015
+              }
+            }
+          ],
+          "ranking_version": "notability-1.0",
+          "strength_contributions": {
+            "reception": 60.806061,
+            "experience": 4.036982
+          }
+        }
+      },
+      {
+        "person_id": "9b34350f-0424-5f49-9d7e-86c1c54312a0",
+        "role": "actor",
+        "attributes": {
+          "schema_version": "talent-1.0",
+          "talent_strength": 70.731227,
+          "reception": 73.275352,
+          "experience": 60.554726,
+          "versatility": 100.0,
+          "popularity_percentile": 0.0,
+          "appeal_popularity": 0.0,
+          "pricing_popularity": 0.0,
+          "genre_fit": {
+            "action": 20.833333,
+            "adventure": 14.285714,
+            "comedy": 14.285714,
+            "crime": 14.285714,
+            "drama": 42.857143,
+            "horror": 20.833333,
+            "mystery": 14.285714,
+            "romance": 14.285714,
+            "science_fiction": 20.833333,
+            "thriller": 20.833333
+          },
+          "specialties": [
+            "drama",
+            "adventure",
+            "comedy"
+          ],
+          "career_span_years": 7,
+          "coverage": {
+            "scope": "eligible imported catalog only",
+            "eligible_movies": 7,
+            "rated_movies": 6,
+            "level": "moderate",
+            "missing_person_popularity": false,
+            "reception_prior_only": false
+          }
+        },
+        "evidence": {
+          "movie_ids": [
+            "13bc0e46-ebec-5329-af7c-91199187cd5d",
+            "1df12d36-858c-5d0c-b9af-0037c73996c8",
+            "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+            "617642f9-d86f-575b-a2cc-8b77e03cd7b6",
+            "6530aa6e-b644-5f50-a57d-79baf5cfbe5e",
+            "7d9bb533-bcf1-529e-90b5-c742f77e516c",
+            "8d7bff8a-2ed0-5fc1-bffa-0ded1d0619ae"
+          ],
+          "rated_movie_ids": [
+            "13bc0e46-ebec-5329-af7c-91199187cd5d",
+            "1df12d36-858c-5d0c-b9af-0037c73996c8",
+            "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+            "617642f9-d86f-575b-a2cc-8b77e03cd7b6",
+            "6530aa6e-b644-5f50-a57d-79baf5cfbe5e",
+            "7d9bb533-bcf1-529e-90b5-c742f77e516c"
+          ],
+          "catalog_rating_prior": "7.4833333333333333333333333333333333333333333333333",
+          "catalog_rating_prior_is_fallback": false,
+          "genre_counts": {
+            "action": 0,
+            "adventure": 1,
+            "comedy": 1,
+            "crime": 1,
+            "drama": 3,
+            "horror": 0,
+            "mystery": 1,
+            "romance": 1,
+            "science_fiction": 0,
+            "thriller": 0
+          },
+          "genre_priors": {
+            "action": "0.5",
+            "adventure": "0.14285714285714285714285714285714285714285714285714",
+            "comedy": "0.14285714285714285714285714285714285714285714285714",
+            "crime": "0.14285714285714285714285714285714285714285714285714",
+            "drama": "0.42857142857142857142857142857142857142857142857143",
+            "horror": "0.5",
+            "mystery": "0.14285714285714285714285714285714285714285714285714",
+            "romance": "0.14285714285714285714285714285714285714285714285714",
+            "science_fiction": "0.5",
+            "thriller": "0.5"
+          },
+          "genre_catalog_gaps": [
+            "action",
+            "horror",
+            "science_fiction",
+            "thriller"
+          ],
+          "reception_contributions": [
+            {
+              "movie_id": "13bc0e46-ebec-5329-af7c-91199187cd5d",
+              "adjusted_reception": 6.991667
+            },
+            {
+              "movie_id": "1df12d36-858c-5d0c-b9af-0037c73996c8",
+              "adjusted_reception": 7.492961
+            },
+            {
+              "movie_id": "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+              "adjusted_reception": 7.95303
+            },
+            {
+              "movie_id": "617642f9-d86f-575b-a2cc-8b77e03cd7b6",
+              "adjusted_reception": 7.496667
+            },
+            {
+              "movie_id": "6530aa6e-b644-5f50-a57d-79baf5cfbe5e",
+              "adjusted_reception": 7.069048
+            },
+            {
+              "movie_id": "7d9bb533-bcf1-529e-90b5-c742f77e516c",
+              "adjusted_reception": 6.494444
+            }
+          ],
+          "notable_works": [
+            {
+              "movie_id": "4d9a0e98-846e-5b5f-ba34-bab261e95972",
+              "rank": 1,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.754449,
+              "adjusted_reception": 7.95303,
+              "reception_available": true,
+              "effective_votes": 5000,
+              "components": {
+                "reception": 0.596477,
+                "vote_support": 0.110972,
+                "visibility": 0.032,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "617642f9-d86f-575b-a2cc-8b77e03cd7b6",
+              "rank": 2,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.724287,
+              "adjusted_reception": 7.496667,
+              "reception_available": true,
+              "effective_votes": 2000,
+              "components": {
+                "reception": 0.56225,
+                "vote_support": 0.099037,
+                "visibility": 0.048,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "6530aa6e-b644-5f50-a57d-79baf5cfbe5e",
+              "rank": 3,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.713496,
+              "adjusted_reception": 7.069048,
+              "reception_available": true,
+              "effective_votes": 3000,
+              "components": {
+                "reception": 0.530179,
+                "vote_support": 0.104318,
+                "visibility": 0.064,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "7d9bb533-bcf1-529e-90b5-c742f77e516c",
+              "rank": 4,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.672096,
+              "adjusted_reception": 6.494444,
+              "reception_available": true,
+              "effective_votes": 1000,
+              "components": {
+                "reception": 0.487083,
+                "vote_support": 0.090013,
+                "visibility": 0.08,
+                "completeness": 0.015
+              }
+            },
+            {
+              "movie_id": "13bc0e46-ebec-5329-af7c-91199187cd5d",
+              "rank": 5,
+              "credited_jobs": [
+                "Actor"
+              ],
+              "notability": 0.63637,
+              "adjusted_reception": 6.991667,
+              "reception_available": true,
+              "effective_votes": 500,
+              "components": {
+                "reception": 0.524375,
+                "vote_support": 0.080995,
+                "visibility": 0.016,
+                "completeness": 0.015
+              }
+            }
+          ],
+          "ranking_version": "notability-1.0",
+          "strength_contributions": {
+            "reception": 58.620282,
+            "experience": 12.110945
+          }
+        }
+      }
+    ],
+    "report": {
+      "profiles": 4,
+      "people": 3,
+      "eligible_movies": 7,
+      "rated_movies": 6,
+      "catalog_rating_prior": "7.4833333333333333333333333333333333333333333333333",
+      "catalog_rating_prior_is_fallback": false,
+      "role_people": {
+        "director": 1,
+        "actor": 2,
+        "writer": 1,
+        "cinematographer": 0,
+        "composer": 0
+      },
+      "genre_catalog_gaps": [
+        {
+          "role": "director",
+          "genre": "action"
+        },
+        {
+          "role": "director",
+          "genre": "adventure"
+        },
+        {
+          "role": "director",
+          "genre": "comedy"
+        },
+        {
+          "role": "director",
+          "genre": "crime"
+        },
+        {
+          "role": "director",
+          "genre": "horror"
+        },
+        {
+          "role": "director",
+          "genre": "romance"
+        },
+        {
+          "role": "director",
+          "genre": "science_fiction"
+        },
+        {
+          "role": "director",
+          "genre": "thriller"
+        },
+        {
+          "role": "actor",
+          "genre": "action"
+        },
+        {
+          "role": "actor",
+          "genre": "horror"
+        },
+        {
+          "role": "actor",
+          "genre": "science_fiction"
+        },
+        {
+          "role": "actor",
+          "genre": "thriller"
+        },
+        {
+          "role": "writer",
+          "genre": "action"
+        },
+        {
+          "role": "writer",
+          "genre": "adventure"
+        },
+        {
+          "role": "writer",
+          "genre": "comedy"
+        },
+        {
+          "role": "writer",
+          "genre": "crime"
+        },
+        {
+          "role": "writer",
+          "genre": "horror"
+        },
+        {
+          "role": "writer",
+          "genre": "mystery"
+        },
+        {
+          "role": "writer",
+          "genre": "romance"
+        },
+        {
+          "role": "writer",
+          "genre": "science_fiction"
+        },
+        {
+          "role": "writer",
+          "genre": "thriller"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "action"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "adventure"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "comedy"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "crime"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "drama"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "horror"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "mystery"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "romance"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "science_fiction"
+        },
+        {
+          "role": "cinematographer",
+          "genre": "thriller"
+        },
+        {
+          "role": "composer",
+          "genre": "action"
+        },
+        {
+          "role": "composer",
+          "genre": "adventure"
+        },
+        {
+          "role": "composer",
+          "genre": "comedy"
+        },
+        {
+          "role": "composer",
+          "genre": "crime"
+        },
+        {
+          "role": "composer",
+          "genre": "drama"
+        },
+        {
+          "role": "composer",
+          "genre": "horror"
+        },
+        {
+          "role": "composer",
+          "genre": "mystery"
+        },
+        {
+          "role": "composer",
+          "genre": "romance"
+        },
+        {
+          "role": "composer",
+          "genre": "science_fiction"
+        },
+        {
+          "role": "composer",
+          "genre": "thriller"
+        }
+      ],
+      "low_coverage_profiles": 1,
+      "playable": false,
+      "note": "Phase 7 exact assignment and offer coverage checks are still required."
+    }
+  },
+  "pricing": {
+    "parameters": {
+      "schema_version": "fictional-fees-1.0",
+      "input_feature_version": "talent-1.0",
+      "weights": [
+        "0.45",
+        "0.35",
+        "0.20"
+      ],
+      "exponent": 2,
+      "rounding_increment_usd": 25000,
+      "rounding": "ROUND_HALF_UP",
+      "limits_usd": {
+        "director": [
+          150000,
+          20000000
+        ],
+        "actor": [
+          100000,
+          30000000
+        ],
+        "writer": [
+          125000,
+          5000000
+        ],
+        "cinematographer": [
+          100000,
+          4000000
+        ],
+        "composer": [
+          75000,
+          6000000
+        ]
+      },
+      "inputs": "stored six-decimal strength, pricing popularity percentile, experience",
+      "currency": "USD",
+      "fee_is_fictional": true,
+      "tier_independent": true
+    },
+    "rows": [
+      {
+        "person_id": "02e72d17-a4c1-55e2-8f45-7f3412969a04",
+        "role": "actor",
+        "fee_usd": 18725000,
+        "explanation": {
+          "inputs": {
+            "talent_strength": 70.731227,
+            "pricing_popularity": 100.0,
+            "experience": 60.554726
+          },
+          "z": 0.7894,
+          "raw_fee_usd": "18732254.31303784099727500000",
+          "floor_usd": 100000,
+          "ceiling_usd": 30000000,
+          "rounding_increment_usd": 25000,
+          "rounding": "ROUND_HALF_UP",
+          "fee_is_fictional": true
+        }
+      },
+      {
+        "person_id": "1fbd6ca0-42cf-5405-9efc-33c5d171f5a2",
+        "role": "director",
+        "fee_usd": 3175000,
+        "explanation": {
+          "inputs": {
+            "talent_strength": 68.70755,
+            "pricing_popularity": 0.0,
+            "experience": 40.369817
+          },
+          "z": 0.389924,
+          "raw_fee_usd": "3168002.353983359887850000",
+          "floor_usd": 150000,
+          "ceiling_usd": 20000000,
+          "rounding_increment_usd": 25000,
+          "rounding": "ROUND_HALF_UP",
+          "fee_is_fictional": true
+        }
+      },
+      {
+        "person_id": "1fbd6ca0-42cf-5405-9efc-33c5d171f5a2",
+        "role": "writer",
+        "fee_usd": 675000,
+        "explanation": {
+          "inputs": {
+            "talent_strength": 64.843042,
+            "pricing_popularity": 0.0,
+            "experience": 20.184909
+          },
+          "z": 0.332164,
+          "raw_fee_usd": "662871.402489877863875000",
+          "floor_usd": 125000,
+          "ceiling_usd": 5000000,
+          "rounding_increment_usd": 25000,
+          "rounding": "ROUND_HALF_UP",
+          "fee_is_fictional": true
+        }
+      },
+      {
+        "person_id": "9b34350f-0424-5f49-9d7e-86c1c54312a0",
+        "role": "actor",
+        "fee_usd": 5875000,
+        "explanation": {
+          "inputs": {
+            "talent_strength": 70.731227,
+            "pricing_popularity": 0.0,
+            "experience": 60.554726
+          },
+          "z": 0.4394,
+          "raw_fee_usd": "5872862.86768284099727500000",
+          "floor_usd": 100000,
+          "ceiling_usd": 30000000,
+          "rounding_increment_usd": 25000,
+          "rounding": "ROUND_HALF_UP",
+          "fee_is_fictional": true
+        }
+      }
+    ],
+    "report": {
+      "fee_is_fictional": true,
+      "currency": "USD",
+      "playable": false,
+      "role_prices": {
+        "director": {
+          "count": 1,
+          "min_usd": 3175000,
+          "max_usd": 3175000
+        },
+        "actor": {
+          "count": 2,
+          "min_usd": 5875000,
+          "max_usd": 18725000
+        },
+        "writer": {
+          "count": 1,
+          "min_usd": 675000,
+          "max_usd": 675000
+        },
+        "cinematographer": {
+          "count": 0,
+          "min_usd": null,
+          "max_usd": null
+        },
+        "composer": {
+          "count": 0,
+          "min_usd": null,
+          "max_usd": null
+        }
+      },
+      "missing_roster_roles": [
+        "actor",
+        "cinematographer",
+        "composer"
+      ],
+      "optimistic_roster_lower_bound_usd": null,
+      "lower_bound_note": "Four distinct actors plus one cheapest fee per other role; a person may overlap across roles. This is not a feasible assignment.",
+      "tiers": {
+        "indie": {
+          "talent_budget_usd": 6500000,
+          "diagnostic": "insufficient_role_counts",
+          "enabled": false
+        },
+        "studio": {
+          "talent_budget_usd": 32500000,
+          "diagnostic": "insufficient_role_counts",
+          "enabled": false
+        },
+        "blockbuster": {
+          "talent_budget_usd": 130000000,
+          "diagnostic": "insufficient_role_counts",
+          "enabled": false
+        }
+      }
+    }
+  }
+}

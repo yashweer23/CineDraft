@@ -1,0 +1,242 @@
+{
+  "synthetic": true,
+  "tmdb_requests": 0,
+  "database_required": false,
+  "demonstration": {
+    "director_actor": {
+      "films": 6,
+      "bonus": 12
+    },
+    "writer_actor": {
+      "films": 1,
+      "bonus": 4
+    },
+    "writer_composer": {
+      "films": 0,
+      "bonus": 0,
+      "message": "No shared credits found in this dataset."
+    }
+  },
+  "people": [
+    {
+      "person_id": "39b5f851-bd23-5373-ad43-05fe8372bba7",
+      "label": "Synthetic Director / Writer"
+    },
+    {
+      "person_id": "88a7ffe9-103c-5ca3-9db6-cd11d49e487b",
+      "label": "Synthetic Actor"
+    },
+    {
+      "person_id": "4a0671d7-0620-5131-90bd-5fc9d5855648",
+      "label": "Synthetic Composer"
+    }
+  ],
+  "films": [
+    {
+      "movie_id": "a9fa0d7f-7d7d-5b0f-bdb2-695651f3ff14",
+      "title": "Synthetic shared film 1"
+    },
+    {
+      "movie_id": "50001f00-240d-5792-966d-e818450f8f11",
+      "title": "Synthetic shared film 2"
+    },
+    {
+      "movie_id": "5aba5954-1ea2-5d1c-9653-fa92a041a65e",
+      "title": "Synthetic shared film 3"
+    },
+    {
+      "movie_id": "264461ba-5583-5cf5-a0b2-1625092b72c2",
+      "title": "Synthetic shared film 4"
+    },
+    {
+      "movie_id": "e1d4f3ea-2319-52ca-843a-5faebdeb35a1",
+      "title": "Synthetic shared film 5"
+    },
+    {
+      "movie_id": "c88954ed-d12a-5389-8274-004690b39d9a",
+      "title": "Synthetic shared film 6"
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "person_id": "39b5f851-bd23-5373-ad43-05fe8372bba7",
+        "role": "director",
+        "film_count": 6
+      },
+      {
+        "person_id": "39b5f851-bd23-5373-ad43-05fe8372bba7",
+        "role": "writer",
+        "film_count": 1
+      },
+      {
+        "person_id": "4a0671d7-0620-5131-90bd-5fc9d5855648",
+        "role": "composer",
+        "film_count": 1
+      },
+      {
+        "person_id": "88a7ffe9-103c-5ca3-9db6-cd11d49e487b",
+        "role": "actor",
+        "film_count": 6
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "15fb6215f4b5d023085719b25b831a7b6aab93587f4104f84f8ddc8e414140d5",
+        "person_a": "39b5f851-bd23-5373-ad43-05fe8372bba7",
+        "role_a": "director",
+        "person_b": "4a0671d7-0620-5131-90bd-5fc9d5855648",
+        "role_b": "composer",
+        "shared_movie_count": 1,
+        "bonus": 4,
+        "evidence": [
+          {
+            "movie_id": "c88954ed-d12a-5389-8274-004690b39d9a",
+            "jobs_a": [
+              "Director"
+            ],
+            "jobs_b": [
+              "Original Music Composer"
+            ]
+          }
+        ]
+      },
+      {
+        "edge_id": "e6383291c2f3b963c10ca6151ebd8b431bed3461624ef5bc2e2d1306178c6bff",
+        "person_a": "39b5f851-bd23-5373-ad43-05fe8372bba7",
+        "role_a": "director",
+        "person_b": "88a7ffe9-103c-5ca3-9db6-cd11d49e487b",
+        "role_b": "actor",
+        "shared_movie_count": 6,
+        "bonus": 12,
+        "evidence": [
+          {
+            "movie_id": "264461ba-5583-5cf5-a0b2-1625092b72c2",
+            "jobs_a": [
+              "Director"
+            ],
+            "jobs_b": [
+              "Actor"
+            ]
+          },
+          {
+            "movie_id": "50001f00-240d-5792-966d-e818450f8f11",
+            "jobs_a": [
+              "Director"
+            ],
+            "jobs_b": [
+              "Actor"
+            ]
+          },
+          {
+            "movie_id": "5aba5954-1ea2-5d1c-9653-fa92a041a65e",
+            "jobs_a": [
+              "Director"
+            ],
+            "jobs_b": [
+              "Actor"
+            ]
+          },
+          {
+            "movie_id": "a9fa0d7f-7d7d-5b0f-bdb2-695651f3ff14",
+            "jobs_a": [
+              "Director"
+            ],
+            "jobs_b": [
+              "Actor"
+            ]
+          },
+          {
+            "movie_id": "c88954ed-d12a-5389-8274-004690b39d9a",
+            "jobs_a": [
+              "Director"
+            ],
+            "jobs_b": [
+              "Actor"
+            ]
+          },
+          {
+            "movie_id": "e1d4f3ea-2319-52ca-843a-5faebdeb35a1",
+            "jobs_a": [
+              "Director"
+            ],
+            "jobs_b": [
+              "Actor"
+            ]
+          }
+        ]
+      },
+      {
+        "edge_id": "ab3545dfd2571371f4127a82d2e44f7fabda66325b3d27202cdfb8ca4b03448f",
+        "person_a": "39b5f851-bd23-5373-ad43-05fe8372bba7",
+        "role_a": "writer",
+        "person_b": "88a7ffe9-103c-5ca3-9db6-cd11d49e487b",
+        "role_b": "actor",
+        "shared_movie_count": 1,
+        "bonus": 4,
+        "evidence": [
+          {
+            "movie_id": "a9fa0d7f-7d7d-5b0f-bdb2-695651f3ff14",
+            "jobs_a": [
+              "Screenplay",
+              "Story"
+            ],
+            "jobs_b": [
+              "Actor"
+            ]
+          }
+        ]
+      },
+      {
+        "edge_id": "bd120f29e0c89b8f4f6c00ffea6d9215a99dd7f080909e32f18e5052ae794d67",
+        "person_a": "4a0671d7-0620-5131-90bd-5fc9d5855648",
+        "role_a": "composer",
+        "person_b": "88a7ffe9-103c-5ca3-9db6-cd11d49e487b",
+        "role_b": "actor",
+        "shared_movie_count": 1,
+        "bonus": 4,
+        "evidence": [
+          {
+            "movie_id": "c88954ed-d12a-5389-8274-004690b39d9a",
+            "jobs_a": [
+              "Original Music Composer"
+            ],
+            "jobs_b": [
+              "Actor"
+            ]
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "schema_version": "collaboration-1.0",
+      "points_per_shared_movie": 4,
+      "edge_bonus_cap": 12,
+      "eligibility": "frozen dataset movie eligibility and mapped professional role",
+      "deduplication": "one movie per unordered distinct-person role pair; exact jobs retained",
+      "canonical_order": "person UUID ascending; roles stay attached to their person",
+      "evidence_order": "movie UUID ascending; jobs sorted by Unicode code point",
+      "max_pair_observations": 500000
+    },
+    "report": {
+      "eligible_movies": 6,
+      "credited_movies": 6,
+      "people": 3,
+      "nodes": 4,
+      "edges": 4,
+      "evidence_rows": 9,
+      "isolated_nodes": 0,
+      "capped_edges": 1,
+      "max_shared_movies": 6,
+      "nodes_by_role": {
+        "director": 1,
+        "actor": 1,
+        "writer": 1,
+        "cinematographer": 0,
+        "composer": 1
+      }
+    },
+    "input_hash": "05044a15079e74317abf71a1ed479834f323f0c1b07b655650dfee087a4972eb",
+    "output_hash": "ed6de8e9354cd133376930a89cb28bcc7dd2289e8b12cb2c09744b242a315a23"
+  }
+}

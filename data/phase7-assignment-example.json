@@ -1,0 +1,36 @@
+{
+  "synthetic": true,
+  "naive_separate_minima_usd": 200000,
+  "exact_distinct_people_assignment": {
+    "cost_usd": 500000,
+    "assignment": [
+      {
+        "slot": "writer",
+        "person_id": "synthetic-writer-only",
+        "fee_usd": 400000
+      },
+      {
+        "slot": "composer",
+        "person_id": "synthetic-multi-role",
+        "fee_usd": 100000
+      }
+    ]
+  },
+  "available_usd": 600000,
+  "writer_offers": [
+    {
+      "person_id": "synthetic-multi-role",
+      "fee_usd": 100000,
+      "selectable": false,
+      "blocked_reason": "The remaining roles cannot be completed within the talent budget.",
+      "remaining_cost_usd": 900000
+    },
+    {
+      "person_id": "synthetic-writer-only",
+      "fee_usd": 400000,
+      "selectable": true,
+      "blocked_reason": null,
+      "remaining_cost_usd": 100000
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+{
+  "synthetic": true,
+  "note": "Invented arithmetic exercise. No catalog was imported or published.",
+  "input_hash": "db64a0c4d6eafcc8654738a69c474d08bab16645514c62fea09f27e395a6ed0f",
+  "output_hash": "14016b0d022bb223f41896463322e62da8585b188f24e87b299c65412f1a2ce4",
+  "result": {
+    "draft_id": "6d298876-377c-53a7-af2a-4da89c26691b",
+    "input_hash": "db64a0c4d6eafcc8654738a69c474d08bab16645514c62fea09f27e395a6ed0f",
+    "simulation_id": "becc61bc-d178-5738-a3a0-359d8e022350",
+    "simulation_version": "simulation-1.0",
+    "synthetic": true,
+    "critics": 70.22,
+    "audience": 60.32,
+    "studio_score": 66,
+    "production_cost_usd": 6750000,
+    "marketing_usd": 1350000,
+    "worldwide_gross_usd": 20008096,
+    "studio_receipts_usd": 10004048,
+    "profit_usd": 1904048,
+    "weekly_gross_usd": [
+      8638080,
+      5539493,
+      3552407,
+      2278116
+    ],
+    "explanation": {
+      "note": "Fictional game simulation, not a prediction of any real film or person.",
+      "rows": [
+        {
+          "slot": "director",
+          "person_id": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "name": "Synthetic Director",
+          "role": "director",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "1.5",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": null,
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "10.34482758620689655172413793103448275862068965517241379310344828",
+          "talent_contribution": "13.79310344827586206896551724137931034482758620689655172413793103"
+        },
+        {
+          "slot": "lead",
+          "person_id": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "name": "Synthetic Lead",
+          "role": "actor",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "1.3",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": "50",
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "8.965517241379310344827586206896551724137931034482758620689655172",
+          "talent_contribution": "11.95402298850574712643678160919540229885057471264367816091954023"
+        },
+        {
+          "slot": "co_lead",
+          "person_id": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "name": "Synthetic Co Lead",
+          "role": "actor",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "1.1",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": "50",
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "7.586206896551724137931034482758620689655172413793103448275862069",
+          "talent_contribution": "10.11494252873563218390804597701149425287356321839080459770114943"
+        },
+        {
+          "slot": "supporting_1",
+          "person_id": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+          "name": "Synthetic Supporting 1",
+          "role": "actor",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "0.7",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": "50",
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "4.827586206896551724137931034482758620689655172413793103448275862",
+          "talent_contribution": "6.436781609195402298850574712643678160919540229885057471264367816"
+        },
+        {
+          "slot": "supporting_2",
+          "person_id": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+          "name": "Synthetic Supporting 2",
+          "role": "actor",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "0.7",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": "50",
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "4.827586206896551724137931034482758620689655172413793103448275862",
+          "talent_contribution": "6.436781609195402298850574712643678160919540229885057471264367816"
+        },
+        {
+          "slot": "writer",
+          "person_id": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+          "name": "Synthetic Writer",
+          "role": "writer",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "1.4",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": null,
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "9.655172413793103448275862068965517241379310344827586206896551724",
+          "talent_contribution": "12.87356321839080459770114942528735632183908045977011494252873563"
+        },
+        {
+          "slot": "cinematographer",
+          "person_id": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+          "name": "Synthetic Cinematographer",
+          "role": "cinematographer",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "1.1",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": null,
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "7.586206896551724137931034482758620689655172413793103448275862069",
+          "talent_contribution": "10.11494252873563218390804597701149425287356321839080459770114943"
+        },
+        {
+          "slot": "composer",
+          "person_id": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+          "name": "Synthetic Composer",
+          "role": "composer",
+          "source": "fixture",
+          "hiring_fee_usd": 406250,
+          "weight": "0.9",
+          "talent": "80",
+          "genre_fit": "60",
+          "cast_appeal": null,
+          "popularity_missing": false,
+          "coverage": {
+            "level": "broader",
+            "eligible_movies": 10,
+            "synthetic": true
+          },
+          "genre_contribution": "6.206896551724137931034482758620689655172413793103448275862068966",
+          "talent_contribution": "8.275862068965517241379310344827586206896551724137931034482758621"
+        }
+      ],
+      "top_genre_contributors": [
+        "director",
+        "writer"
+      ],
+      "chemistry_edges": [
+        {
+          "slot_a": "director",
+          "slot_b": "lead",
+          "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "person_id_b": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "name_a": "Synthetic Director",
+          "name_b": "Synthetic Lead",
+          "role_a": "director",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ]
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "co_lead",
+          "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "person_id_b": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "name_a": "Synthetic Director",
+          "name_b": "Synthetic Co Lead",
+          "role_a": "director",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ]
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "supporting_1",
+          "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "person_id_b": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+          "name_a": "Synthetic Director",
+          "name_b": "Synthetic Supporting 1",
+          "role_a": "director",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+            "actor"
+          ],
+          "canonical_b": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ]
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "supporting_2",
+          "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "person_id_b": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+          "name_a": "Synthetic Director",
+          "name_b": "Synthetic Supporting 2",
+          "role_a": "director",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+            "actor"
+          ],
+          "canonical_b": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ]
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "writer",
+          "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "person_id_b": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+          "name_a": "Synthetic Director",
+          "name_b": "Synthetic Writer",
+          "role_a": "director",
+          "role_b": "writer",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "canonical_b": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ]
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "cinematographer",
+          "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "person_id_b": "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+          "name_a": "Synthetic Director",
+          "name_b": "Synthetic Cinematographer",
+          "role_a": "director",
+          "role_b": "cinematographer",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ],
+          "canonical_b": [
+            "dd244499-84d2-57f8-aeea-7ac5e2f1e577",
+            "cinematographer"
+          ]
+        },
+        {
+          "slot_a": "director",
+          "slot_b": "composer",
+          "person_id_a": "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+          "person_id_b": "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+          "name_a": "Synthetic Director",
+          "name_b": "Synthetic Composer",
+          "role_a": "director",
+          "role_b": "composer",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "8ecaf9b1-3bc7-582f-a9ee-e1a338a6c5da",
+            "composer"
+          ],
+          "canonical_b": [
+            "c2546117-825f-53c2-8cec-1a6e4454ecd0",
+            "director"
+          ]
+        },
+        {
+          "slot_a": "writer",
+          "slot_b": "lead",
+          "person_id_a": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+          "person_id_b": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "name_a": "Synthetic Writer",
+          "name_b": "Synthetic Lead",
+          "role_a": "writer",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ]
+        },
+        {
+          "slot_a": "writer",
+          "slot_b": "co_lead",
+          "person_id_a": "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+          "person_id_b": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "name_a": "Synthetic Writer",
+          "name_b": "Synthetic Co Lead",
+          "role_a": "writer",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "a8f3c0e3-028a-52ff-8745-d0544f9e8388",
+            "writer"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ]
+        },
+        {
+          "slot_a": "lead",
+          "slot_b": "co_lead",
+          "person_id_a": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "person_id_b": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "name_a": "Synthetic Lead",
+          "name_b": "Synthetic Co Lead",
+          "role_a": "actor",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ]
+        },
+        {
+          "slot_a": "lead",
+          "slot_b": "supporting_1",
+          "person_id_a": "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+          "person_id_b": "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+          "name_a": "Synthetic Lead",
+          "name_b": "Synthetic Supporting 1",
+          "role_a": "actor",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "8c14e16c-d887-5de8-a8e0-36a2aded9f29",
+            "actor"
+          ],
+          "canonical_b": [
+            "ee3d776d-e7a1-58bd-b0d5-643f7d8651d3",
+            "actor"
+          ]
+        },
+        {
+          "slot_a": "co_lead",
+          "slot_b": "supporting_2",
+          "person_id_a": "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+          "person_id_b": "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+          "name_a": "Synthetic Co Lead",
+          "name_b": "Synthetic Supporting 2",
+          "role_a": "actor",
+          "role_b": "actor",
+          "edge_id": null,
+          "shared_movie_count": 0,
+          "bonus": 0,
+          "message": "No shared credits found in this dataset.",
+          "evidence": [],
+          "canonical_a": [
+            "4be75de1-452c-56ce-ba1d-069ce26cb4cc",
+            "actor"
+          ],
+          "canonical_b": [
+            "f559ec09-d2f3-57a8-8259-4e7d3657e64c",
+            "actor"
+          ]
+        }
+      ],
+      "warnings": [],
+      "production_reserve_usd": 3500000,
+      "talent_spend_usd": 3250000,
+      "finance_note": "Production commitment is reserve plus hires. Marketing is an additional modeled cost. Gross is theatrical revenue; receipts are the studio share."
+    },
+    "schema_version": "phase8-v1",
+    "versions": {
+      "dataset_id": "fixture:phase8-example",
+      "feature_id": "features:phase8-example",
+      "pricing_id": "pricing:phase8-example",
+      "rules_id": "rules:classic-1.0",
+      "scoring_id": "scoring:baseline-1.0",
+      "ranking_version": "notability-1.0",
+      "role_mapping_version": "fixture:roles",
+      "prng_version": "sha256-order-1.0",
+      "simulation_version": "simulation-1.0",
+      "catalog_id": "draft-catalog:phase8-example",
+      "catalog_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "graph_id": "graph:phase8-example",
+      "graph_hash": "f401db03b200b6f79613fe2b5730a49d0ce3d24efb8ac047730b82ed5976072e",
+      "feature_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "pricing_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    },
+    "studio_score_unrounded": "65.9250",
+    "score_components": [
+      {
+        "name": "genre",
+        "value": "60",
+        "weight": "0.30",
+        "contribution": "18.00"
+      },
+      {
+        "name": "talent",
+        "value": "80",
+        "weight": "0.30",
+        "contribution": "24.00"
+      },
+      {
+        "name": "chemistry",
+        "value": "60",
+        "weight": "0.25",
+        "contribution": "15.00"
+      },
+      {
+        "name": "efficiency",
+        "value": "59.50",
+        "weight": "0.15",
+        "contribution": "8.9250"
+      }
+    ],
+    "cast_appeal": "50",
+    "critics_unrounded": "70.22225211531899269346013170434162020683288574218750",
+    "audience_unrounded": "60.32187071140782763656318365974584594368934631347656250",
+    "gross_multiplier": "2.96416237818971713346982710390875581651926040649414062500",
+    "total_cost_usd": 8100000,
+    "unused_talent_budget_usd": 3250000,
+    "return_on_total_cost_percent": "23.50676543209876543209876543209876543209876543209876543209876543",
+    "weekly_retention": "0.64128748284563131054625273463898338377475738525390625000",
+    "reproducibility": {
+      "manifest": {
+        "simulation_version": "simulation-1.0",
+        "scoring_id": "scoring:baseline-1.0",
+        "scoring_hash": "198546a6926d28768c90d1037890192cb4f9c2b8610e704715facd2eda86529d",
+        "arithmetic": "decimal",
+        "precision": 64,
+        "rounding": "ROUND_HALF_UP",
+        "random_version": "sha256-uniform53-1.0",
+        "seed_derivation": "canonical JSON [random_version, frozen_seed, stream, draw_index]; SHA-256",
+        "sample_mapping": "first 64 hash bits shifted right by 11; n / 2^53; low + (high-low)*u",
+        "interval": "[low, high); 2^53 equally spaced values",
+        "streams": [
+          "critics",
+          "audience",
+          "revenue"
+        ],
+        "draw_index": 0,
+        "iterations": 1,
+        "review_display_decimals": 2,
+        "weekly_rounding": "floor weeks 1-3; residual to week 4"
+      },
+      "manifest_hash": "5a01b76138244bc22684a48efc1acf140c9bf88ce967c87feca12f0d29afc8a3",
+      "seed": "phase8-arithmetic-example",
+      "draws": [
+        {
+          "stream": "critics",
+          "draw_index": 0,
+          "sha256": "85b08d2cad1ac73a2f532f360b2481011d64efafd50add145556a144ab188d6e",
+          "sample_uint53": "4703786536117080",
+          "unit_interval": "0.52222521153189926934601317043416202068328857421875",
+          "noise": "0.22225211531899269346013170434162020683288574218750"
+        },
+        {
+          "stream": "audience",
+          "draw_index": 0,
+          "sha256": "21d7030b80f1a908a44202fd7fcfe60f4a0d00b8b0c65af2998f045c54b3021e",
+          "sample_uint53": "1190635288665653",
+          "unit_interval": "0.13218707114078276365631836597458459436893463134765625",
+          "noise": "-3.67812928859217236343681634025415405631065368652343750"
+        },
+        {
+          "stream": "revenue",
+          "draw_index": 0,
+          "sha256": "bae9437bd2cd6969b25c5765a0c7a2b3944285618d4a9d95b1d4f8c2aa173441",
+          "sample_uint53": "6576352714709421",
+          "unit_interval": "0.73012182019265525756424040082492865622043609619140625",
+          "noise": "0.276146184231186309077088480989914387464523315429687500"
+        }
+      ]
+    }
+  }
+}
