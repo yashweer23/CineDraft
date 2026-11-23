@@ -1,0 +1,243 @@
+{
+  "schema_version": "phase13-solver-benchmark-v1",
+  "machine": {
+    "python": "3.12.14",
+    "os": "Linux",
+    "release": "6.18.57",
+    "architecture": "x86_64",
+    "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "logical_cpus": 9,
+    "note": "Host-visible CPU count; container quota and other workloads may differ. No hostname collected."
+  },
+  "iterations_per_round": 20,
+  "rounds": 7,
+  "reference_sha256": "2a929ec2be8b0a59f60b581e128385f1d06da8fe8c23e014a1fd7271dcfebad6",
+  "current_sha256": "8e6a0133026c62fe2dfc99fc5eb64fbe9de32c1e2fc97761490068e795a9fde5",
+  "method": "3 warmups per function/case; alternating measurement order; median milliseconds per solve. Exact output equality checked outside timing. Single process, no HTTP, database or speed threshold.",
+  "cases": [
+    {
+      "name": "30-people-8-slots",
+      "person_roles": 100,
+      "remaining_slots": 8,
+      "exact_output_hash": "3d554ed74b7d8ca20d7da4e3b29be9d12702dd78caafe670437a3f4c829a9731",
+      "samples_ms": {
+        "phase12": [
+          7.699154350001436,
+          7.88263085000267,
+          8.09155260000125,
+          8.157460549995221,
+          8.497569949997796,
+          8.595882400004484,
+          8.032488250000824
+        ],
+        "phase13": [
+          3.1787807499995324,
+          2.8589491499985797,
+          3.002674900000102,
+          2.6853172500011624,
+          2.9550646500013045,
+          3.4015861499995026,
+          2.737978300001487
+        ]
+      },
+      "median_ms": {
+        "phase12": 8.09155260000125,
+        "phase13": 2.9550646500013045
+      },
+      "speedup": 2.7381981642931836
+    },
+    {
+      "name": "100-people-8-slots",
+      "person_roles": 333,
+      "remaining_slots": 8,
+      "exact_output_hash": "aca0771fefdc7cc1075368fee9d51c158a169c9c818a83ad9fc7cb041b257488",
+      "samples_ms": {
+        "phase12": [
+          11.71696754999516,
+          12.158338049999884,
+          11.524204250002867,
+          12.255762949996551,
+          12.36719715000163,
+          12.812420350002185,
+          18.05871340000067
+        ],
+        "phase13": [
+          4.900635099994588,
+          4.70458109999754,
+          3.2445030999951996,
+          4.07270659999881,
+          5.739020150002716,
+          4.022889850000411,
+          4.483195550000119
+        ]
+      },
+      "median_ms": {
+        "phase12": 12.255762949996551,
+        "phase13": 4.483195550000119
+      },
+      "speedup": 2.733711437145816
+    },
+    {
+      "name": "1000-people-8-slots",
+      "person_roles": 3333,
+      "remaining_slots": 8,
+      "exact_output_hash": "39baadd9ba7d8393f4ad96293639a90c0e0296f3e0c369471c7acc2e1d25bdf6",
+      "samples_ms": {
+        "phase12": [
+          20.3036379499963,
+          21.14831869999989,
+          19.312992900000836,
+          21.409124899997778,
+          19.9505980500021,
+          22.332446000001482,
+          19.460853550003776
+        ],
+        "phase13": [
+          8.149266800000987,
+          6.26777845000106,
+          5.817019800002754,
+          6.197901449996834,
+          6.254023999997571,
+          7.018932600004746,
+          6.979989349997595
+        ]
+      },
+      "median_ms": {
+        "phase12": 20.3036379499963,
+        "phase13": 6.26777845000106
+      },
+      "speedup": 3.239367522633616
+    },
+    {
+      "name": "100-people-4-slots",
+      "person_roles": 333,
+      "remaining_slots": 4,
+      "exact_output_hash": "17ae066ff4f14d758cee79dfcdf5ebe7a05e48ac5e32cc9f0592646fce8a0b45",
+      "samples_ms": {
+        "phase12": [
+          0.36999415000309455,
+          0.33610434999786776,
+          0.32559950000177196,
+          0.29054960000394203,
+          0.3202177499986192,
+          0.3151281499981451,
+          0.4087199000025521
+        ],
+        "phase13": [
+          0.12002215000279648,
+          0.10542199999576951,
+          0.13832065000087823,
+          0.14223445000425272,
+          0.15501674999995885,
+          0.19091095000476344,
+          0.13942775000259644
+        ]
+      },
+      "median_ms": {
+        "phase12": 0.32559950000177196,
+        "phase13": 0.13942775000259644
+      },
+      "speedup": 2.33525607345531
+    }
+  ],
+  "profile_phase12": [
+    {
+      "function": "assignment_phase12.py:minimum_assignment",
+      "calls": 20,
+      "self_seconds": 0.325601872,
+      "cumulative_seconds": 0.5727177320000001
+    },
+    {
+      "function": "enum.py:__get__",
+      "calls": 689600,
+      "self_seconds": 0.174057663,
+      "cumulative_seconds": 0.243079292
+    },
+    {
+      "function": "enum.py:value",
+      "calls": 689600,
+      "self_seconds": 0.069021629,
+      "cumulative_seconds": 0.069021629
+    },
+    {
+      "function": "~:<built-in method builtins.sorted>",
+      "calls": 140,
+      "self_seconds": 0.0018229670000000002,
+      "cumulative_seconds": 0.00253317
+    },
+    {
+      "function": "~:<method 'append' of 'list' objects>",
+      "calls": 6560,
+      "self_seconds": 0.0009275910000000001,
+      "cumulative_seconds": 0.0009275910000000001
+    },
+    {
+      "function": "assignment_phase12.py:<lambda>",
+      "calls": 6560,
+      "self_seconds": 0.0007102030000000001,
+      "cumulative_seconds": 0.0007102030000000001
+    },
+    {
+      "function": "assignment_phase12.py:<genexpr>",
+      "calls": 180,
+      "self_seconds": 0.00015695000000000002,
+      "cumulative_seconds": 0.000335913
+    },
+    {
+      "function": "enum.py:__call__",
+      "calls": 160,
+      "self_seconds": 0.00010454500000000001,
+      "cumulative_seconds": 0.000178963
+    }
+  ],
+  "profile_phase13": [
+    {
+      "function": "assignment.py:minimum_assignment",
+      "calls": 20,
+      "self_seconds": 0.095804238,
+      "cumulative_seconds": 0.10317909900000001
+    },
+    {
+      "function": "~:<built-in method builtins.sorted>",
+      "calls": 140,
+      "self_seconds": 0.003309194,
+      "cumulative_seconds": 0.004003441
+    },
+    {
+      "function": "assignment.py:<genexpr>",
+      "calls": 180,
+      "self_seconds": 0.000174677,
+      "cumulative_seconds": 0.0014080100000000001
+    },
+    {
+      "function": "enum.py:__call__",
+      "calls": 160,
+      "self_seconds": 0.0012009190000000002,
+      "cumulative_seconds": 0.001233333
+    },
+    {
+      "function": "~:<method 'append' of 'list' objects>",
+      "calls": 6560,
+      "self_seconds": 0.000984347,
+      "cumulative_seconds": 0.000984347
+    },
+    {
+      "function": "assignment.py:<lambda>",
+      "calls": 6560,
+      "self_seconds": 0.000694247,
+      "cumulative_seconds": 0.000694247
+    },
+    {
+      "function": "assignment.py:<genexpr>",
+      "calls": 1760,
+      "self_seconds": 0.0005903390000000001,
+      "cumulative_seconds": 0.0005903390000000001
+    },
+    {
+      "function": "enum.py:__get__",
+      "calls": 480,
+      "self_seconds": 0.000120329,
+      "cumulative_seconds": 0.00018789900000000002
+    }
+  ]
+}

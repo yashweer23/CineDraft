@@ -1,0 +1,8 @@
+{
+  "schema_version": "phase13-live-status-v1",
+  "postgresql_integration": {"status": "not_run", "reason": "No PostgreSQL server or Docker runtime available in the build environment."},
+  "live_http_load": {"status": "not_run", "latency_p50_ms": null, "latency_p95_ms": null, "requests_per_second": null, "error_rate": null},
+  "live_browser_postgresql": {"status": "not_run"},
+  "human_playtests": {"status": "not_conducted", "observed_participants": 0},
+  "windows_execution": {"status": "not_run"}
+}
