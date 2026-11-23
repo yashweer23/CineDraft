@@ -1,0 +1,15 @@
+# Optional VS Code REST Client examples. Use your actual published graph and UUIDs.
+@api = http://localhost:8001
+@graph = graph:first-graph-v1
+
+### Published graph versions
+GET {{api}}/api/collaboration/versions
+
+### Eligible role nodes
+GET {{api}}/api/collaboration/{{graph}}/nodes?role=director&limit=20
+
+### Connections
+GET {{api}}/api/collaboration/{{graph}}/edges?limit=6
+
+### Graph manifest and report
+GET {{api}}/api/collaboration/{{graph}}/report
