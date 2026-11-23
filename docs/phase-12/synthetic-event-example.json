@@ -1,0 +1,343 @@
+{
+  "schema_version": "gameplay-events-1.0",
+  "origin": "generated_demo",
+  "session_key": "ee50faf5f28d5b8a10a6c1741e7246eb64d41c7e83a306b34749aaa88b8f296a",
+  "started": "2026-10-01T12:00:00Z",
+  "captured": "2026-10-01T12:05:45Z",
+  "genre": "drama",
+  "tier": "studio",
+  "catalog": "demo:practice-v1",
+  "rules": "classic-1.0",
+  "scoring": "baseline-1.0",
+  "simulation": "simulation-1.0",
+  "fixture": true,
+  "mode": "practice",
+  "total": 50000000,
+  "allowance": 32500000,
+  "reserve": 17500000,
+  "events": [
+    {
+      "event_key": "625334c81cd696b86c43cd279d57a7ea12e855ba169b51343c331a50012cc893",
+      "kind": "start",
+      "at": "2026-10-01T12:00:00Z",
+      "revision": 0,
+      "slot": null,
+      "person": null,
+      "offer": null,
+      "fee": null,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "e12326848376c1de3ee63f64323c95983fe066df3c1b8cb7dc70f1a1cb03bc67",
+      "kind": "pick",
+      "at": "2026-10-01T12:00:12Z",
+      "revision": 1,
+      "slot": "director",
+      "person": "64d75959-bcdf-5444-840f-f692725bd678",
+      "offer": "5163f644490ce4d373708f9e57bbba9ab37b4505f3012746f383dda58680adef",
+      "fee": 100000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "c3fc3ab26a22b8282046590f3df4d4497341d6d0292eb77fce61bd131e3b006b",
+      "kind": "pick",
+      "at": "2026-10-01T12:00:25Z",
+      "revision": 2,
+      "slot": "lead",
+      "person": "398cb365-4b1d-5947-a982-d91a799d2ae3",
+      "offer": "ab6030d8f9300c0973f99ef6d9538c060294ef620a1397461a011d5ae1f6e13e",
+      "fee": 115000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "8f7cbbb88dfd6cafba9ce40f4ade460b9ba03186d3ad4e34d8290fd96b129e29",
+      "kind": "pick",
+      "at": "2026-10-01T12:01:50Z",
+      "revision": 3,
+      "slot": "co_lead",
+      "person": "db676cc7-f9e8-50f7-8657-9619c1ce1422",
+      "offer": "bdd0623fe9e334a2021721ebdeeeeb1be1996f525e4b1df6719617b38a5b43fe",
+      "fee": 120000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "2f95e66f4e039e9eacb830917ba61eefb02313695bdfb6ab1fc99d0b605d0763",
+      "kind": "pick",
+      "at": "2026-10-01T12:02:05Z",
+      "revision": 4,
+      "slot": "supporting_1",
+      "person": "af8b8377-686e-51f8-8554-8c1372150f64",
+      "offer": "d61761de319ad4579e510d1d11b18251834a8f521e425d47f1c21936a40ab25a",
+      "fee": 135000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "8b2ff54ee1ee8debe9790efcd5efbf37c237189cd03be8ee684207e957cf1a1a",
+      "kind": "pick",
+      "at": "2026-10-01T12:02:21Z",
+      "revision": 5,
+      "slot": "supporting_2",
+      "person": "7626cf15-be3d-5fb8-b77f-a87937229d67",
+      "offer": "baa1c3583330735651ba7c13867a580cc3d9c368b46f37eca26957c803b82699",
+      "fee": 140000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "3795cc04b2d290d7fcca7974c2a23481a5b825cd430a9d248a695663fa5bdee2",
+      "kind": "pick",
+      "at": "2026-10-01T12:02:38Z",
+      "revision": 6,
+      "slot": "writer",
+      "person": "a5646574-8595-527f-b7c9-a65d3b0b76ba",
+      "offer": "5fa74c3d576b4dc581076a5331fb35ff63238e6f4a35d64585107098566d9f7b",
+      "fee": 155000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "2c91c6e9526a57dceacd7182c6b14eb24d08aaedd3fa2af55627e3c63bd91562",
+      "kind": "pick",
+      "at": "2026-10-01T12:02:56Z",
+      "revision": 7,
+      "slot": "cinematographer",
+      "person": "224b8b08-1a7d-59f7-903f-6e6b535974a5",
+      "offer": "10870d7b43c77e580339bcdf7755d551db4493b310a8dffbeb69d053919808da",
+      "fee": 160000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "d57beac4bce79c811f91c643a54b26a87fd09a19656010d29d5d5fc2ed55ff9c",
+      "kind": "pick",
+      "at": "2026-10-01T12:03:15Z",
+      "revision": 8,
+      "slot": "composer",
+      "person": "fa35cfe7-fe20-54c7-b2bc-17367c888847",
+      "offer": "a28626345d827abf53519de5f4c023f34e969e6097e74ea1e0dab9e7601e0d99",
+      "fee": 175000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "a58eba28659d186a7efea692abf999283cd8911cba8d21bcb21550c3af4c6efe",
+      "kind": "preview_recast",
+      "at": "2026-10-01T12:03:30Z",
+      "revision": 9,
+      "slot": null,
+      "person": null,
+      "offer": null,
+      "fee": null,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "c5f17aa9659b21cb44e5819ba871a4b92f4602357761ba6c49a6ed778c9b65da",
+      "kind": "confirm_recast",
+      "at": "2026-10-01T12:03:50Z",
+      "revision": 10,
+      "slot": "director",
+      "person": "2d7a86da-ffac-5bc0-9c20-f46ac01bb171",
+      "offer": "a4c1d1401fdb4efbf1ae47837e311ef9262bb62ff0a1fc95d18588c6c73019f9",
+      "fee": 180000,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "1e3649a075d9ed29edaff23eeec7d8924ec6cc1fb8612ff0c1f5efcdbe438bd8",
+      "kind": "finalize",
+      "at": "2026-10-01T12:04:10Z",
+      "revision": 11,
+      "slot": null,
+      "person": null,
+      "offer": null,
+      "fee": null,
+      "score": null,
+      "profit": null
+    },
+    {
+      "event_key": "001f80755073a81f45c412581c9e875b2ed75d71534c792c3ba11a470a05d8a1",
+      "kind": "release",
+      "at": "2026-10-01T12:04:15Z",
+      "revision": 12,
+      "slot": null,
+      "person": null,
+      "offer": null,
+      "fee": null,
+      "score": 60,
+      "profit": -250000
+    },
+    {
+      "event_key": "afad97c19f53c5faf9a2f9172b1aca1f79efa2e6771b9467abf48938ac3a83e9",
+      "kind": "whatif",
+      "at": "2026-10-01T12:04:45Z",
+      "revision": 13,
+      "slot": null,
+      "person": null,
+      "offer": null,
+      "fee": null,
+      "score": null,
+      "profit": null
+    }
+  ],
+  "opportunities": [
+    {
+      "kind": "pick",
+      "offer": "5163f644490ce4d373708f9e57bbba9ab37b4505f3012746f383dda58680adef",
+      "person": "64d75959-bcdf-5444-840f-f692725bd678",
+      "name": "Sample Director A",
+      "slot": "director",
+      "at": "2026-10-01T12:00:00Z",
+      "event_key": "625334c81cd696b86c43cd279d57a7ea12e855ba169b51343c331a50012cc893"
+    },
+    {
+      "kind": "pick",
+      "offer": "5163f644490ce4d373708f9e57bbba9ab37b4505f3012746f383dda58680adef",
+      "person": "cbc41e0f-974a-502d-ad13-821ab6c96668",
+      "name": "Sample Director B",
+      "slot": "director",
+      "at": "2026-10-01T12:00:00Z",
+      "event_key": "625334c81cd696b86c43cd279d57a7ea12e855ba169b51343c331a50012cc893"
+    },
+    {
+      "kind": "pick",
+      "offer": "ab6030d8f9300c0973f99ef6d9538c060294ef620a1397461a011d5ae1f6e13e",
+      "person": "5cecbfe5-a6ff-53b6-9002-5ef09a880407",
+      "name": "Sample Lead A",
+      "slot": "lead",
+      "at": "2026-10-01T12:00:12Z",
+      "event_key": "e12326848376c1de3ee63f64323c95983fe066df3c1b8cb7dc70f1a1cb03bc67"
+    },
+    {
+      "kind": "pick",
+      "offer": "ab6030d8f9300c0973f99ef6d9538c060294ef620a1397461a011d5ae1f6e13e",
+      "person": "398cb365-4b1d-5947-a982-d91a799d2ae3",
+      "name": "Sample Lead B",
+      "slot": "lead",
+      "at": "2026-10-01T12:00:12Z",
+      "event_key": "e12326848376c1de3ee63f64323c95983fe066df3c1b8cb7dc70f1a1cb03bc67"
+    },
+    {
+      "kind": "pick",
+      "offer": "bdd0623fe9e334a2021721ebdeeeeb1be1996f525e4b1df6719617b38a5b43fe",
+      "person": "db676cc7-f9e8-50f7-8657-9619c1ce1422",
+      "name": "Sample Co Lead A",
+      "slot": "co_lead",
+      "at": "2026-10-01T12:00:25Z",
+      "event_key": "c3fc3ab26a22b8282046590f3df4d4497341d6d0292eb77fce61bd131e3b006b"
+    },
+    {
+      "kind": "pick",
+      "offer": "bdd0623fe9e334a2021721ebdeeeeb1be1996f525e4b1df6719617b38a5b43fe",
+      "person": "bf8a0f23-3e6d-52b4-9b48-4a1825ccb48c",
+      "name": "Sample Co Lead B",
+      "slot": "co_lead",
+      "at": "2026-10-01T12:00:25Z",
+      "event_key": "c3fc3ab26a22b8282046590f3df4d4497341d6d0292eb77fce61bd131e3b006b"
+    },
+    {
+      "kind": "pick",
+      "offer": "d61761de319ad4579e510d1d11b18251834a8f521e425d47f1c21936a40ab25a",
+      "person": "06f73f8f-d8da-54cd-872c-36965cb52694",
+      "name": "Sample Supporting 1 A",
+      "slot": "supporting_1",
+      "at": "2026-10-01T12:01:50Z",
+      "event_key": "8f7cbbb88dfd6cafba9ce40f4ade460b9ba03186d3ad4e34d8290fd96b129e29"
+    },
+    {
+      "kind": "pick",
+      "offer": "d61761de319ad4579e510d1d11b18251834a8f521e425d47f1c21936a40ab25a",
+      "person": "af8b8377-686e-51f8-8554-8c1372150f64",
+      "name": "Sample Supporting 1 B",
+      "slot": "supporting_1",
+      "at": "2026-10-01T12:01:50Z",
+      "event_key": "8f7cbbb88dfd6cafba9ce40f4ade460b9ba03186d3ad4e34d8290fd96b129e29"
+    },
+    {
+      "kind": "pick",
+      "offer": "baa1c3583330735651ba7c13867a580cc3d9c368b46f37eca26957c803b82699",
+      "person": "7626cf15-be3d-5fb8-b77f-a87937229d67",
+      "name": "Sample Supporting 2 A",
+      "slot": "supporting_2",
+      "at": "2026-10-01T12:02:05Z",
+      "event_key": "2f95e66f4e039e9eacb830917ba61eefb02313695bdfb6ab1fc99d0b605d0763"
+    },
+    {
+      "kind": "pick",
+      "offer": "baa1c3583330735651ba7c13867a580cc3d9c368b46f37eca26957c803b82699",
+      "person": "8244f645-205b-55f9-b4f8-edee24473d31",
+      "name": "Sample Supporting 2 B",
+      "slot": "supporting_2",
+      "at": "2026-10-01T12:02:05Z",
+      "event_key": "2f95e66f4e039e9eacb830917ba61eefb02313695bdfb6ab1fc99d0b605d0763"
+    },
+    {
+      "kind": "pick",
+      "offer": "5fa74c3d576b4dc581076a5331fb35ff63238e6f4a35d64585107098566d9f7b",
+      "person": "f5a63add-0157-5dc5-b993-44c1e88c46cd",
+      "name": "Sample Writer A",
+      "slot": "writer",
+      "at": "2026-10-01T12:02:21Z",
+      "event_key": "8b2ff54ee1ee8debe9790efcd5efbf37c237189cd03be8ee684207e957cf1a1a"
+    },
+    {
+      "kind": "pick",
+      "offer": "5fa74c3d576b4dc581076a5331fb35ff63238e6f4a35d64585107098566d9f7b",
+      "person": "a5646574-8595-527f-b7c9-a65d3b0b76ba",
+      "name": "Sample Writer B",
+      "slot": "writer",
+      "at": "2026-10-01T12:02:21Z",
+      "event_key": "8b2ff54ee1ee8debe9790efcd5efbf37c237189cd03be8ee684207e957cf1a1a"
+    },
+    {
+      "kind": "pick",
+      "offer": "10870d7b43c77e580339bcdf7755d551db4493b310a8dffbeb69d053919808da",
+      "person": "224b8b08-1a7d-59f7-903f-6e6b535974a5",
+      "name": "Sample Cinematographer A",
+      "slot": "cinematographer",
+      "at": "2026-10-01T12:02:38Z",
+      "event_key": "3795cc04b2d290d7fcca7974c2a23481a5b825cd430a9d248a695663fa5bdee2"
+    },
+    {
+      "kind": "pick",
+      "offer": "10870d7b43c77e580339bcdf7755d551db4493b310a8dffbeb69d053919808da",
+      "person": "f486df89-96b4-5eb1-94e4-b15f1feece20",
+      "name": "Sample Cinematographer B",
+      "slot": "cinematographer",
+      "at": "2026-10-01T12:02:38Z",
+      "event_key": "3795cc04b2d290d7fcca7974c2a23481a5b825cd430a9d248a695663fa5bdee2"
+    },
+    {
+      "kind": "pick",
+      "offer": "a28626345d827abf53519de5f4c023f34e969e6097e74ea1e0dab9e7601e0d99",
+      "person": "61f39199-3d80-5462-8f7a-ffe4575d58b1",
+      "name": "Sample Composer A",
+      "slot": "composer",
+      "at": "2026-10-01T12:02:56Z",
+      "event_key": "2c91c6e9526a57dceacd7182c6b14eb24d08aaedd3fa2af55627e3c63bd91562"
+    },
+    {
+      "kind": "pick",
+      "offer": "a28626345d827abf53519de5f4c023f34e969e6097e74ea1e0dab9e7601e0d99",
+      "person": "fa35cfe7-fe20-54c7-b2bc-17367c888847",
+      "name": "Sample Composer B",
+      "slot": "composer",
+      "at": "2026-10-01T12:02:56Z",
+      "event_key": "2c91c6e9526a57dceacd7182c6b14eb24d08aaedd3fa2af55627e3c63bd91562"
+    },
+    {
+      "kind": "recast",
+      "offer": "a4c1d1401fdb4efbf1ae47837e311ef9262bb62ff0a1fc95d18588c6c73019f9",
+      "person": "2d7a86da-ffac-5bc0-9c20-f46ac01bb171",
+      "name": "Sample Director C",
+      "slot": "director",
+      "at": "2026-10-01T12:03:30Z",
+      "event_key": "a58eba28659d186a7efea692abf999283cd8911cba8d21bcb21550c3af4c6efe"
+    }
+  ]
+}

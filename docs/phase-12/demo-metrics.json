@@ -1,0 +1,551 @@
+{
+  "version": "bi-1.0",
+  "filters": {
+    "cohort": "demo",
+    "as_of": "2026-11-01T00:00:00+00:00"
+  },
+  "overview": [
+    {
+      "started": 12,
+      "completed": 7,
+      "abandoned": 3,
+      "unfinished": 2,
+      "replay_starts": 2,
+      "confirmed_recasts": 2,
+      "comparisons": 1,
+      "catalogs": 1,
+      "fixture_sessions": 12
+    }
+  ],
+  "funnel": [
+    {
+      "n": 0,
+      "label": "Started",
+      "reached": 12,
+      "starts": 12
+    },
+    {
+      "n": 1,
+      "label": "1 pick",
+      "reached": 11,
+      "starts": 12
+    },
+    {
+      "n": 2,
+      "label": "2 picks",
+      "reached": 11,
+      "starts": 12
+    },
+    {
+      "n": 3,
+      "label": "3 picks",
+      "reached": 8,
+      "starts": 12
+    },
+    {
+      "n": 4,
+      "label": "4 picks",
+      "reached": 8,
+      "starts": 12
+    },
+    {
+      "n": 5,
+      "label": "5 picks",
+      "reached": 7,
+      "starts": 12
+    },
+    {
+      "n": 6,
+      "label": "6 picks",
+      "reached": 7,
+      "starts": 12
+    },
+    {
+      "n": 7,
+      "label": "7 picks",
+      "reached": 7,
+      "starts": 12
+    },
+    {
+      "n": 8,
+      "label": "8 picks",
+      "reached": 7,
+      "starts": 12
+    },
+    {
+      "n": 9,
+      "label": "Finalized",
+      "reached": 7,
+      "starts": 12
+    },
+    {
+      "n": 10,
+      "label": "Released",
+      "reached": 7,
+      "starts": 12
+    }
+  ],
+  "stops": [
+    {
+      "picks_made": 0,
+      "explicitly_abandoned": 0,
+      "still_unfinished": 1
+    },
+    {
+      "picks_made": 2,
+      "explicitly_abandoned": 3,
+      "still_unfinished": 0
+    },
+    {
+      "picks_made": 4,
+      "explicitly_abandoned": 0,
+      "still_unfinished": 1
+    }
+  ],
+  "rounds": [
+    {
+      "slot": "co_lead",
+      "measured_picks": 8,
+      "median_seconds": 88.5,
+      "clock_reversals": 0
+    },
+    {
+      "slot": "composer",
+      "measured_picks": 7,
+      "median_seconds": 22.0,
+      "clock_reversals": 0
+    },
+    {
+      "slot": "cinematographer",
+      "measured_picks": 7,
+      "median_seconds": 21.0,
+      "clock_reversals": 0
+    },
+    {
+      "slot": "writer",
+      "measured_picks": 7,
+      "median_seconds": 20.0,
+      "clock_reversals": 0
+    },
+    {
+      "slot": "supporting_2",
+      "measured_picks": 7,
+      "median_seconds": 19.0,
+      "clock_reversals": 0
+    },
+    {
+      "slot": "supporting_1",
+      "measured_picks": 8,
+      "median_seconds": 18.5,
+      "clock_reversals": 0
+    },
+    {
+      "slot": "lead",
+      "measured_picks": 11,
+      "median_seconds": 18.0,
+      "clock_reversals": 0
+    },
+    {
+      "slot": "director",
+      "measured_picks": 11,
+      "median_seconds": 17.0,
+      "clock_reversals": 0
+    }
+  ],
+  "genres": [
+    {
+      "genre": "drama",
+      "starts": 6,
+      "official_releases": 4,
+      "share_pct": 50.0
+    },
+    {
+      "genre": "thriller",
+      "starts": 6,
+      "official_releases": 3,
+      "share_pct": 50.0
+    }
+  ],
+  "talent": [
+    {
+      "person": "64d75959-bcdf-5444-840f-f692725bd678",
+      "slot": "director",
+      "name": "Sample Director A",
+      "selectable_offers": 13,
+      "selections": 6,
+      "pick_pct": 46.2,
+      "official_films": 2,
+      "avg_score": 72.0,
+      "avg_profit_usd": 250000.0
+    },
+    {
+      "person": "398cb365-4b1d-5947-a982-d91a799d2ae3",
+      "slot": "lead",
+      "name": "Sample Lead B",
+      "selectable_offers": 11,
+      "selections": 6,
+      "pick_pct": 54.5,
+      "official_films": 4,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "cbc41e0f-974a-502d-ad13-821ab6c96668",
+      "slot": "director",
+      "name": "Sample Director B",
+      "selectable_offers": 13,
+      "selections": 5,
+      "pick_pct": 38.5,
+      "official_films": 3,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "db676cc7-f9e8-50f7-8657-9619c1ce1422",
+      "slot": "co_lead",
+      "name": "Sample Co Lead A",
+      "selectable_offers": 11,
+      "selections": 5,
+      "pick_pct": 45.5,
+      "official_films": 4,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "5cecbfe5-a6ff-53b6-9002-5ef09a880407",
+      "slot": "lead",
+      "name": "Sample Lead A",
+      "selectable_offers": 11,
+      "selections": 5,
+      "pick_pct": 45.5,
+      "official_films": 3,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "af8b8377-686e-51f8-8554-8c1372150f64",
+      "slot": "supporting_1",
+      "name": "Sample Supporting 1 B",
+      "selectable_offers": 8,
+      "selections": 5,
+      "pick_pct": 62.5,
+      "official_films": 4,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "7626cf15-be3d-5fb8-b77f-a87937229d67",
+      "slot": "supporting_2",
+      "name": "Sample Supporting 2 A",
+      "selectable_offers": 8,
+      "selections": 4,
+      "pick_pct": 50.0,
+      "official_films": 4,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "224b8b08-1a7d-59f7-903f-6e6b535974a5",
+      "slot": "cinematographer",
+      "name": "Sample Cinematographer A",
+      "selectable_offers": 7,
+      "selections": 4,
+      "pick_pct": 57.1,
+      "official_films": 4,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "fa35cfe7-fe20-54c7-b2bc-17367c888847",
+      "slot": "composer",
+      "name": "Sample Composer B",
+      "selectable_offers": 7,
+      "selections": 4,
+      "pick_pct": 57.1,
+      "official_films": 4,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "a5646574-8595-527f-b7c9-a65d3b0b76ba",
+      "slot": "writer",
+      "name": "Sample Writer B",
+      "selectable_offers": 7,
+      "selections": 4,
+      "pick_pct": 57.1,
+      "official_films": 4,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "bf8a0f23-3e6d-52b4-9b48-4a1825ccb48c",
+      "slot": "co_lead",
+      "name": "Sample Co Lead B",
+      "selectable_offers": 11,
+      "selections": 3,
+      "pick_pct": 27.3,
+      "official_films": 3,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "06f73f8f-d8da-54cd-872c-36965cb52694",
+      "slot": "supporting_1",
+      "name": "Sample Supporting 1 A",
+      "selectable_offers": 8,
+      "selections": 3,
+      "pick_pct": 37.5,
+      "official_films": 3,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "8244f645-205b-55f9-b4f8-edee24473d31",
+      "slot": "supporting_2",
+      "name": "Sample Supporting 2 B",
+      "selectable_offers": 8,
+      "selections": 3,
+      "pick_pct": 37.5,
+      "official_films": 3,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "f486df89-96b4-5eb1-94e4-b15f1feece20",
+      "slot": "cinematographer",
+      "name": "Sample Cinematographer B",
+      "selectable_offers": 7,
+      "selections": 3,
+      "pick_pct": 42.9,
+      "official_films": 3,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "61f39199-3d80-5462-8f7a-ffe4575d58b1",
+      "slot": "composer",
+      "name": "Sample Composer A",
+      "selectable_offers": 7,
+      "selections": 3,
+      "pick_pct": 42.9,
+      "official_films": 3,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "f5a63add-0157-5dc5-b993-44c1e88c46cd",
+      "slot": "writer",
+      "name": "Sample Writer A",
+      "selectable_offers": 7,
+      "selections": 3,
+      "pick_pct": 42.9,
+      "official_films": 3,
+      "avg_score": 69.0,
+      "avg_profit_usd": 125000.0
+    },
+    {
+      "person": "2d7a86da-ffac-5bc0-9c20-f46ac01bb171",
+      "slot": "director",
+      "name": "Sample Director C",
+      "selectable_offers": 0,
+      "selections": 0,
+      "pick_pct": null,
+      "official_films": 2,
+      "avg_score": 66.0,
+      "avg_profit_usd": 0.0
+    }
+  ],
+  "budget": [
+    {
+      "official_films": 7,
+      "total_budget": 190000000,
+      "talent_allowance": 123500000,
+      "reserved_production": 66500000,
+      "committed_talent": 7860000,
+      "unused_allowance": 115640000,
+      "utilization_pct": 6.4
+    }
+  ],
+  "allocations": [
+    {
+      "slot": "composer",
+      "released_films": 7,
+      "total_fees": 1210000,
+      "mean_fee": 172857.0
+    },
+    {
+      "slot": "cinematographer",
+      "released_films": 7,
+      "total_fees": 1135000,
+      "mean_fee": 162143.0
+    },
+    {
+      "slot": "writer",
+      "released_films": 7,
+      "total_fees": 1070000,
+      "mean_fee": 152857.0
+    },
+    {
+      "slot": "supporting_2",
+      "released_films": 7,
+      "total_fees": 995000,
+      "mean_fee": 142143.0
+    },
+    {
+      "slot": "supporting_1",
+      "released_films": 7,
+      "total_fees": 930000,
+      "mean_fee": 132857.0
+    },
+    {
+      "slot": "director",
+      "released_films": 7,
+      "total_fees": 875000,
+      "mean_fee": 125000.0
+    },
+    {
+      "slot": "co_lead",
+      "released_films": 7,
+      "total_fees": 855000,
+      "mean_fee": 122143.0
+    },
+    {
+      "slot": "lead",
+      "released_films": 7,
+      "total_fees": 790000,
+      "mean_fee": 112857.0
+    }
+  ],
+  "versions": [
+    {
+      "catalog": "demo:practice-v1",
+      "rules": "classic-1.0",
+      "scoring": "baseline-1.0",
+      "simulation": "simulation-1.0",
+      "fixture": 1,
+      "starts": 12
+    }
+  ],
+  "trace": [
+    {
+      "session_key": "ee50faf5f28d5b8a10a6c1741e7246eb64d41c7e83a306b34749aaa88b8f296a",
+      "genre": "drama",
+      "tier": "studio",
+      "start_event": "625334c81cd696b86c43cd279d57a7ea12e855ba169b51343c331a50012cc893",
+      "release_event": "001f80755073a81f45c412581c9e875b2ed75d71534c792c3ba11a470a05d8a1",
+      "official_score": 60,
+      "picks": 8,
+      "explicitly_abandoned": 0
+    },
+    {
+      "session_key": "8fac159958ce1361d82704e3db8c8ae32ec23eed24ce38ac055c03d74dd1c2f5",
+      "genre": "thriller",
+      "tier": "indie",
+      "start_event": "8a0154aa2f83593e7559a268f30aa1c6dcc05fdd61bd455715c9515271927c14",
+      "release_event": "303b40ab32ff46de639dc7f8a9810068b4ac951adedb69ec0f30548dc0ea944a",
+      "official_score": 63,
+      "picks": 8,
+      "explicitly_abandoned": 0
+    },
+    {
+      "session_key": "e775748c8992e5ed83f52f48b70b4a017b587d3d044fef6e1e06e0f090ae9295",
+      "genre": "drama",
+      "tier": "indie",
+      "start_event": "4876918486adae2ec9e2274e55ade44d0e6507187b39c0c9bdb0095d4ad45959",
+      "release_event": "4c3ac002b4974bb45da0dc30f4ab6f84fe4b8d88a46eca064b8d931815a83dc4",
+      "official_score": 66,
+      "picks": 8,
+      "explicitly_abandoned": 0
+    },
+    {
+      "session_key": "ba17be2ba4562f4c158ba7932ad94ead03e1f2cae988cae183b650b3cffb688a",
+      "genre": "thriller",
+      "tier": "studio",
+      "start_event": "2dc2335d545c1ef35e34142fe0ecb917874fd0033cd87ceeb8ba61281bd6d79c",
+      "release_event": "52f871980bedc6b033d55d8def6454c4a424d1b62de9fd37663983ceeecff5e6",
+      "official_score": 69,
+      "picks": 8,
+      "explicitly_abandoned": 0
+    },
+    {
+      "session_key": "7b528099427910b23031d6969d30e43d069b94a75d5a700617c87fcbb395fb1a",
+      "genre": "drama",
+      "tier": "indie",
+      "start_event": "10b9a5c3837b8597331b309fa18e9561c90b5c1ab5cd8a8a535ea99d338cfa32",
+      "release_event": "c77cdc4efe25995667f11943eaf535c07f51c3fa7b71e07e3957f1dd7e7c5fc4",
+      "official_score": 72,
+      "picks": 8,
+      "explicitly_abandoned": 0
+    },
+    {
+      "session_key": "598fb29cc1929286f6ee09dc67ab92007248cacd2d8e626fcbf80c0becde5591",
+      "genre": "thriller",
+      "tier": "indie",
+      "start_event": "d90970d53b822465ea8b7370dbb615e390d69fb839b9db9ed1c148a910f56ddf",
+      "release_event": "186aaee068c6ee8a49682e1925ba3a1c1f64b3a5555ae3b078c02a8f0d08c3db",
+      "official_score": 75,
+      "picks": 8,
+      "explicitly_abandoned": 0
+    },
+    {
+      "session_key": "2774ab2cfa5a946d0132812f974997ec81d920bac4b7d0cc68990be300ed4bca",
+      "genre": "drama",
+      "tier": "studio",
+      "start_event": "adba69ea0d155de6147d2b203cd5f94fc4cd33a9165050f7caa66ac9c35505bb",
+      "release_event": "384df2d9b4bed2a19bbb38041011c18aad81f9f3bc46d51930e0bde6cd386157",
+      "official_score": 78,
+      "picks": 8,
+      "explicitly_abandoned": 0
+    },
+    {
+      "session_key": "80a7bb7e1defece7a05b00752468a4bc98fa738fdd03003cc7424b3866ba724f",
+      "genre": "thriller",
+      "tier": "indie",
+      "start_event": "753361ebe705747921677de4e1063e75774b1e19744fa9b55311de2c2098b534",
+      "release_event": null,
+      "official_score": null,
+      "picks": 2,
+      "explicitly_abandoned": 1
+    },
+    {
+      "session_key": "e71d9c49d431f96adc73bacc92fd9c876ee28ec752a6661b2f2aa74b06d8324f",
+      "genre": "drama",
+      "tier": "indie",
+      "start_event": "3ba67fcf6c66e42e909843e551bb41119e71cd74f3ca7b31cab5197cdb246c77",
+      "release_event": null,
+      "official_score": null,
+      "picks": 2,
+      "explicitly_abandoned": 1
+    },
+    {
+      "session_key": "ba117943f969288918103c529bc174f9aa8e78d107408c91162b9985ae5647f7",
+      "genre": "thriller",
+      "tier": "studio",
+      "start_event": "524d1a5b61cb5797d6044cf5d31fffd9603735e8ffb8f7b0abf6d9643beb70db",
+      "release_event": null,
+      "official_score": null,
+      "picks": 2,
+      "explicitly_abandoned": 1
+    },
+    {
+      "session_key": "976e7823b198d2fa622c2f9a07744bfe71c2930e15669f3d81c68eab4b9f9fc2",
+      "genre": "drama",
+      "tier": "indie",
+      "start_event": "2f51af830154d42ac3cfea25a541dc6cc7e41c69b4905a74ac86feba52bfa3fb",
+      "release_event": null,
+      "official_score": null,
+      "picks": 4,
+      "explicitly_abandoned": 0
+    },
+    {
+      "session_key": "70fdaae9bbe371c4203ec81d7407aed2265a20a08d4c7c5de3f1edbac0e43a07",
+      "genre": "thriller",
+      "tier": "indie",
+      "start_event": "00511e3f493486b518bd77ad157de0659835f38e441193318f933856c8076e61",
+      "release_event": null,
+      "official_score": null,
+      "picks": 0,
+      "explicitly_abandoned": 0
+    }
+  ]
+}
