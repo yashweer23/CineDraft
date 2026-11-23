@@ -1,0 +1,18 @@
+@base = http://localhost:8000
+@dataset = tmdb:first-import-v1
+@person = replace-with-a-returned-person-uuid
+
+### Change base to your API_PORT. Optional VS Code REST Client requests.
+GET {{base}}/api/health
+
+### Published datasets
+GET {{base}}/api/catalog/datasets?limit=20
+
+### Eligible movies
+GET {{base}}/api/catalog/{{dataset}}/movies?limit=5
+
+### Directors
+GET {{base}}/api/catalog/{{dataset}}/people?role=director&limit=5
+
+### Actual person's directing credits (replace person above)
+GET {{base}}/api/catalog/{{dataset}}/people/{{person}}/films?role=director&limit=5
