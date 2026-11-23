@@ -1,0 +1,82 @@
+{
+  "synthetic": true,
+  "mode": "offline preview; no database writes",
+  "dataset_id": "fixture:portfolio-v1",
+  "manifest": {
+    "schema_version": "portfolio-demo-1.0",
+    "synthetic": true,
+    "source": "fixture",
+    "purpose": "Opt-in local portfolio demonstration",
+    "input_rows_hash": "b4ddd82610e63ee9de2a1b6a39c1bcd82365ece8c9d035e9924f0be58bc88394",
+    "people": 36,
+    "movies": 20,
+    "credits": 228,
+    "person_roles": 38
+  },
+  "input_hash": "c89f3b8c68b966918fb5925e6a82d3c4de0efc606e6b4c253eb826dc22bcb1e2",
+  "feature_hash": "b822af026e7b0c75521391beadec71426bfce0780d5fc7418f060094fdd59086",
+  "pricing_hash": "fe15839b310303025acf94b5fcc906a6f2e892228b06fb514196b30b1d98b639",
+  "graph_hash": "424dc3b561dad994e83483a89143ab7b49771ba149029ec60be45de7f4c9a91f",
+  "graph_nodes": 38,
+  "graph_edges": 341,
+  "minimum_assignment": {
+    "cost_usd": 28750000,
+    "assignment": [
+      {
+        "slot": "director",
+        "person_id": "2c22a1bb-a961-54f2-a67b-bfbc3f2fa9c1",
+        "fee_usd": 3425000
+      },
+      {
+        "slot": "lead",
+        "person_id": "0b8200a1-cfb1-5f53-9a7d-9352bb9a5717",
+        "fee_usd": 5150000
+      },
+      {
+        "slot": "co_lead",
+        "person_id": "17d4c5d8-c221-530f-88a5-017613c7891c",
+        "fee_usd": 5800000
+      },
+      {
+        "slot": "supporting_1",
+        "person_id": "3118b7c8-c53f-59dd-b42e-73c26c6e36fc",
+        "fee_usd": 6625000
+      },
+      {
+        "slot": "supporting_2",
+        "person_id": "b36db783-02d0-5458-95e1-ee0be15bad1b",
+        "fee_usd": 5025000
+      },
+      {
+        "slot": "writer",
+        "person_id": "4282d24e-8258-5e83-967b-7c2ebed955ef",
+        "fee_usd": 925000
+      },
+      {
+        "slot": "cinematographer",
+        "person_id": "4a672c21-859d-5f0a-b09d-2b8e6d692d69",
+        "fee_usd": 750000
+      },
+      {
+        "slot": "composer",
+        "person_id": "a5478fcb-f1ce-587c-9259-54820fc23599",
+        "fee_usd": 1050000
+      }
+    ]
+  },
+  "tiers": {
+    "indie": {
+      "talent_budget_usd": 6500000,
+      "enabled": false
+    },
+    "studio": {
+      "talent_budget_usd": 32500000,
+      "enabled": true
+    },
+    "blockbuster": {
+      "talent_budget_usd": 130000000,
+      "enabled": true
+    }
+  },
+  "scope": "Fictional people, films, ratings and credits. Production feature/pricing/graph algorithms; no saved drafts or results."
+}

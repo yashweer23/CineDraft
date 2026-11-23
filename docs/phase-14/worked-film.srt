@@ -1,0 +1,48 @@
+1
+00:00:00,000 --> 00:00:09,000
+A blockbuster has a $200M budget. The game sets aside $70M before the first hire.
+
+2
+00:00:09,000 --> 00:00:19,000
+This film uses 36 fictional people and 20 films. You can reproduce the choices locally.
+
+3
+00:00:19,000 --> 00:00:33,000
+Each pick must leave enough money and enough distinct people to fill every remaining slot.
+
+4
+00:00:33,000 --> 00:00:47,000
+The example takes the best thriller fit among the legal cards offered. Total talent spend: $62M.
+
+5
+00:00:47,000 --> 00:00:57,000
+The same fictional film lists both jobs. The graph keeps those source credits on the edge.
+
+6
+00:00:57,000 --> 00:01:07,000
+Six shared movies reach the 12-point edge cap. The game scores twelve specific roster relationships.
+
+7
+00:01:07,000 --> 00:01:16,000
+Genre fit, talent, chemistry and hiring efficiency each contribute to the studio score.
+
+8
+00:01:16,000 --> 00:01:26,000
+The engine adds the unrounded contributions, then rounds the displayed total.
+
+9
+00:01:26,000 --> 00:01:36,000
+Production is the $70M reserve plus $62M in hires. Marketing adds another $26.4M.
+
+10
+00:01:36,000 --> 00:01:46,000
+The studio receives half the fictional gross. Subtract both costs from receipts to get profit.
+
+11
+00:01:46,000 --> 00:01:58,000
+Both casts face the same 64 scenarios. The cheaper director reduces median fictional profit by about $6.02M.
+
+12
+00:01:58,000 --> 00:02:10,000
+Only the hypothetical roster changes. Run python -m scripts.portfolio_tour from backend/ to reproduce this film.
+

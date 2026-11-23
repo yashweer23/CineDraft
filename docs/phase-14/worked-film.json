@@ -1,0 +1,239 @@
+{
+  "mode": "Offline worked example. Production algorithms, fictional source observations, no database writes.",
+  "genre": "thriller",
+  "tier": "blockbuster",
+  "budget": 200000000,
+  "reserve": 70000000,
+  "spend": 62000000,
+  "choices": [
+    {
+      "slot": "director",
+      "name": "Synthetic Director 06",
+      "fee": 11400000,
+      "remaining": 118600000,
+      "offered": [
+        {
+          "name": "Synthetic Director 05",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Director 06",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Director 01",
+          "selectable": true
+        }
+      ]
+    },
+    {
+      "slot": "lead",
+      "name": "Synthetic Actor 12",
+      "fee": 17075000,
+      "remaining": 101525000,
+      "offered": [
+        {
+          "name": "Synthetic Actor 07",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Actor 12",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Actor 01",
+          "selectable": true
+        }
+      ]
+    },
+    {
+      "slot": "co_lead",
+      "name": "Synthetic Actor 10",
+      "fee": 13825000,
+      "remaining": 87700000,
+      "offered": [
+        {
+          "name": "Synthetic Actor 03",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Actor 04",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Actor 10",
+          "selectable": true
+        }
+      ]
+    },
+    {
+      "slot": "supporting_1",
+      "name": "Synthetic Actor 06",
+      "fee": 8925000,
+      "remaining": 78775000,
+      "offered": [
+        {
+          "name": "Synthetic Actor 11",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Actor 06",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Actor 04",
+          "selectable": true
+        }
+      ]
+    },
+    {
+      "slot": "supporting_2",
+      "name": "Synthetic Actor 01",
+      "fee": 5150000,
+      "remaining": 73625000,
+      "offered": [
+        {
+          "name": "Synthetic Actor 09",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Actor 05",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Actor 01",
+          "selectable": true
+        }
+      ]
+    },
+    {
+      "slot": "writer",
+      "name": "Synthetic Writer 05",
+      "fee": 2225000,
+      "remaining": 71400000,
+      "offered": [
+        {
+          "name": "Synthetic Director 01",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Writer 02",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Writer 05",
+          "selectable": true
+        }
+      ]
+    },
+    {
+      "slot": "cinematographer",
+      "name": "Synthetic Cinematographer 06",
+      "fee": 2325000,
+      "remaining": 69075000,
+      "offered": [
+        {
+          "name": "Synthetic Cinematographer 06",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Cinematographer 03",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Cinematographer 05",
+          "selectable": true
+        }
+      ]
+    },
+    {
+      "slot": "composer",
+      "name": "Synthetic Composer 01",
+      "fee": 1075000,
+      "remaining": 68000000,
+      "offered": [
+        {
+          "name": "Synthetic Composer 01",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Composer 03",
+          "selectable": true
+        },
+        {
+          "name": "Synthetic Composer 04",
+          "selectable": true
+        }
+      ]
+    }
+  ],
+  "first_card_works": [
+    "Synthetic Crime Study 07",
+    "Synthetic Mystery Study 13",
+    "Synthetic Comedy Study 06",
+    "Synthetic Thriller Study 19",
+    "Synthetic Horror Study 12"
+  ],
+  "evidence": {
+    "a": "Synthetic Actor 12",
+    "b": "Synthetic Director 06",
+    "shared": 6,
+    "bonus": 12,
+    "title": "Synthetic Thriller Study 19",
+    "jobs_a": [
+      "Actor"
+    ],
+    "jobs_b": [
+      "Director"
+    ]
+  },
+  "release": {
+    "studio_score": 53,
+    "score_components": [
+      {
+        "name": "genre",
+        "value": "20.25841312643678160919540229885057471264367816091954022988505747",
+        "weight": "0.30",
+        "contribution": "6.077523937931034482758620689655172413793103448275862068965517241"
+      },
+      {
+        "name": "talent",
+        "value": "64.22314497701149425287356321839080459770114942528735632183908046",
+        "weight": "0.30",
+        "contribution": "19.26694349310344827586206896551724137931034482758620689655172414"
+      },
+      {
+        "name": "chemistry",
+        "value": "87.77777777777777777777777777777777777777777777777777777777777778",
+        "weight": "0.25",
+        "contribution": "21.94444444444444444444444444444444444444444444444444444444444445"
+      },
+      {
+        "name": "efficiency",
+        "value": "36.19709835663129973474801061007957559681697612732095490716180372",
+        "weight": "0.15",
+        "contribution": "5.429564753494694960212201591511936339522546419098143236074270558"
+      }
+    ],
+    "production_cost_usd": 132000000,
+    "marketing_usd": 26400000,
+    "worldwide_gross_usd": 399067581,
+    "studio_receipts_usd": 199533791,
+    "profit_usd": 41133791
+  },
+  "comparison": {
+    "before": "Synthetic Director 06",
+    "after": "Synthetic Director 02",
+    "samples": 64,
+    "score_delta": -4,
+    "fee_delta": -7975000,
+    "profit_delta": {
+      "p10": "-7928485.4",
+      "median": "-6018638.5",
+      "p90": "-4222005.5"
+    }
+  },
+  "input_hash": "936e75b8509f36482655db1699230f41ee679a8fabcb2f6e2d02333981a50966",
+  "result_hash": "efc887264aec662b574d976c020ae65c5fe8cf8f32cece06625e7c17b1936d88",
+  "replay_matched": true
+}
