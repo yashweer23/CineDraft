@@ -1,0 +1,15 @@
+@base = http://localhost:8001
+@pricing = pricing:first-ratings-v1
+@person = replace-with-a-returned-person-uuid
+
+### Computed versions
+GET {{base}}/api/talent/versions
+
+### Three director cards
+GET {{base}}/api/talent/{{pricing}}/profiles?role=director&genre=crime&limit=3
+
+### Coverage and fee diagnostics
+GET {{base}}/api/talent/{{pricing}}/report
+
+### Full calculation evidence
+GET {{base}}/api/talent/{{pricing}}/profiles/{{person}}/director?genre=crime
