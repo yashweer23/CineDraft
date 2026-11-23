@@ -1,0 +1,10 @@
+import {render,screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import {it,expect,vi} from 'vitest';
+import AnalyticsTools from './AnalyticsTools';
+import type {StudioState} from './studioApi';
+function setup(status='results_available',hidden=false,busy=false){const exportEvents=vi.fn(),startReplay=vi.fn();const s={draft:{draft_id:'abc',status},challengeContext:{challenge:hidden?{results_hidden:true}:null},busy,pending:null,mustRefresh:false,startReplay,exportEvents} as unknown as StudioState;render(<AnalyticsTools s={s}/>);return{startReplay,exportEvents};}
+it('hides both controls during a challenge embargo',()=>{setup('results_available',true);expect(screen.queryByText('Gameplay analytics & practice replay')).toBeNull();});
+it('allows the owner to export an unfinished draft without offering a replay',async()=>{const {exportEvents}=setup('awaiting_pick');await userEvent.click(screen.getByText('Gameplay analytics & practice replay'));await userEvent.click(screen.getByRole('button',{name:'Download my gameplay events'}));expect(exportEvents).toHaveBeenCalledOnce();expect(screen.queryByRole('button',{name:'Replay this brief'})).toBeNull();});
+it('requires intentional confirmation before starting a separate practice replay',async()=>{const {startReplay}=setup();await userEvent.click(screen.getByText('Gameplay analytics & practice replay'));await userEvent.click(screen.getByRole('button',{name:'Replay this brief'}));expect(startReplay).not.toHaveBeenCalled();await userEvent.click(screen.getByRole('button',{name:'Start practice replay'}));expect(startReplay).toHaveBeenCalledOnce();});
+it('disables export and replay while another request is unresolved',async()=>{setup('results_available',false,true);await userEvent.click(screen.getByText('Gameplay analytics & practice replay'));expect(screen.getByRole('button',{name:'Replay this brief'})).toBeDisabled();expect(screen.getByRole('button',{name:'Download my gameplay events'})).toBeDisabled();});
